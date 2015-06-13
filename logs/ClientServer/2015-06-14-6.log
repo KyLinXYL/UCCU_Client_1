@@ -1,0 +1,25 @@
+[01:26:39] [ClientServer/ClientMain/init/DEBUG]: address: baidu.com:80
+[01:26:39] [ClientServer/ClientMain/init/DEBUG]: 图片加载成功
+[01:26:39] [ClientServer/ClientMain/init/DEBUG]: GIF动画加载成功
+[01:26:39] [ClientServer/ClientMain/init/DEBUG]: 物品预加载成功
+[01:26:39] [ClientServer/ClientMain/init/DEBUG]: init over
+[01:26:39] [ClientServer/ClientMain/KERNEL]: 0.开始建立网络连接…………
+[01:26:40] [ClientServer/ClientMain/setUpConnection/DEBUG]: setUpConnection over
+[01:26:40] [ClientServer/ClientMain/KERNEL]: 1.网络连接成功!
+[01:26:40] [ClientServer/ClientMain/KERNEL]: 2.发送0000包，确认对方是否为服务器Gate端
+[01:26:40] [SendingModule/send00Package/INFO]: send00Package over
+[01:26:40] [AioModule/Write/Completed/DEBUG]: Sent 14 bytes to sessionbaidu.com/180.149.132.47:80
+[01:26:40] [ClientSever/LoginBox/serverState/INFO]: Receive a package 0001(回应连接请求)
+[01:26:40] [AioModule/Write/Completed/DEBUG]: Sent contents(14bytes): ff ff 00 00 00 0e 00 00 00 00 30 39 20 db 
+[01:26:40] [ClientSever/LoginBox/serverState/INFO]: package 0001: 1
+[01:26:40] [ClientServer/ClientMain/KERNEL]: 3.收到0001包，确认对方为服务器Gate端
+[01:26:40] [ClientServer/ClientMain/KERNEL]: 4.初始化loginBox登陆界面
+[01:26:40] [ClientServer/LoginBox/onLoginResponse/INFO]: Receive a package 0003(登陆反馈)
+[01:26:40] [ClientServer/LoginBox/onLoginResponse/INFO]: package 0003: true
+[01:26:40] [ClientServer/LoginBox/noMorePackage/INFO]: Receive a package 0006(角色预加载: 这是最后一个空包
+[01:26:41] [SendingModule/sendCreateCharacter/INFO]: package 0008(创建角色) send!
+[01:26:41] [AioModule/Write/Completed/DEBUG]: Sent 25 bytes to sessionbaidu.com/180.149.132.47:80
+[01:26:41] [ClientServer/LoginBox/onCreatResponse/INFO]: Receive a package 0009(角色创建结果)
+[01:26:41] [AioModule/Write/Completed/DEBUG]: Sent contents(25bytes): ff ff 00 00 00 19 00 08 6e 75 6c 6c 00 64 64 64 64 00 01 00 00 00 01 38 47 
+[01:26:42] [ClientServer/ClientMain/KERNEL]: 5.登陆结束
+[01:26:42] [ClientServer/ClientMain/KERNEL]: 6.开始游戏，启动gameBox

@@ -1,0 +1,106 @@
+[00:25:21] [ClientServer/ClientMain/init/DEBUG]: address: baidu.com:80
+[00:25:21] [ClientServer/ClientMain/init/DEBUG]: 图片加载成功
+[00:25:21] [ClientServer/ClientMain/init/DEBUG]: GIF动画加载成功
+[00:25:21] [ClientServer/ClientMain/init/DEBUG]: 物品预加载成功
+[00:25:22] [ClientServer/ClientMain/init/DEBUG]: init over
+[00:25:22] [ClientServer/ClientMain/KERNEL]: 0.开始建立网络连接…………
+[00:25:22] [ClientServer/ClientMain/setUpConnection/DEBUG]: setUpConnection over
+[00:25:22] [ClientServer/ClientMain/KERNEL]: 1.网络连接成功!
+[00:25:22] [ClientServer/ClientMain/KERNEL]: 2.发送0000包，确认对方是否为服务器Gate端
+[00:25:22] [SendingModule/send00Package/INFO]: send00Package over
+[00:25:22] [ClientSever/LoginBox/serverState/INFO]: Receive a package 0001(回应连接请求)
+[00:25:22] [AioModule/Write/Completed/DEBUG]: Sent 14 bytes to sessionbaidu.com/180.149.132.47:80
+[00:25:22] [ClientSever/LoginBox/serverState/INFO]: package 0001: 1
+[00:25:22] [ClientServer/ClientMain/KERNEL]: 3.收到0001包，确认对方为服务器Gate端
+[00:25:22] [AioModule/Write/Completed/DEBUG]: Sent contents(14bytes): ff ff 00 00 00 0e 00 00 00 00 30 39 20 db 
+[00:25:22] [ClientServer/ClientMain/KERNEL]: 4.初始化loginBox登陆界面
+[00:25:22] [ClientServer/LoginBox/onLoginResponse/INFO]: Receive a package 0003(登陆反馈)
+[00:25:22] [ClientServer/LoginBox/onLoginResponse/INFO]: package 0003: true
+[00:25:23] [ClientSever/LoginBox/addCharacter/INFO]: Receive a package 0006(角色预加载)
+[00:25:23] [ClientSever/LoginBox/addCharacter/INFO]: Receive a package 0006(角色预加载)
+[00:25:23] [ClientServer/LoginBox/noMorePackage/INFO]: Receive a package 0006(角色预加载: 这是最后一个空包
+[00:25:24] [AioModule/Write/Completed/DEBUG]: Sent 21 bytes to sessionbaidu.com/180.149.132.47:80
+[00:25:24] [SendingModule/sendCreateCharacter/INFO]: package 0008(创建角色) send!
+[00:25:24] [AioModule/Write/Completed/DEBUG]: Sent contents(21bytes): ff ff 00 00 00 15 00 08 6e 75 6c 6c 00 64 64 64 64 00 01 21 a7 
+[00:25:24] [ClientServer/LoginBox/onCreatResponse/INFO]: Receive a package 0009(角色创建结果)
+[00:25:24] [ClientSever/LoginBox/addCharacter/INFO]: Receive a package 0006(角色预加载)
+[00:25:25] [ClientServer/GameBox/addCharacter/DEBUG]: Receive a package 000A(游戏中所有玩家信息)
+[00:25:25] [ClientServer/GameBox/addCharacter/DEBUG]: 000A:加入一个主角玩家:third role
+[00:25:25] [ClientServer/GameBox/addCharacter/DEBUG]: Receive a package 000A(游戏中所有玩家信息)
+[00:25:25] [ClientServer/GameBox/addCharacter/DEBUG]: 000A:加入一个非主角玩家:another role
+[00:25:25] [ClientServer/ClientMain/KERNEL]: 5.登陆结束
+[00:25:25] [ClientServer/ClientMain/KERNEL]: 6.开始游戏，启动gameBox
+[00:25:25] [ClientServer/GameBox/startGame/KERNEL]: 接收主角详细信息(000A):关闭加载窗口,开始游戏!
+[00:25:25] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[00:25:25] [Client/GameBox/updateTarget/INFO]: targetX: 10000/targetY 20000
+[00:25:26] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[00:25:26] [Client/GameBox/updateTarget/INFO]: targetX: -11/targetY 291
+[00:25:26] [AioModule/Write/Completed/DEBUG]: Sent 30 bytes to sessionbaidu.com/180.149.132.47:80
+[00:25:26] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[00:25:27] [SendingModule/sendTargetPos/DEBUG]: targetX: -11/targetY: 291
+[00:25:27] [AioModule/Write/Completed/DEBUG]: Sent contents(30bytes): ff ff 00 00 00 1e 00 0b 00 00 00 03 ff ff ff f5 00 00 01 23 00 00 01 4d ed bd 78 98 45 ac 
+[00:25:28] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[00:25:28] [Client/GameBox/updateTarget/INFO]: targetX: -7/targetY 295
+[00:25:28] [AioModule/Write/Completed/DEBUG]: Sent 30 bytes to sessionbaidu.com/180.149.132.47:80
+[00:25:28] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[00:25:28] [SendingModule/sendTargetPos/DEBUG]: targetX: -7/targetY: 295
+[00:25:28] [AioModule/Write/Completed/DEBUG]: Sent contents(30bytes): ff ff 00 00 00 1e 00 0b 00 00 00 03 ff ff ff f9 00 00 01 27 00 00 01 4d ed bd 7d c3 55 0d 
+[00:25:29] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[00:25:29] [Client/GameBox/updateTarget/INFO]: targetX: -441/targetY 146
+[00:25:29] [AioModule/Write/Completed/DEBUG]: Sent 30 bytes to sessionbaidu.com/180.149.132.47:80
+[00:25:29] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[00:25:29] [AioModule/Write/Completed/DEBUG]: Sent contents(30bytes): ff ff 00 00 00 1e 00 0b 00 00 00 03 ff ff fe 47 00 00 00 92 00 00 01 4d ed bd 81 54 66 b8 
+[00:25:29] [SendingModule/sendTargetPos/DEBUG]: targetX: -441/targetY: 146
+[00:25:30] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[00:25:30] [Client/GameBox/updateTarget/INFO]: targetX: -344/targetY -200
+[00:25:30] [AioModule/Write/Completed/DEBUG]: Sent 30 bytes to sessionbaidu.com/180.149.132.47:80
+[00:25:30] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[00:25:30] [AioModule/Write/Completed/DEBUG]: Sent contents(30bytes): ff ff 00 00 00 1e 00 0b 00 00 00 03 ff ff fe a8 ff ff ff 38 00 00 01 4d ed bd 86 df 42 21 
+[00:25:30] [SendingModule/sendTargetPos/DEBUG]: targetX: -344/targetY: -200
+[00:25:31] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[00:25:31] [Client/GameBox/updateTarget/INFO]: targetX: 346/targetY -260
+[00:25:31] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[00:25:31] [AioModule/Write/Completed/DEBUG]: Sent 30 bytes to sessionbaidu.com/180.149.132.47:80
+[00:25:31] [SendingModule/sendTargetPos/DEBUG]: targetX: 346/targetY: -260
+[00:25:31] [AioModule/Write/Completed/DEBUG]: Sent contents(30bytes): ff ff 00 00 00 1e 00 0b 00 00 00 03 00 00 01 5a ff ff fe fc 00 00 01 4d ed bd 89 2b 4c 89 
+[00:25:31] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[00:25:31] [Client/GameBox/updateTarget/INFO]: targetX: 527/targetY -52
+[00:25:31] [AioModule/Write/Completed/DEBUG]: Sent 30 bytes to sessionbaidu.com/180.149.132.47:80
+[00:25:31] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[00:25:31] [SendingModule/sendTargetPos/DEBUG]: targetX: 527/targetY: -52
+[00:25:31] [AioModule/Write/Completed/DEBUG]: Sent contents(30bytes): ff ff 00 00 00 1e 00 0b 00 00 00 03 00 00 02 0f ff ff ff cc 00 00 01 4d ed bd 8a c5 4c 57 
+[00:25:31] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[00:25:31] [Client/GameBox/updateTarget/INFO]: targetX: 445/targetY 170
+[00:25:32] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[00:25:32] [AioModule/Write/Completed/DEBUG]: Sent 30 bytes to sessionbaidu.com/180.149.132.47:80
+[00:25:32] [SendingModule/sendTargetPos/DEBUG]: targetX: 445/targetY: 170
+[00:25:32] [AioModule/Write/Completed/DEBUG]: Sent contents(30bytes): ff ff 00 00 00 1e 00 0b 00 00 00 03 00 00 01 bd 00 00 00 aa 00 00 01 4d ed bd 8c 5f 66 17 
+[00:25:32] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[00:25:32] [Client/GameBox/updateTarget/INFO]: targetX: 335/targetY 347
+[00:25:32] [AioModule/Write/Completed/DEBUG]: Sent 30 bytes to sessionbaidu.com/180.149.132.47:80
+[00:25:32] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[00:25:32] [SendingModule/sendTargetPos/DEBUG]: targetX: 335/targetY: 347
+[00:25:32] [AioModule/Write/Completed/DEBUG]: Sent contents(30bytes): ff ff 00 00 00 1e 00 0b 00 00 00 03 00 00 01 4f 00 00 01 5b 00 00 01 4d ed bd 8d b8 15 c3 
+[00:25:32] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[00:25:32] [Client/GameBox/updateTarget/INFO]: targetX: 54/targetY 410
+[00:25:32] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[00:25:32] [AioModule/Write/Failed/WARNING]: Failed to send to sessionnull. java.nio.channels.ClosedChannelException
+[00:25:32] [SendingModule/sendTargetPos/DEBUG]: targetX: 54/targetY: 410
+[00:25:33] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[00:25:33] [Client/GameBox/updateTarget/INFO]: targetX: -160/targetY 407
+[00:25:33] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[00:25:33] [SendingModule/sendTargetPos/DEBUG]: targetX: -160/targetY: 407
+[00:25:33] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[00:25:33] [Client/GameBox/updateTarget/INFO]: targetX: -307/targetY 232
+[00:25:33] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[00:25:33] [SendingModule/sendTargetPos/DEBUG]: targetX: -307/targetY: 232
+[00:25:34] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[00:25:34] [Client/GameBox/updateTarget/INFO]: targetX: 452/targetY 532
+[00:25:35] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[00:25:35] [SendingModule/sendTargetPos/DEBUG]: targetX: 452/targetY: 532
+[00:25:35] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[00:25:35] [Client/GameBox/updateTarget/INFO]: targetX: 663/targetY 168
+[00:25:35] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[00:25:35] [SendingModule/sendTargetPos/DEBUG]: targetX: 663/targetY: 168
+[00:25:38] [ClientServer/ClientMain/KERNEL]: 7.游戏结束，退出主程序
+[00:25:38] [SendingModule/sendLogout/INFO]: logout send!
