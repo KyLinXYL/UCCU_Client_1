@@ -28,7 +28,7 @@ public class ClientMain {
 	public static boolean isLoginOver;
 	public static boolean isLoginsuccess;
 	static boolean isGameOver;
-	static boolean deBug =true;//调试模式
+	static boolean deBug =false;//调试模式
 	public static void main(String[] arg) {
 		init(LogMode.DEBUG);
 		UccuLogger.kernel("ClientServer/ClientMain", "0.开始建立网络连接…………");
@@ -123,7 +123,7 @@ public class ClientMain {
 //				mySleep(2000);
 				loginBox.onLoginResponse(true);// 假装收到了一个登录成功反馈
 				// loginBox.onRegistResponse(true);//假装收到了一个注册成功反馈
-//				mySleep(1000);
+//				mySleep(1000000);
 				// 假装收到了两个角色信息
 //				loginBox.addCharacter(1, "first role", (byte) 12, (byte) 0);
 //				loginBox.addCharacter(2, "second role", (byte) 15, (byte) 1);

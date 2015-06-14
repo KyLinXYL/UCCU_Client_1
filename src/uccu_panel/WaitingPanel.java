@@ -1,5 +1,6 @@
 package uccu_panel;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Rectangle;
@@ -7,33 +8,27 @@ import java.awt.Rectangle;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 
 import uccu_client.Painter;
 
 public class WaitingPanel extends JPanel {
-	JLabel waitPic;
-	Image waitBar;
-	double stage;
-	int barX = 0,barY,barH = 50;
-	public WaitingPanel(Image pic,Image bar,Rectangle bounds) {
+	JTextArea intro;
+	JLabel stage;
+	public WaitingPanel(String info,Rectangle bounds,Rectangle introbounds) {
 		this.setOpaque(false);
 		this.setLayout(null);
 		this.setBounds(bounds);
-		barY = getHeight()-barH;
-		waitBar = bar;
-		stage = 0;
-		waitPic = new JLabel("this is a wating(ju) icon(hua)");
-		waitPic.setBounds((getWidth()-100)/2, (getHeight()-100)/2, 100, 100);
-		waitPic.setIcon(new ImageIcon(pic));
-		this.add(waitPic);
-	}
-	public void paintComponent(Graphics g){
-		super.paintComponents(g);
-//		img = Toolkit.getDefaultToolkit().getImage("background.jpg");
-		int barW = (int)(getWidth()*stage);
-		g.drawImage(waitBar,barX,barY,barW + barX,barY+barH,0,0,barW,barH,this);
+		stage = new JLabel("...0%");
+		this.add(stage);
+		intro = new JTextArea(info);
+		intro.setBackground(new Color(0,0,0,200));
+		intro.setForeground(Color.white);
+		intro.setOpaque(false);
+		intro.setBounds(introbounds);
+		this.add(intro);
 	}
 	public void setStage(double s){
-		stage = s;
+//		stage = s;
 	}
 }

@@ -53,9 +53,9 @@ public class LoginBox extends JFrame{
 		this.add(loginPanel);
 		backPicPanel = new BackgroundPanel(new Rectangle(0,0,1366,768));
 		waitingPanel = new WaitingPanel(
-				Toolkit.getDefaultToolkit().getImage("loading.gif")
-				,Toolkit.getDefaultToolkit().getImage("bar.png")
-				,new Rectangle(0,0,1366,768));
+				"tmpintro\nhahhahhah\nnimanima"
+				,new Rectangle(0,0,1366,768)
+				,new Rectangle(50,100,400,600));
 		characterPanel = new CharacterPanel(this);
 		characterPanel.setBounds(0, 0, 1366, 768);
 		createPanel = new CreatePanel(this);
@@ -77,7 +77,7 @@ public class LoginBox extends JFrame{
 			((JPanel)this.getContentPane()).setOpaque(false);
 			loginPanel.setVisible(false);
 			this.add(waitingPanel);
-			backPicPanel.img = Toolkit.getDefaultToolkit().getImage("lf.jpg");
+			backPicPanel.img = Toolkit.getDefaultToolkit().getImage("load1.jpg");
 			try {Thread.sleep(500);} catch (InterruptedException e) {}
 			this.setVisible(true);//backPicPanel.repaint();
 		}

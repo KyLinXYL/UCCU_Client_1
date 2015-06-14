@@ -5,6 +5,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Image;
+import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.Toolkit;
 import java.awt.event.KeyAdapter;
@@ -94,7 +95,7 @@ public class Painter extends JFrame{
 		
 		gameWindow = new GameWindow();
 		chatPanel = new ChatPanel();
-		waitingPanel = new WaitingPanel(picMap.get(1).getImage(),picMap.get(2).getImage(),getBounds());
+		waitingPanel = new WaitingPanel("tmpintro\nhahah\nninini",getBounds(),new Rectangle(100,100,500,700));
 		desktopPane = new JDesktopPane();
 		popupInfoPanel = new PopupInfoPanel(new Picture("lf.jpg", 0,0,0));
 		iconPanel = new IconPanel();
@@ -223,7 +224,7 @@ public class Painter extends JFrame{
 //		session = gameBox.session;
 		this.getLayeredPane().add(gameWindow,new Integer(Integer.MIN_VALUE));
 		((JPanel)this.getContentPane()).setOpaque(false);
-		background = new Picture("lf.jpg", getWidth(), getHeight(),0);
+		background = new Picture("load2.jpg", getWidth(), getHeight(),0);
 		gameWindow.img = background.getImage().getScaledInstance(getWidth(),getHeight(), Image.SCALE_DEFAULT);
 		this.getContentPane().add(waitingPanel);
 		setVisible(true);
