@@ -105,12 +105,33 @@ public class GameBox{
 		}
 	}	
 	//攻击函数,由当前游戏窗体攻击事件触发
-	public void attack(int id){
+	public void attack(int attack,int tar){
 		synchronized (lock_bullet) {
-			Warhead warhead=mainrole.attack((playerPool.get(id)));
+			Airplane attacker=playerPool.get(attack);
+			Airplane target=playerPool.get(tar);
+			Warhead warhead=attacker.attack(target);
 			warheadPool.add(warhead);
 			painter.addEntity(warhead);		
 		}
+	}
+	public void renewCharacter(int id,String name,String describe,byte level,byte gender,
+			int life,int curlife,int mana, int curmana, int atk,int def,int exp,
+			int movespeed,int posX,int posY,int pid){
+		Airplane renewair=playerPool.get(id);
+		renewair.name=name;
+		renewair.describe=describe;
+		renewair.level=level;
+		renewair.gender=gender;
+		renewair.life= life;
+		renewair.curlife=curlife;
+		renewair.mana=mana;
+		renewair.curmana=curmana;
+		renewair.atk=atk;
+		renewair.def=def;
+		renewair.exp=exp;
+		renewair.speed=movespeed;
+		renewair.posX=posX;
+		renewair.posY=posX;
 	}
 	//Action_plane线程专门负责处理每20ms之后所有飞机的位置
 	private class ActionThread_plane implements Runnable{

@@ -28,7 +28,7 @@ public class Airplane extends Entity {
 		this.gender=g;
 		this.speed=speed;
 		this.life= life;
-		this.curlife=life;
+		this.curlife=curlife;
 		this.mana=mana;
 		this.curmana=curmana;
 		this.atk=atk;
