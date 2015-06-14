@@ -127,7 +127,7 @@ public class ClientMain {
 				// 假装收到了两个角色信息
 				loginBox.addCharacter(1, "first role", (byte) 12, (byte) 0,11);
 				loginBox.addCharacter(2, "second role", (byte) 15, (byte) 1,12);
-				loginBox.addCharacter(2, "t role", (byte) 15, (byte) 1,13);
+//				loginBox.addCharacter(2, "t role", (byte) 15, (byte) 1,13);
 				loginBox.noMorePackage();
 				mySleep(1000000);
 				// 假装再创建1个角色

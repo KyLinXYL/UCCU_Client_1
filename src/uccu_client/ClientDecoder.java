@@ -154,12 +154,17 @@ public class ClientDecoder implements Decoder {
 			}
 			case 0x0014:{ //PING请求包
 				long timestamp = datagram.getLong();
+				GameBox.globalTimeDelta = System.currentTimeMillis() - timestamp;
+				GameBox.lastping = true;
 				UccuLogger.log("ClientServer/ClientDecoder", "Receive a package 0014(PING)"+timestamp);
 				SendingModule.sendPINGResponse(timestamp);	//立即回应
 				break;
 			}
 			case 0x0016:{ //时间同步
-				GameBox.globalTimeDelta = System.currentTimeMillis()-datagram.getLong();
+				if(GameBox.lastping){
+					GameBox.lastping = false;
+					GameBox.globalTimeDelta -= datagram.getLong();
+				}
 				UccuLogger.log("ClientServer/ClientDecoder", "Receive a package 0016(时间同步)"+GameBox.globalTimeDelta);
 				break;
 			}

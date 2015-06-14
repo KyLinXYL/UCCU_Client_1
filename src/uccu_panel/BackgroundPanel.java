@@ -11,6 +11,7 @@ public class BackgroundPanel extends JPanel{
 	public BackgroundPanel(Rectangle bounds) {
 		this.setLayout(null);
 		this.setBounds(bounds);
+		img = null;
 	}
 	public void paintComponent(Graphics g){
 		super.paintComponents(g);

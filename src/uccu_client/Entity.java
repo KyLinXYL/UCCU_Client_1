@@ -13,22 +13,20 @@ public class Entity extends DoublePoint{
 	public double maxhp;
 	
 	Entity(style t,int id,int picid,double x,double y,double size,double angle) {
+		super(x,y);
 		this.type=t;
 		this.ID=id;
 		this.picID=picid;
-		this.posX=x;
-		this.posY=y;
 		this.size=size;
 		this.angle=angle;
 		this.hp = -1;
 		this.maxhp = -1;
 	}
 	Entity(style t,int id,int picid,double x,double y,double size,double angle,double hp,double maxhp) {
+		super(x,y);
 		this.type=t;
 		this.ID=id;
 		this.picID=picid;
-		this.posX=x;
-		this.posY=y;
 		this.size=size;
 		this.angle=angle;
 		this.hp = hp;

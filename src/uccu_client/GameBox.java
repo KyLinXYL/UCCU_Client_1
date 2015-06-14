@@ -19,6 +19,7 @@ public class GameBox{
 	public Mainrole mainrole;
 	//与服务器绝对时间的差
 	static long globalTimeDelta;
+	static boolean lastping = false;
 	//更改playerPool和warheadPool的锁
 	private static Object lock_plane = new Object(); // static确保只有一把锁
 	private static Object lock_bullet = new Object(); // static确保只有一把锁
@@ -47,6 +48,7 @@ public class GameBox{
 			painter.setInitStage(i++/100.0);
 			ClientMain.mySleep(200);
 		}
+		painter.setInitStage(1);
 		//加载完成 等待窗口关闭	正式开始游戏
 		UccuLogger.kernel("ClientServer/GameBox/startGame", "接收主角详细信息(000A):关闭加载窗口,开始游戏!");
 		painter.gameStart();
