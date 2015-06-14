@@ -133,8 +133,9 @@ public class ChatPanel extends JPanel{
 					SendingModule.sendPubChat(t);
 					break;
 				case pri:
+					if(priID.getType() != style.airplane) return;
 					if(priID == null) insertChat("[WARNING] 你必须指定一个私聊对象",labelstat);
-					else SendingModule.sendPriChat(priID.getID(), t);
+					else SendingModule.sendPriChat(((Airplane)priID).name, t);
 					break;
 				}
         	}

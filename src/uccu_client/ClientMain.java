@@ -125,10 +125,11 @@ public class ClientMain {
 				// loginBox.onRegistResponse(true);//假装收到了一个注册成功反馈
 //				mySleep(1000000);
 				// 假装收到了两个角色信息
-//				loginBox.addCharacter(1, "first role", (byte) 12, (byte) 0);
-//				loginBox.addCharacter(2, "second role", (byte) 15, (byte) 1);
+				loginBox.addCharacter(1, "first role", (byte) 12, (byte) 0,11);
+				loginBox.addCharacter(2, "second role", (byte) 15, (byte) 1,12);
+				loginBox.addCharacter(2, "t role", (byte) 15, (byte) 1,13);
 				loginBox.noMorePackage();
-//				mySleep(1000);
+				mySleep(1000000);
 				// 假装再创建1个角色
 				SendingModule.sendCreateCharacter("dddd",(byte) 1, 1);
 				// 假装角色创建成功
@@ -151,16 +152,16 @@ public class ClientMain {
 			else if(num==4){	//模拟各种聊天请求
 				mySleep(500);
 				double ran=Math.random();
-				if(ran<0.08){gameBox.painter.allMapChat(chatStat.frequency,0,"");}
-				else if(ran<0.16){gameBox.painter.allMapChat(chatStat.nopermission,0,"");}
-				else if(ran<0.25){gameBox.painter.allMapChat(chatStat.wrong,0,"");}
-				else if(ran<0.37){gameBox.painter.allMapChat(chatStat.success,ClientMain.mainID,"全局喇叭测试(主角)");}
-				else if(ran<0.50){gameBox.painter.allMapChat(chatStat.success,(int)(ran+0.5),"全局喇叭测试(其他人/系统)");}
-				else if(ran<0.58){gameBox.painter.personChat(chatStat.frequency,0,ClientMain.mainID,"");}
-				else if(ran<0.66){gameBox.painter.personChat(chatStat.blacklist,0,ClientMain.mainID,"");}
-				else if(ran<0.75){gameBox.painter.personChat(chatStat.wrong,0,ClientMain.mainID,"");}
-				else if(ran<0.86){gameBox.painter.personChat(chatStat.success,(int)(ran+100),ClientMain.mainID,"私聊测试(别人对你说)");}
-				else {gameBox.painter.personChat(chatStat.success,ClientMain.mainID,(int)(ran+100),"私聊测试(你对别人说)");}
+				if(ran<0.08){gameBox.painter.allMapChat(chatStat.frequency,"","");}
+				else if(ran<0.16){gameBox.painter.allMapChat(chatStat.nopermission,"","");}
+				else if(ran<0.25){gameBox.painter.allMapChat(chatStat.wrong,"","");}
+//				else if(ran<0.37){gameBox.painter.allMapChat(chatStat.success,ClientMain.mainID,"全局喇叭测试(主角)");}
+//				else if(ran<0.50){gameBox.painter.allMapChat(chatStat.success,(int)(ran+0.5),"全局喇叭测试(其他人/系统)");}
+//				else if(ran<0.58){gameBox.painter.personChat(chatStat.frequency,0,ClientMain.mainID,"");}
+//				else if(ran<0.66){gameBox.painter.personChat(chatStat.blacklist,0,ClientMain.mainID,"");}
+//				else if(ran<0.75){gameBox.painter.personChat(chatStat.wrong,0,ClientMain.mainID,"");}
+//				else if(ran<0.86){gameBox.painter.personChat(chatStat.success,(int)(ran+100),ClientMain.mainID,"私聊测试(别人对你说)");}
+//				else {gameBox.painter.personChat(chatStat.success,ClientMain.mainID,(int)(ran+100),"私聊测试(你对别人说)");}
 			}
 		}
 	}

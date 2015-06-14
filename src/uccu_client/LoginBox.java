@@ -3,6 +3,7 @@ package uccu_client;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.Toolkit;
 import java.awt.event.WindowAdapter;
@@ -112,7 +113,8 @@ public class LoginBox extends JFrame{
 		this.setVisible(false);
 		waitingPanel.setVisible(false);
 		this.add(characterPanel);
-		backPicPanel.img = Toolkit.getDefaultToolkit().getImage("background.jpg");
+		backPicPanel.img = Toolkit.getDefaultToolkit().getImage("角色背景.png")
+				.getScaledInstance(1366,768,Image.SCALE_DEFAULT);
 		try {Thread.sleep(500);} catch (InterruptedException e) {}
 		this.setVisible(true);//backPicPanel.repaint();
 	}

@@ -1,6 +1,7 @@
 package uccu_panel;
 
 import java.awt.GridLayout;
+import java.awt.Image;
 import java.awt.Toolkit;
 import java.nio.ByteBuffer;
 
@@ -27,6 +28,7 @@ class CharacterInfo{
 	}
 }
 public class CharacterPanel extends JPanel{
+	final int maxcharacter = 3;
 	JButton[] characterButton;
 	JTextField nameText;
 	JTextField levelText;
@@ -58,12 +60,12 @@ public class CharacterPanel extends JPanel{
 			ClientMain.isLoginOver = true;
 			loginBox.dispose();
 		});
-		characterButton = new JButton[8];
-		characterInfo = new CharacterInfo[8];
-		for(int i=0;i<8;++i){
+		characterButton = new JButton[maxcharacter];
+		characterInfo = new CharacterInfo[maxcharacter];
+		for(int i=0;i<maxcharacter;++i){
 			characterButton[i] = new JButton();
 			characterButton[i].setName(String.valueOf(i));
-			characterButton[i].setSize(250, 300);
+			characterButton[i].setSize(200, 200);
 			characterButton[i].setOpaque(false);
 			characterButton[i].setContentAreaFilled(false);
 			characterButton[i].setBorderPainted(false);
@@ -81,10 +83,10 @@ public class CharacterPanel extends JPanel{
 		this.setLayout(null);
 		JPanel cbp = new JPanel();
 		cbp.setOpaque(false);
-		cbp.setLayout(new GridLayout(2,4,0,0));
+		cbp.setLayout(new GridLayout(maxcharacter,1,0,0));
 		for(JButton cb : characterButton)
 			cbp.add(cb);
-		cbp.setBounds(100, 100, 1000, 400);
+		cbp.setBounds(70, 65, 300, 530);
 		this.add(cbp);
 		
 		JPanel lbp = new JPanel();
@@ -111,7 +113,8 @@ public class CharacterPanel extends JPanel{
 		if(characterCount == 8) return;
 		characterInfo[characterCount] = new CharacterInfo(id,name,level, gender,picID);
 		characterButton[characterCount].setIcon(new ImageIcon(
-				Toolkit.getDefaultToolkit().getImage("loading.gif") ));
+				uccu_client.Painter.painter.getPicByPid(picID).getImage()
+				.getScaledInstance(130,130,Image.SCALE_DEFAULT) ));
 		characterCount++;
 	}
 }

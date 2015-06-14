@@ -187,7 +187,7 @@ public class Painter extends JFrame{
 	public void localInform(String msg){
 		chatPanel.insertChat("[通知]"+msg, chatPanel.labelstat);
 	}
-	public void allMapChat(chatStat s,int speakerID,String msg){
+	public void allMapChat(chatStat s,String speakerID,String msg){
 		//先检查chatStat如果是success的话那么 Speakerid表示说话的人的名字，msg表示信息
 		//否则输出错误信息:
 //			s==chatStat.frequency; 间隔太短
@@ -204,7 +204,7 @@ public class Painter extends JFrame{
 			chatPanel.insertChat("[错误]暂时不能发送",puborpri.pub);break;
 		}
 		}
-	public void personChat(chatStat s,int sendid, int recvid, String msg){
+	public void personChat(chatStat s,String sendid, String recvid, String msg){
 		//同样先检查chatStat如果是success的话那么分开为 你对xxx说 和xxx 对你说
 //			s==chatStat.frequency; 间隔太短
 //			s==chatStat.nopermission; 你在对方黑名单中

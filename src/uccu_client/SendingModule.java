@@ -41,10 +41,10 @@ public class SendingModule {
 	}
 	public static void sendMovingTarget(int ID,int X,int Y){
 		ByteBuffer bb = ByteBuffer.allocate(256);
-		bb.putInt(ID);
+//		bb.putInt(ID);
 		bb.putInt(X);
 		bb.putInt(Y);
-		bb.putLong(System.currentTimeMillis());
+		bb.putLong(System.currentTimeMillis()-GameBox.globalTimeDelta);
 		ClientMain.serverSession.write(Datagram.wrap(bb,Target.CL_Gate,0x000B));
 		UccuLogger.debug("SendingModule/sendTargetPos", "package 000B(角色移动意图) send!");
 		UccuLogger.debug("SendingModule/sendTargetPos", "targetX: "+X+"/targetY: "+Y);
@@ -52,16 +52,16 @@ public class SendingModule {
 	}
 	public static void sendPubChat(String t){
 		ByteBuffer bb = ByteBuffer.allocate(256);
-    	bb.putInt(ClientMain.gameBox.mainrole.getID());
+//    	bb.putInt(ClientMain.gameBox.mainrole.getID());
 		Datagram.restoreString(bb, t);
 		ClientMain.serverSession.write(Datagram.wrap(bb,Target.CL_Gate,0x000D));
 		UccuLogger.debug("SendingModule/sendPubChat", t);
 	}
-	public static void sendPriChat(int id,String t){
+	public static void sendPriChat(String id,String t){
 		ByteBuffer bb = ByteBuffer.allocate(256);
-		bb.putInt(id);
+		Datagram.restoreString(bb, id);
 		Datagram.restoreString(bb, t);
-		ClientMain.serverSession.write(Datagram.wrap(bb,Target.CL_Gate,0x000D));
+		ClientMain.serverSession.write(Datagram.wrap(bb,Target.CL_Gate,0x0010));
 		UccuLogger.debug("SendingModule/sendPriChat", id + ":" + t);
 	}
 	public static void sendUseItem(int itemInsId,int Optype,int targetID){

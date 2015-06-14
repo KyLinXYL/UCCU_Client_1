@@ -1,0 +1,29 @@
+[15:44:16] [ClientServer/ClientMain/init/DEBUG]: address: 192.168.1.104:8438
+[15:44:16] [ClientServer/ClientMain/init/DEBUG]: 图片加载成功
+[15:44:16] [ClientServer/ClientMain/init/DEBUG]: GIF动画加载成功
+[15:44:16] [ClientServer/ClientMain/init/DEBUG]: 物品预加载成功
+[15:44:16] [ClientServer/ClientMain/init/DEBUG]: init over
+[15:44:16] [ClientServer/ClientMain/KERNEL]: 0.开始建立网络连接…………
+[15:44:16] [ClientServer/ClientMain/setUpConnection/DEBUG]: setUpConnection over
+[15:44:16] [ClientServer/ClientMain/KERNEL]: 1.网络连接成功!
+[15:44:16] [AioModule/Read/Completed/DEBUG]: Received 18 bytes from session/192.168.1.104:8438
+[15:44:16] [ClientServer/ClientMain/KERNEL]: 2.发送0000包，确认对方是否为服务器Gate端
+[15:44:16] [AioModule/Read/Completed/DEBUG]: Received contents(18bytes): ff ff 00 00 00 12 00 14 00 00 01 4d f1 07 a2 f2 2a 87 
+[15:44:16] [ClientServer/ClientDecoder/INFO]: Receive a package 0014(PING)
+[15:44:16] [SendingModule/send00Package/INFO]: send00Package over
+[15:44:16] [AioModule/Write/Completed/DEBUG]: Sent 14 bytes to session/192.168.1.104:8438
+[15:44:16] [SendingModule/PINGResponse/DEBUG]: package 0015(PING回应包) send!
+[15:44:16] [AioModule/Write/Completed/DEBUG]: Sent contents(14bytes): ff ff 00 00 00 0e 00 00 00 00 30 39 20 db 
+[15:44:16] [AioModule/Write/Completed/DEBUG]: Sent 18 bytes to session/192.168.1.104:8438
+[15:44:16] [AioModule/Write/Completed/DEBUG]: Sent contents(18bytes): ff ff 00 00 00 12 00 15 00 00 01 4d f1 07 a2 f2 23 13 
+[15:44:16] [AioModule/Read/Completed/DEBUG]: Received 11 bytes from session/192.168.1.104:8438
+[15:44:16] [AioModule/Read/Completed/DEBUG]: Received contents(11bytes): ff ff 00 00 00 0b 00 01 01 2a 46 
+[15:44:16] [ClientServer/ClientDecoder/INFO]: Receive a package 0001(回应连接请求)
+[15:44:16] [ClientServer/ClientDecoder/INFO]: package 0001: 1
+[15:44:16] [ClientSever/LoginBox/serverState/INFO]: Receive a package 0001(回应连接请求)
+[15:44:16] [ClientSever/LoginBox/serverState/INFO]: package 0001: 1
+[15:44:16] [AioModule/Read/Completed/DEBUG]: Received 18 bytes from session/192.168.1.104:8438
+[15:44:16] [AioModule/Read/Completed/DEBUG]: Received contents(18bytes): ff ff 00 00 00 12 00 16 00 00 01 4d f1 07 a4 15 1b e2 
+[15:44:16] [ClientServer/ClientDecoder/INFO]: Receive a package 0016(时间同步)
+[15:44:16] [ClientServer/ClientMain/KERNEL]: 3.收到0001包，确认对方为服务器Gate端
+[15:44:16] [ClientServer/ClientMain/KERNEL]: 4.初始化loginBox登陆界面

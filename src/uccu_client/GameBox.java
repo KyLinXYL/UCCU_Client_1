@@ -40,6 +40,7 @@ public class GameBox{
 			if(i>100){
 				UccuLogger.kernel("ClientServer/GameBox/startGame", "接收角色详细信息(000A)超时!(未接收到主角信息)");
 				ClientMain.isGameOver=true;
+				return;
 			}
 			if(mainrole!=null)
 				roleSending=false;			
@@ -64,7 +65,7 @@ public class GameBox{
 			double speed = pl.speed;
 			double tmpspeed = speed*sleeptime*dL/(sleeptime*dL-dt*speed);
 			if(tmpspeed <= 0) tmpspeed = speed;
-			pl.deltaV = tmpspeed;
+			pl.deltaV = tmpspeed*sleeptime/1000;
 			/* dont move!! */
 			pl.targetX = targetX;
 			pl.targetY = targetY;
@@ -75,8 +76,8 @@ public class GameBox{
 		}
 	}
 	public void sendTargetPos(int targetX,int targetY){
-		updateTarget(ClientMain.mainID,targetX, targetY,System.currentTimeMillis()-globalTimeDelta);//先更新目标地址，再发送数据包
-		SendingModule.sendMovingTarget(mainrole.getID(), (int)mainrole.targetX, (int)mainrole.targetY);
+//		updateTarget(ClientMain.mainID,targetX, targetY,System.currentTimeMillis()-globalTimeDelta);//先更新目标地址，再发送数据包
+		SendingModule.sendMovingTarget(mainrole.getID(), targetX,targetY);
 		}
 	//将角色初始化,加入角色池并放入贴图池
 	public void addCharacter(int id,String name,String describe,byte level,byte gender,
@@ -96,8 +97,8 @@ public class GameBox{
 			painter.addEntity(tmpMain);
 			painter.setMainRole(tmpMain);
 			mainrole=tmpMain;
-			for(int i=0;i<32;++i)
-				mainrole.add_items(0, 5,0);
+//			for(int i=0;i<32;++i)
+//				mainrole.add_items(0, 5,0);
 			UccuLogger.debug("ClientServer/GameBox/addCharacter", "000A:加入一个主角玩家:"+name);
 		}
 	}	
