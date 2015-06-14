@@ -130,8 +130,8 @@ public class GameBox{
 		renewair.def=def;
 		renewair.exp=exp;
 		renewair.speed=movespeed;
-		renewair.posX=posX;
-		renewair.posY=posX;
+//		renewair.posX=posX;
+//		renewair.posY=posY;
 	}
 	//Action_plane线程专门负责处理每20ms之后所有飞机的位置
 	private class ActionThread_plane implements Runnable{

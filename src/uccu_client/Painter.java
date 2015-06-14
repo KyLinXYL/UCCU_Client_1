@@ -123,7 +123,14 @@ public class Painter extends JFrame{
 				lastpress = e.getWhen();
 				if(lockPlayer == null) return;
 //				gameBox.attack(lockPlayer.getID());
-				SendingModule.sendUseSkill(3, 0, lockPlayer.getID());
+				int id = 0;
+				for(Skill sk:gameBox.mainrole.skills){
+					if(sk.picID == 1000000000+3){
+						id = sk.instanceID;
+						break;
+					}
+				}
+				SendingModule.sendUseSkill(id, 0, lockPlayer.getID());
 			}
 		});
 		gameWindow.addMouseListener(new MouseAdapter() {
