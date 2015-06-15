@@ -42,18 +42,18 @@ public class LoginPanel extends JPanel{
 		bgLabel.setBounds(getBounds());
 		this.add(bgLabel,new Integer(Integer.MIN_VALUE));
 		
-		IDField.setBounds(100,400, 240, 30);
+		IDField.setBounds(560,435, 240, 30);
 		IDField.setBackground(new Color(250,250,250,200));
 		IDField.setForeground(Color.black);
 		IDField.setBorder(null);
 		this.add(IDField);
-		PWDField.setBounds(100, 450, 240, 30);
+		PWDField.setBounds(560, 480, 240, 30);
 		PWDField.setBackground(new Color(250,250,250,200));
 		PWDField.setForeground(Color.BLACK);
 		PWDField.setBorder(null);
 		this.add(PWDField);
 		serverStat.setBounds(20, 170, 50, 30);
-		registerButton.setBounds(450, 385, 105, 45);
+		registerButton.setBounds(820, 425, 105, 45);
 		registerButton.setBackground(new Color(0,0,0,0));
 		registerButton.setBorderPainted(false);
 		registerIcon[0] = new ImageIcon(Toolkit.getDefaultToolkit().getImage("注册1.png"));
@@ -67,7 +67,7 @@ public class LoginPanel extends JPanel{
 				registerButton.getWidth(), registerButton.getHeight(), Image.SCALE_DEFAULT));
 		registerButton.setIcon(registerIcon[0]);
 		this.add(registerButton);
-		loginButton.setBounds(450, 450, 105, 45);
+		loginButton.setBounds(820, 475, 105, 45);
 		loginButton.setBackground(new Color(0,0,0,0));
 		loginButton.setBorderPainted(false);
 		loginIcon[0] = new ImageIcon(Toolkit.getDefaultToolkit().getImage("登录1.png"));

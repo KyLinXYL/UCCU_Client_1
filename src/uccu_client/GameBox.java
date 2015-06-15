@@ -166,6 +166,11 @@ public class GameBox{
 							plane.angle = Math.PI / 2 + Math.PI * face+ (Math.atan(deltaY / deltaX));
 						/* 我修改了你的移动方法 不然deltaX很小或者deltaY是负数时会出错
 						 * 这里采用总速度不变，横纵速度按比例变化的方法 最后如果delta比速度的步长短时，只移动delta*/
+						if(deltaX * deltaX + deltaY * deltaY < 1){
+							plane.posX += deltaX;
+							plane.posY += deltaY;
+							continue;
+						}
 						double tmp = plane.deltaV/Math.sqrt(deltaX * deltaX + deltaY * deltaY);
 						if (tmp > 1)
 							tmp = 1;// 比例大于1说明步长大于delta，将比例修改为1，否则会不能停止移动，反复在原地抖动
@@ -196,7 +201,7 @@ public class GameBox{
 						targetPlane=warhead.targetAirplane;
 						deltaX = targetPlane.posX-warhead.posX;
 						deltaY = targetPlane.posY-warhead.posY;
-						if(deltaX==0 && deltaY==0){
+						if(Math.abs(deltaX)<=15 && Math.abs(deltaY)<=15){
 							painter.deleteEntity(warhead);
 							iter.remove();
 							continue;

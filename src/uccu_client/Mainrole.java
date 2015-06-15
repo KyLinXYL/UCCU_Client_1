@@ -15,10 +15,19 @@ public class Mainrole extends Airplane {
 			skills[i]=new Skill();
 		}	
 	}
+	public void deleteAllItem(){
+		for(int i=0;i<32;++i){
+			items[i]=new Item();
+		}	
+	}
 	public void add_items (int ID,int num,int instanceID){
 		int i=0;
-		for(;i<items.length;++i)
-			if(items[i].empty||items[i].num==0)	break;
+		for(;i<items.length;++i){
+			if(items[i].empty||items[i].num==0){
+				break;
+			}
+		}
+		if(i >= items.length) return;
 		items[i].empty=false;
 		items[i].picID=pre_items[ID].picID;
 		items[i].num=num;

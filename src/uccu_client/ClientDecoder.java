@@ -97,6 +97,7 @@ public class ClientDecoder implements Decoder {
 				UccuLogger.log("ClientServer/ClientDecoder", "package 000C: "+"/id: "+id+"/posX: "+targetX+"/posY: "+targetY);
 				if(id != ClientMain.mainID)
 					gameBox.updateTarget(id, targetX, targetY,globalTime);
+				else gameBox.updateTarget(id, targetX, targetY, System.currentTimeMillis()-GameBox.globalTimeDelta);
 				break;
 			}
 			case 0x000E:{	//全局喇叭被服务器拒绝
@@ -171,6 +172,7 @@ public class ClientDecoder implements Decoder {
 			case 0x0019:{ //背包信息
 				int size= datagram.getInt();
 				int instanceID,data,ID,num;
+				gameBox.mainrole.deleteAllItem();
 				for(int i=0;i<size;++i){
 					instanceID = datagram.getInt();
 					data = datagram.getInt();
@@ -241,7 +243,7 @@ public class ClientDecoder implements Decoder {
 				if(type==3){	//攻击
 					gameBox.attack(attacker, target);				
 				}
-				if(type==100){	//特效(加血)??type 是多少？
+				if(type==4){	//特效(加血)??type 是多少？
 					gameBox.bloodUp(attacker);
 				}
 				UccuLogger.log("ClientServer/ClientDecoder", "Receive a package 001D(特效包)");

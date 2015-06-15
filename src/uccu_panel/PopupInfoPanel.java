@@ -1,5 +1,6 @@
 package uccu_panel;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 import javax.swing.*;
@@ -14,6 +15,7 @@ public class PopupInfoPanel extends JPanel{
 		text = new JTextArea();
 		text.setOpaque(false);
 		text.setEditable(false);
+		text.setForeground(Color.white);
 		this.add(text);
 	}
 	@Override

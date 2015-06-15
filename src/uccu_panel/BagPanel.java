@@ -15,6 +15,7 @@ public class BagPanel extends JInternalFrame{
 		this.setSize(310,510);
 		this.setDefaultCloseOperation(HIDE_ON_CLOSE);
 		this.setLayout(null);
+		
 		bp = null;
 		backg = new BackgroundPanel(new Rectangle(0,0,getWidth(),getHeight()));
 		backg.setSize(getSize());
@@ -32,7 +33,7 @@ public class BagPanel extends JInternalFrame{
 		this.add(bp);
 		Item[] bagitem = uccu_client.Painter.gameBox.mainrole.items;
 		for(int i=0;i<bagitem.length;++i){
-			if(bagitem[i] == null || bagitem[i].empty) continue;
+			if(bagitem[i] == null || bagitem[i].empty || bagitem[i].num == 0) continue;
 			ItemIcon item = new ItemIcon(bagitem[i]);
 			item.setBounds((i%4)*(lbW+gapW),(i/4)*(lbH+gapH),lbW,lbH);
 			bp.add(item);

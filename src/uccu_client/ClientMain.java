@@ -129,7 +129,7 @@ public class ClientMain {
 				loginBox.addCharacter(2, "second role", (byte) 15, (byte) 1,12);
 //				loginBox.addCharacter(2, "t role", (byte) 15, (byte) 1,13);
 				loginBox.noMorePackage();
-				mySleep(100000);
+//				mySleep(100000);
 				// 假装再创建1个角色
 				SendingModule.sendCreateCharacter("dddd",(byte) 1, 1);
 				// 假装角色创建成功
@@ -142,6 +142,10 @@ public class ClientMain {
 				ClientMain.isLoginOver = true;
 				loginBox.dispose();
 				//收到两个角色详细的包，其中一个是mainID代表的主角
+				gameBox.addCharacter(5, "dddd", "haha",(byte)11,(byte)11,1111, 1000, 100
+						, 50, 10, 10, 10, 200, 0, 0, 12);
+				gameBox.addCharacter(6, "dddd", "haha",(byte)11,(byte)11,1111, 1000, 100
+						, 50, 10, 10, 10, 200, 0, 0, 12);
 				gameBox.addCharacter(3, "dddd", "haha",(byte)11,(byte)11,1111, 1000, 100
 						, 50, 10, 10, 10, 200, 0, 0, 12);
 //				gameBox.addCharacter(3,"third role", (byte)12, (byte)1,(byte)1,50,50);
@@ -149,7 +153,8 @@ public class ClientMain {
 			}
 			else if(num==3){//模拟移动情况
 //				gameBox.updateTarget(3, 2000, 5000);
-//				gameBox.updateTarget(5, 10000, 20000,System.currentTimeMillis());
+				gameBox.updateTarget(5, 5000, 2000,System.currentTimeMillis());
+				gameBox.updateTarget(6, 1000, 3000, System.currentTimeMillis());
 			}
 			else if(num==4){	//模拟各种聊天请求
 				mySleep(500);

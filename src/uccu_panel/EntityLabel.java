@@ -47,6 +47,20 @@ public class EntityLabel extends JLabel{
 		return;
 	}
 	public void flashPos(Graphics2D gbuffer,double X,double Y){
+		int mapR = 100,relR = 5000,pR = 3;
+		double rX = (entityInfo.posX - X)*mapR/relR;
+		double rY = (entityInfo.posY - Y)*mapR/relR;
+		if(rX*rX+rY*rY <= 100*100){
+			if(entityInfo.getType() == style.airplane){
+				gbuffer.setColor(Color.blue);
+				pR = 3;
+			}
+			else if(entityInfo.getType() == style.bullet){
+				gbuffer.setColor(Color.red);
+				pR = 2;
+			}
+			gbuffer.drawOval(mapR-pR+(int)rX, mapR-pR+20+(int)rY, 2*pR,2*pR);
+		}
 		int relX = (int)(entityInfo.posX - X + Painter.width/2);
 		int relY = (int)(entityInfo.posY - Y + Painter.height/2);
 		int picW = pic.getWidth();

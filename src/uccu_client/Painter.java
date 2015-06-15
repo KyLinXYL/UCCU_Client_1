@@ -167,6 +167,12 @@ public class Painter extends JFrame{
         		gbuffer.drawImage(background.getImage(), zeroX+i*imgW, zeroY+j*imgH,zeroX+(i+1)*imgW, zeroY+(j+1)*imgH
         				,1,1,imgW,imgH,gameWindow);
         	}
+        String mainpos = "("+(int)mainRole.posX+","+(int)mainRole.posY+")";
+        gbuffer.setColor(Color.white);
+        gbuffer.drawChars(mainpos.toCharArray(), 0, mainpos.length(), 10, 20);
+        gbuffer.drawOval(0, 20, 200, 200);
+        gbuffer.setColor(new Color(43,53,60,180));
+        gbuffer.fillOval(0, 20, 200, 200);
 		/* 绘制每个Entity，修改他们的点击窗口位置 */
         Iterator<Entity> iter = entityMap.keySet().iterator();
 		while(iter.hasNext()){

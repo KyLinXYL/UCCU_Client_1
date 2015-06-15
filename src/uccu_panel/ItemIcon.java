@@ -21,7 +21,7 @@ class ItemIcon extends UsableIcon{
     public void myMouseEntered(MouseEvent e) {
     	int absX = e.getXOnScreen();
     	int absY = e.getYOnScreen();
-    	Painter.painter.showPopupInfo(info.describtion,absX,absY);
+    	Painter.painter.showPopupInfo(info.describtion+"\n物品数量："+info.num,absX,absY);
     }
 	@Override
     public void myMouseExit(MouseEvent e) {
@@ -37,6 +37,6 @@ class ItemIcon extends UsableIcon{
 			return;
 		}
 		info.lastuse = now;
-		SendingModule.sendUseItem(info.instanceID,1,Painter.painter.getLockedPlayerID());
+		SendingModule.sendUseItem(info.instanceID,0,Painter.painter.getLockedPlayerID());
 	}
 }
