@@ -99,8 +99,8 @@ public class GameBox{
 			painter.addEntity(tmpMain);
 			painter.setMainRole(tmpMain);
 			mainrole=tmpMain;
-//			for(int i=0;i<32;++i)
-//				mainrole.add_items(0, 5,0);
+			for(int i=0;i<3;++i)
+				mainrole.add_skills(0, 5, 5, 5);
 			UccuLogger.debug("ClientServer/GameBox/addCharacter", "000A:加入一个主角玩家:"+name);
 		}
 	}	
@@ -124,6 +124,7 @@ public class GameBox{
 		renewair.gender=gender;
 		renewair.life= life;
 		renewair.curlife=curlife;
+		renewair.hp = (double)life/(double)curlife;
 		renewair.mana=mana;
 		renewair.curmana=curmana;
 		renewair.atk=atk;
