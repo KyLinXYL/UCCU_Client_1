@@ -28,13 +28,15 @@ public class Airplane extends Entity {
 		this.gender=g;
 		this.speed=speed;
 		this.life= life;
-		this.curlife=life;
+		this.curlife=curlife;
 		this.mana=mana;
 		this.curmana=curmana;
 		this.atk=atk;
 		this.def=def;
 		this.exp=exp;
 		this.deltaV = this.speed;
+		this.targetX = x;
+		this.targetY = y;
 		// TODO 最后两个参数size和angle先传固定值，以后再加
 	}
 	public Warhead attack(Airplane target){

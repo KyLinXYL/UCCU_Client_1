@@ -154,12 +154,17 @@ public class ClientDecoder implements Decoder {
 			}
 			case 0x0014:{ //PING请求包
 				long timestamp = datagram.getLong();
+				GameBox.globalTimeDelta = System.currentTimeMillis() - timestamp;
+				GameBox.lastping = true;
 				UccuLogger.log("ClientServer/ClientDecoder", "Receive a package 0014(PING)"+timestamp);
 				SendingModule.sendPINGResponse(timestamp);	//立即回应
 				break;
 			}
 			case 0x0016:{ //时间同步
-				GameBox.globalTimeDelta = System.currentTimeMillis()-datagram.getLong();
+				if(GameBox.lastping){
+					GameBox.lastping = false;
+					GameBox.globalTimeDelta -= datagram.getLong();
+				}
 				UccuLogger.log("ClientServer/ClientDecoder", "Receive a package 0016(时间同步)"+GameBox.globalTimeDelta);
 				break;
 			}
@@ -226,7 +231,18 @@ public class ClientDecoder implements Decoder {
 				int pid=datagram.getInt();
 				UccuLogger.log("ClientServer/ClientDecoder", "Receive a package 000A(游戏中所有玩家信息)");
 				UccuLogger.log("ClientServer/ClientDecoder", "package 000A: "+"/id: "+id+"/name: "+name+"/level: "+level+"/gender: "+gender+"/posX: "+posX+"/posY: "+posY);
-				gameBox.addCharacter(id, name, describe, level, gender, life, curlife, mana, curmana, atk, def, exp, movespeed, posX, posY, pid);
+				gameBox.renewCharacter(id, name, describe, level, gender, life, curlife, mana, curmana, atk, def, exp, movespeed, posX, posY, pid);
+				break;
+			}
+			case 0x001D:{	//特效包
+				int type = datagram.getInt();	//特效包
+				int attacker= datagram.getInt();
+				int target = datagram.getInt();
+				if(type==3){
+					gameBox.attack(attacker, target);				
+				}
+				UccuLogger.log("ClientServer/ClientDecoder", "Receive a package 001D(特效包)");
+				UccuLogger.log("ClientServer/ClientDecoder", "package 001D(特效包): attacker:"+attacker+"/targetID:"+target);
 				break;
 			}
 			

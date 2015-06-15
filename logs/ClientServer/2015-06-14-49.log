@@ -1,0 +1,194 @@
+[17:29:51] [ClientServer/ClientMain/init/DEBUG]: address: 192.168.1.104:8438
+[17:29:51] [ClientServer/ClientMain/init/DEBUG]: 图片加载成功
+[17:29:51] [ClientServer/ClientMain/init/DEBUG]: GIF动画加载成功
+[17:29:51] [ClientServer/ClientMain/init/DEBUG]: 物品预加载成功
+[17:29:51] [ClientServer/ClientMain/init/DEBUG]: init over
+[17:29:51] [ClientServer/ClientMain/KERNEL]: 0.开始建立网络连接…………
+[17:29:51] [ClientServer/ClientMain/setUpConnection/DEBUG]: setUpConnection over
+[17:29:51] [ClientServer/ClientMain/KERNEL]: 1.网络连接成功!
+[17:29:51] [AioModule/Read/Completed/DEBUG]: Received 18 bytes from session/192.168.1.104:8438
+[17:29:51] [ClientServer/ClientMain/KERNEL]: 2.发送0000包，确认对方是否为服务器Gate端
+[17:29:51] [AioModule/Read/Completed/DEBUG]: Received contents(18bytes): ff ff 00 00 00 12 00 14 00 00 01 4d f1 68 4c ca 8f ef 
+[17:29:51] [ClientServer/ClientDecoder/INFO]: Receive a package 0014(PING)
+[17:29:51] [SendingModule/send00Package/INFO]: send00Package over
+[17:29:51] [AioModule/Write/Completed/DEBUG]: Sent 14 bytes to session/192.168.1.104:8438
+[17:29:51] [SendingModule/PINGResponse/DEBUG]: package 0015(PING回应包) send!
+[17:29:51] [AioModule/Write/Completed/DEBUG]: Sent 18 bytes to session/192.168.1.104:8438
+[17:29:51] [AioModule/Write/Completed/DEBUG]: Sent contents(14bytes): ff ff 00 00 00 0e 00 00 00 00 30 39 20 db 
+[17:29:51] [AioModule/Write/Completed/DEBUG]: Sent contents(18bytes): ff ff 00 00 00 12 00 15 00 00 01 4d f1 68 4c ca 88 7b 
+[17:29:51] [AioModule/Read/Completed/DEBUG]: Received 11 bytes from session/192.168.1.104:8438
+[17:29:51] [AioModule/Read/Completed/DEBUG]: Received contents(11bytes): ff ff 00 00 00 0b 00 01 01 2a 46 
+[17:29:51] [ClientServer/ClientDecoder/INFO]: Receive a package 0001(回应连接请求)
+[17:29:51] [ClientServer/ClientDecoder/INFO]: package 0001: 1
+[17:29:51] [ClientSever/LoginBox/serverState/INFO]: Receive a package 0001(回应连接请求)
+[17:29:51] [ClientSever/LoginBox/serverState/INFO]: package 0001: 1
+[17:29:51] [AioModule/Read/Completed/DEBUG]: Received 18 bytes from session/192.168.1.104:8438
+[17:29:51] [AioModule/Read/Completed/DEBUG]: Received contents(18bytes): ff ff 00 00 00 12 00 16 00 00 01 4d f1 68 4d de 81 2b 
+[17:29:51] [ClientServer/ClientDecoder/INFO]: Receive a package 0016(时间同步)
+[17:29:51] [ClientServer/ClientMain/KERNEL]: 3.收到0001包，确认对方为服务器Gate端
+[17:29:51] [ClientServer/ClientMain/KERNEL]: 4.初始化loginBox登陆界面
+[17:29:56] [AioModule/Write/Completed/DEBUG]: Sent 48 bytes to session/192.168.1.104:8438
+[17:29:56] [SendingModule/sendLogin/INFO]: package 0002(登陆信息) send!
+[17:29:56] [AioModule/Write/Completed/DEBUG]: Sent contents(48bytes): ff ff 00 00 00 30 00 02 31 32 33 34 00 38 31 44 43 39 42 44 42 35 32 44 30 34 44 43 32 30 30 33 36 44 42 44 38 33 31 33 45 44 30 35 35 00 79 71 
+[17:29:56] [AioModule/Read/Completed/DEBUG]: Received 11 bytes from session/192.168.1.104:8438
+[17:29:56] [AioModule/Read/Completed/DEBUG]: Received contents(11bytes): ff ff 00 00 00 0b 00 03 01 2a 58 
+[17:29:56] [ClientServer/ClientDecoder/INFO]: Receive a package 0003(登陆反馈)
+[17:29:56] [ClientServer/ClientDecoder/INFO]: package 0003: true
+[17:29:56] [ClientServer/LoginBox/onLoginResponse/INFO]: Receive a package 0003(登陆反馈)
+[17:29:56] [ClientServer/LoginBox/onLoginResponse/INFO]: package 0003: true
+[17:29:57] [AioModule/Read/Completed/DEBUG]: Received 82 bytes from session/192.168.1.104:8438
+[17:29:57] [AioModule/Read/Completed/DEBUG]: Received contents(82bytes): ff ff 00 00 00 18 00 06 00 00 00 0a 31 32 33 00 01 01 00 00 00 0b 36 32 ff ff 00 00 00 18 00 06 00 00 00 0b 34 35 36 00 01 01 00 00 00 0b 64 a6 ff ff 00 00 00 18 00 06 00 00 00 0c 37 38 39 00 01 01 00 00 00 0b 93 1a ff ff 00 00 00 0a 00 06 45 71 
+[17:29:57] [ClientServer/ClientDecoder/INFO]: Receive a package 0006(角色预加载)
+[17:29:57] [ClientServer/ClientDecoder/INFO]: package 0006: /id: 10/name: 123/level: 1/gender: 1
+[17:29:57] [ClientSever/LoginBox/addCharacter/INFO]: Receive a package 0006(角色预加载)
+[17:29:57] [ClientServer/ClientDecoder/INFO]: Receive a package 0006(角色预加载)
+[17:29:57] [ClientServer/ClientDecoder/INFO]: package 0006: /id: 11/name: 456/level: 1/gender: 1
+[17:29:57] [ClientSever/LoginBox/addCharacter/INFO]: Receive a package 0006(角色预加载)
+[17:29:57] [ClientServer/ClientDecoder/INFO]: Receive a package 0006(角色预加载)
+[17:29:57] [ClientServer/ClientDecoder/INFO]: package 0006: /id: 12/name: 789/level: 1/gender: 1
+[17:29:57] [ClientSever/LoginBox/addCharacter/INFO]: Receive a package 0006(角色预加载)
+[17:29:57] [ClientServer/ClientDecoder/INFO]: Receive a package 0006(角色预加载——空包)
+[17:29:57] [ClientServer/LoginBox/noMorePackage/INFO]: Receive a package 0006(角色预加载: 这是最后一个空包
+[17:29:59] [AioModule/Write/Completed/DEBUG]: Sent 14 bytes to session/192.168.1.104:8438
+[17:29:59] [SendingModule/sendCharacter/INFO]: package 0007(角色选择) send!
+[17:29:59] [AioModule/Write/Completed/DEBUG]: Sent contents(14bytes): ff ff 00 00 00 0e 00 07 00 00 00 0c a0 71 
+[17:29:59] [AioModule/Read/Completed/DEBUG]: Received 80 bytes from session/192.168.1.104:8438
+[17:29:59] [AioModule/Read/Completed/DEBUG]: Received contents(80bytes): ff ff 00 00 00 50 00 0a 00 00 00 0c 37 38 39 00 74 68 69 73 20 69 73 20 61 20 70 6c 61 6e 65 00 01 01 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 00 c8 00 00 00 c8 00 00 00 0b 52 8d 
+[17:29:59] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[17:29:59] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 12/name: 789/level: 1/gender: 1/posX: 200/posY: 200
+[17:29:59] [ClientServer/GameBox/addCharacter/DEBUG]: Receive a package 000A(游戏中所有玩家信息)
+[17:29:59] [ClientServer/GameBox/addCharacter/DEBUG]: 000A:加入一个主角玩家:789
+[17:29:59] [AioModule/Read/Completed/DEBUG]: Received 270 bytes from session/192.168.1.104:8438
+[17:29:59] [AioModule/Read/Completed/DEBUG]: Received contents(270bytes): ff ff 00 00 01 0e 00 19 00 00 00 20 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 00 00 71 7e 
+[17:29:59] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[17:29:59] [AioModule/Read/Completed/DEBUG]: Received 14 bytes from session/192.168.1.104:8438
+[17:29:59] [AioModule/Read/Completed/DEBUG]: Received contents(14bytes): ff ff 00 00 00 0e 00 1b 00 00 00 00 72 5c 
+[17:29:59] [AioModule/Read/Completed/DEBUG]: Received 38 bytes from session/192.168.1.104:8438
+[17:29:59] [AioModule/Read/Completed/DEBUG]: Received contents(38bytes): ff ff 00 00 00 26 00 1a 00 00 00 02 00 00 00 00 3b 9a ca 01 00 00 00 01 00 00 00 01 3b 9a ca 02 00 00 00 01 75 ab 
+[17:29:59] [ClientServer/ClientDecoder/INFO]: Receive a package 001A(技能信息)
+[17:30:00] [ClientServer/ClientMain/KERNEL]: 5.登陆结束
+[17:30:00] [ClientServer/ClientMain/KERNEL]: 6.开始游戏，启动gameBox
+[17:30:00] [ClientServer/GameBox/startGame/KERNEL]: 接收主角详细信息(000A):关闭加载窗口,开始游戏!
+[17:30:04] [AioModule/Write/Completed/DEBUG]: Sent 14 bytes to session/192.168.1.104:8438
+[17:30:04] [SendingModule/sendPubChat/DEBUG]: 123
+[17:30:04] [AioModule/Write/Completed/DEBUG]: Sent contents(14bytes): ff ff 00 00 00 0e 00 0d 31 32 33 00 87 2a 
+[17:30:04] [AioModule/Read/Completed/DEBUG]: Received 18 bytes from session/192.168.1.104:8438
+[17:30:04] [AioModule/Read/Completed/DEBUG]: Received contents(18bytes): ff ff 00 00 00 12 00 0f 37 38 39 00 31 32 33 00 4c 2a 
+[17:30:04] [ClientServer/ClientDecoder/INFO]: Receive a package 000F(全局喇叭信息)
+[17:30:04] [ClientServer/ClientDecoder/INFO]: speakerID: 789/message: 123
+[17:30:06] [SendingModule/sendPubChat/DEBUG]: 456
+[17:30:06] [AioModule/Write/Completed/DEBUG]: Sent 14 bytes to session/192.168.1.104:8438
+[17:30:06] [AioModule/Write/Completed/DEBUG]: Sent contents(14bytes): ff ff 00 00 00 0e 00 0d 34 35 36 00 98 52 
+[17:30:06] [AioModule/Read/Completed/DEBUG]: Received 18 bytes from session/192.168.1.104:8438
+[17:30:06] [AioModule/Read/Completed/DEBUG]: Received contents(18bytes): ff ff 00 00 00 12 00 0f 37 38 39 00 34 35 36 00 76 8a 
+[17:30:06] [ClientServer/ClientDecoder/INFO]: Receive a package 000F(全局喇叭信息)
+[17:30:06] [ClientServer/ClientDecoder/INFO]: speakerID: 789/message: 456
+[17:30:08] [SendingModule/sendPubChat/DEBUG]: 789
+[17:30:08] [AioModule/Write/Completed/DEBUG]: Sent 14 bytes to session/192.168.1.104:8438
+[17:30:08] [AioModule/Write/Completed/DEBUG]: Sent contents(14bytes): ff ff 00 00 00 0e 00 0d 37 38 39 00 a9 7a 
+[17:30:08] [AioModule/Read/Completed/DEBUG]: Received 18 bytes from session/192.168.1.104:8438
+[17:30:08] [AioModule/Read/Completed/DEBUG]: Received contents(18bytes): ff ff 00 00 00 12 00 0f 37 38 39 00 37 38 39 00 a0 ea 
+[17:30:08] [ClientServer/ClientDecoder/INFO]: Receive a package 000F(全局喇叭信息)
+[17:30:08] [ClientServer/ClientDecoder/INFO]: speakerID: 789/message: 789
+[17:30:10] [AioModule/Write/Completed/DEBUG]: Sent 15 bytes to session/192.168.1.104:8438
+[17:30:10] [SendingModule/sendPubChat/DEBUG]: 哈哈
+[17:30:10] [AioModule/Write/Completed/DEBUG]: Sent contents(15bytes): ff ff 00 00 00 0f 00 0d b9 fe b9 fe 00 bb 4e 
+[17:30:10] [AioModule/Read/Completed/DEBUG]: Received 19 bytes from session/192.168.1.104:8438
+[17:30:10] [AioModule/Read/Completed/DEBUG]: Received contents(19bytes): ff ff 00 00 00 13 00 0f 37 38 39 00 b9 fe b9 fe 00 ab d9 
+[17:30:10] [ClientServer/ClientDecoder/INFO]: Receive a package 000F(全局喇叭信息)
+[17:30:10] [ClientServer/ClientDecoder/INFO]: speakerID: 789/message: 哈哈
+[17:30:12] [AioModule/Write/Completed/DEBUG]: Sent 17 bytes to session/192.168.1.104:8438
+[17:30:12] [SendingModule/sendPubChat/DEBUG]: 啦啦啦
+[17:30:12] [AioModule/Write/Completed/DEBUG]: Sent contents(17bytes): ff ff 00 00 00 11 00 0d c0 b2 c0 b2 c0 b2 00 50 a8 
+[17:30:12] [AioModule/Read/Completed/DEBUG]: Received 21 bytes from session/192.168.1.104:8438
+[17:30:12] [AioModule/Read/Completed/DEBUG]: Received contents(21bytes): ff ff 00 00 00 15 00 0f 37 38 39 00 c0 b2 c0 b2 c0 b2 00 01 0d 
+[17:30:12] [ClientServer/ClientDecoder/INFO]: Receive a package 000F(全局喇叭信息)
+[17:30:12] [ClientServer/ClientDecoder/INFO]: speakerID: 789/message: 啦啦啦
+[17:30:23] [SendingModule/sendPubChat/DEBUG]: 你在说话
+[17:30:23] [AioModule/Write/Completed/DEBUG]: Sent 19 bytes to session/192.168.1.104:8438
+[17:30:23] [AioModule/Write/Completed/DEBUG]: Sent contents(19bytes): ff ff 00 00 00 13 00 0d c4 e3 d4 da cb b5 bb b0 00 b9 b6 
+[17:30:23] [AioModule/Read/Completed/DEBUG]: Received 23 bytes from session/192.168.1.104:8438
+[17:30:23] [AioModule/Read/Completed/DEBUG]: Received contents(23bytes): ff ff 00 00 00 17 00 0f 37 38 39 00 c4 e3 d4 da cb b5 bb b0 00 75 8c 
+[17:30:23] [ClientServer/ClientDecoder/INFO]: Receive a package 000F(全局喇叭信息)
+[17:30:23] [ClientServer/ClientDecoder/INFO]: speakerID: 789/message: 你在说话
+[17:30:27] [AioModule/Write/Completed/DEBUG]: Sent 21 bytes to session/192.168.1.104:8438
+[17:30:27] [SendingModule/sendPubChat/DEBUG]: 1234567890
+[17:30:27] [AioModule/Write/Completed/DEBUG]: Sent contents(21bytes): ff ff 00 00 00 15 00 0d 31 32 33 34 35 36 37 38 39 30 00 9c fd 
+[17:30:27] [AioModule/Read/Completed/DEBUG]: Received 25 bytes from session/192.168.1.104:8438
+[17:30:27] [AioModule/Read/Completed/DEBUG]: Received contents(25bytes): ff ff 00 00 00 19 00 0f 37 38 39 00 31 32 33 34 35 36 37 38 39 30 00 3d f8 
+[17:30:27] [ClientServer/ClientDecoder/INFO]: Receive a package 000F(全局喇叭信息)
+[17:30:27] [ClientServer/ClientDecoder/INFO]: speakerID: 789/message: 1234567890
+[17:30:49] [AioModule/Write/Completed/DEBUG]: Sent 23 bytes to session/192.168.1.104:8438
+[17:30:49] [SendingModule/sendPubChat/DEBUG]: 放假放假放假
+[17:30:49] [AioModule/Write/Completed/DEBUG]: Sent contents(23bytes): ff ff 00 00 00 17 00 0d b7 c5 bc d9 b7 c5 bc d9 b7 c5 bc d9 00 85 5d 
+[17:30:49] [AioModule/Read/Completed/DEBUG]: Received 27 bytes from session/192.168.1.104:8438
+[17:30:49] [AioModule/Read/Completed/DEBUG]: Received contents(27bytes): ff ff 00 00 00 1b 00 0f 37 38 39 00 b7 c5 bc d9 b7 c5 bc d9 b7 c5 bc d9 00 32 60 
+[17:30:49] [ClientServer/ClientDecoder/INFO]: Receive a package 000F(全局喇叭信息)
+[17:30:49] [ClientServer/ClientDecoder/INFO]: speakerID: 789/message: 放假放假放假
+[17:30:51] [AioModule/Write/Completed/DEBUG]: Sent 15 bytes to session/192.168.1.104:8438
+[17:30:51] [SendingModule/sendPubChat/DEBUG]: 哈哈
+[17:30:51] [AioModule/Write/Completed/DEBUG]: Sent contents(15bytes): ff ff 00 00 00 0f 00 0d b9 fe b9 fe 00 bb 4e 
+[17:30:51] [AioModule/Read/Completed/DEBUG]: Received 19 bytes from session/192.168.1.104:8438
+[17:30:51] [AioModule/Read/Completed/DEBUG]: Received contents(19bytes): ff ff 00 00 00 13 00 0f 37 38 39 00 b9 fe b9 fe 00 ab d9 
+[17:30:51] [ClientServer/ClientDecoder/INFO]: Receive a package 000F(全局喇叭信息)
+[17:30:51] [ClientServer/ClientDecoder/INFO]: speakerID: 789/message: 哈哈
+[17:30:55] [SendingModule/sendPubChat/DEBUG]: 哈哈
+[17:30:55] [AioModule/Write/Completed/DEBUG]: Sent 15 bytes to session/192.168.1.104:8438
+[17:30:55] [AioModule/Write/Completed/DEBUG]: Sent contents(15bytes): ff ff 00 00 00 0f 00 0d b9 fe b9 fe 00 bb 4e 
+[17:30:55] [AioModule/Read/Completed/DEBUG]: Received 19 bytes from session/192.168.1.104:8438
+[17:30:55] [AioModule/Read/Completed/DEBUG]: Received contents(19bytes): ff ff 00 00 00 13 00 0f 37 38 39 00 b9 fe b9 fe 00 ab d9 
+[17:30:55] [ClientServer/ClientDecoder/INFO]: Receive a package 000F(全局喇叭信息)
+[17:30:55] [ClientServer/ClientDecoder/INFO]: speakerID: 789/message: 哈哈
+[17:30:59] [SendingModule/sendPubChat/DEBUG]: 房价唉
+[17:30:59] [AioModule/Write/Completed/DEBUG]: Sent 17 bytes to session/192.168.1.104:8438
+[17:30:59] [AioModule/Write/Completed/DEBUG]: Sent contents(17bytes): ff ff 00 00 00 11 00 0d b7 bf bc db b0 a6 00 7c 17 
+[17:30:59] [AioModule/Read/Completed/DEBUG]: Received 21 bytes from session/192.168.1.104:8438
+[17:30:59] [AioModule/Read/Completed/DEBUG]: Received contents(21bytes): ff ff 00 00 00 15 00 0f 37 38 39 00 b7 bf bc db b0 a6 00 b3 30 
+[17:30:59] [ClientServer/ClientDecoder/INFO]: Receive a package 000F(全局喇叭信息)
+[17:30:59] [ClientServer/ClientDecoder/INFO]: speakerID: 789/message: 房价唉
+[17:31:07] [SendingModule/sendPubChat/DEBUG]: 哈哈
+[17:31:07] [AioModule/Write/Completed/DEBUG]: Sent 15 bytes to session/192.168.1.104:8438
+[17:31:07] [AioModule/Write/Completed/DEBUG]: Sent contents(15bytes): ff ff 00 00 00 0f 00 0d b9 fe b9 fe 00 bb 4e 
+[17:31:07] [AioModule/Read/Completed/DEBUG]: Received 19 bytes from session/192.168.1.104:8438
+[17:31:07] [AioModule/Read/Completed/DEBUG]: Received contents(19bytes): ff ff 00 00 00 13 00 0f 37 38 39 00 b9 fe b9 fe 00 ab d9 
+[17:31:07] [ClientServer/ClientDecoder/INFO]: Receive a package 000F(全局喇叭信息)
+[17:31:07] [ClientServer/ClientDecoder/INFO]: speakerID: 789/message: 哈哈
+[17:31:08] [SendingModule/sendPubChat/DEBUG]: 哈哈
+[17:31:08] [AioModule/Write/Completed/DEBUG]: Sent 15 bytes to session/192.168.1.104:8438
+[17:31:08] [AioModule/Write/Completed/DEBUG]: Sent contents(15bytes): ff ff 00 00 00 0f 00 0d b9 fe b9 fe 00 bb 4e 
+[17:31:08] [AioModule/Read/Completed/DEBUG]: Received 19 bytes from session/192.168.1.104:8438
+[17:31:08] [AioModule/Read/Completed/DEBUG]: Received contents(19bytes): ff ff 00 00 00 13 00 0f 37 38 39 00 b9 fe b9 fe 00 ab d9 
+[17:31:08] [ClientServer/ClientDecoder/INFO]: Receive a package 000F(全局喇叭信息)
+[17:31:08] [ClientServer/ClientDecoder/INFO]: speakerID: 789/message: 哈哈
+[17:31:11] [SendingModule/sendPubChat/DEBUG]: 你你
+[17:31:11] [AioModule/Write/Completed/DEBUG]: Sent 15 bytes to session/192.168.1.104:8438
+[17:31:11] [AioModule/Write/Completed/DEBUG]: Sent contents(15bytes): ff ff 00 00 00 0f 00 0d c4 e3 c4 e3 00 a4 80 
+[17:31:11] [AioModule/Read/Completed/DEBUG]: Received 19 bytes from session/192.168.1.104:8438
+[17:31:11] [AioModule/Read/Completed/DEBUG]: Received contents(19bytes): ff ff 00 00 00 13 00 0f 37 38 39 00 c4 e3 c4 e3 00 3e a7 
+[17:31:11] [ClientServer/ClientDecoder/INFO]: Receive a package 000F(全局喇叭信息)
+[17:31:11] [ClientServer/ClientDecoder/INFO]: speakerID: 789/message: 你你
+[17:31:29] [SendingModule/sendPubChat/DEBUG]: 大饭店
+[17:31:29] [AioModule/Write/Completed/DEBUG]: Sent 17 bytes to session/192.168.1.104:8438
+[17:31:29] [AioModule/Write/Completed/DEBUG]: Sent contents(17bytes): ff ff 00 00 00 11 00 0d b4 f3 b7 b9 b5 ea 00 5e 0f 
+[17:31:29] [AioModule/Read/Completed/DEBUG]: Received 21 bytes from session/192.168.1.104:8438
+[17:31:29] [AioModule/Read/Completed/DEBUG]: Received contents(21bytes): ff ff 00 00 00 15 00 0f 37 38 39 00 b4 f3 b7 b9 b5 ea 00 57 f7 
+[17:31:29] [ClientServer/ClientDecoder/INFO]: Receive a package 000F(全局喇叭信息)
+[17:31:29] [ClientServer/ClientDecoder/INFO]: speakerID: 789/message: 大饭店
+[17:31:33] [SendingModule/sendPubChat/DEBUG]: 奋斗奋斗
+[17:31:33] [AioModule/Write/Completed/DEBUG]: Sent 19 bytes to session/192.168.1.104:8438
+[17:31:33] [AioModule/Write/Completed/DEBUG]: Sent contents(19bytes): ff ff 00 00 00 13 00 0d b7 dc b6 b7 b7 dc b6 b7 00 16 24 
+[17:31:33] [AioModule/Read/Completed/DEBUG]: Received 23 bytes from session/192.168.1.104:8438
+[17:31:33] [AioModule/Read/Completed/DEBUG]: Received contents(23bytes): ff ff 00 00 00 17 00 0f 37 38 39 00 b7 dc b6 b7 b7 dc b6 b7 00 34 7c 
+[17:31:33] [ClientServer/ClientDecoder/INFO]: Receive a package 000F(全局喇叭信息)
+[17:31:33] [ClientServer/ClientDecoder/INFO]: speakerID: 789/message: 奋斗奋斗
+[17:31:53] [SendingModule/sendPriChat/DEBUG]: 12:你好
+[17:31:53] [AioModule/Write/Completed/DEBUG]: Sent 19 bytes to session/192.168.1.104:8438
+[17:31:53] [AioModule/Write/Completed/DEBUG]: Sent contents(19bytes): ff ff 00 00 00 13 00 0d 00 00 00 0c c4 e3 ba c3 00 16 f5 
+[17:31:53] [AioModule/Read/Completed/DEBUG]: Received 15 bytes from session/192.168.1.104:8438
+[17:31:53] [AioModule/Read/Completed/DEBUG]: Received contents(15bytes): ff ff 00 00 00 0f 00 0f 37 38 39 00 00 af 6c 
+[17:31:53] [ClientServer/ClientDecoder/INFO]: Receive a package 000F(全局喇叭信息)
+[17:31:53] [ClientServer/ClientDecoder/INFO]: speakerID: 789/message: 
+[17:35:45] [ClientServer/ClientMain/KERNEL]: 7.游戏结束，退出主程序
+[17:35:45] [SendingModule/sendLogout/INFO]: logout send!
+[17:35:45] [AioModule/Write/Completed/DEBUG]: Sent 14 bytes to session/192.168.1.104:8438
+[17:35:45] [AioModule/Write/Completed/DEBUG]: Sent contents(14bytes): ff ff 00 00 00 0e 00 13 00 00 00 00 84 c6 

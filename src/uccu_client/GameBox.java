@@ -19,6 +19,7 @@ public class GameBox{
 	public Mainrole mainrole;
 	//与服务器绝对时间的差
 	static long globalTimeDelta;
+	static boolean lastping = false;
 	//更改playerPool和warheadPool的锁
 	private static Object lock_plane = new Object(); // static确保只有一把锁
 	private static Object lock_bullet = new Object(); // static确保只有一把锁
@@ -47,6 +48,7 @@ public class GameBox{
 			painter.setInitStage(i++/100.0);
 			ClientMain.mySleep(200);
 		}
+		painter.setInitStage(1);
 		//加载完成 等待窗口关闭	正式开始游戏
 		UccuLogger.kernel("ClientServer/GameBox/startGame", "接收主角详细信息(000A):关闭加载窗口,开始游戏!");
 		painter.gameStart();
@@ -103,12 +105,33 @@ public class GameBox{
 		}
 	}	
 	//攻击函数,由当前游戏窗体攻击事件触发
-	public void attack(int id){
+	public void attack(int attack,int tar){
 		synchronized (lock_bullet) {
-			Warhead warhead=mainrole.attack((playerPool.get(id)));
+			Airplane attacker=playerPool.get(attack);
+			Airplane target=playerPool.get(tar);
+			Warhead warhead=attacker.attack(target);
 			warheadPool.add(warhead);
 			painter.addEntity(warhead);		
 		}
+	}
+	public void renewCharacter(int id,String name,String describe,byte level,byte gender,
+			int life,int curlife,int mana, int curmana, int atk,int def,int exp,
+			int movespeed,int posX,int posY,int pid){
+		Airplane renewair=playerPool.get(id);
+		renewair.name=name;
+		renewair.describe=describe;
+		renewair.level=level;
+		renewair.gender=gender;
+		renewair.life= life;
+		renewair.curlife=curlife;
+		renewair.mana=mana;
+		renewair.curmana=curmana;
+		renewair.atk=atk;
+		renewair.def=def;
+		renewair.exp=exp;
+		renewair.speed=movespeed;
+//		renewair.posX=posX;
+//		renewair.posY=posY;
 	}
 	//Action_plane线程专门负责处理每20ms之后所有飞机的位置
 	private class ActionThread_plane implements Runnable{

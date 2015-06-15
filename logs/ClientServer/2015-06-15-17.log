@@ -1,0 +1,176 @@
+[01:47:49] [ClientServer/ClientMain/init/DEBUG]: address: 192.168.1.100:8438
+[01:47:49] [ClientServer/ClientMain/init/DEBUG]: 图片加载成功
+[01:47:49] [ClientServer/ClientMain/init/DEBUG]: GIF动画加载成功
+[01:47:49] [ClientServer/ClientMain/init/DEBUG]: 物品预加载成功
+[01:47:49] [ClientServer/ClientMain/init/DEBUG]: init over
+[01:47:49] [ClientServer/ClientMain/KERNEL]: 0.开始建立网络连接…………
+[01:47:49] [ClientServer/ClientMain/setUpConnection/DEBUG]: setUpConnection over
+[01:47:49] [ClientServer/ClientMain/KERNEL]: 1.网络连接成功!
+[01:47:49] [AioModule/Read/Completed/DEBUG]: Received 18 bytes from session/192.168.1.100:8438
+[01:47:49] [ClientServer/ClientMain/KERNEL]: 2.发送0000包，确认对方是否为服务器Gate端
+[01:47:49] [AioModule/Read/Completed/DEBUG]: Received contents(18bytes): ff ff 00 00 00 12 00 14 00 00 01 4d f3 30 39 e9 74 9e 
+[01:47:49] [ClientServer/ClientDecoder/INFO]: Receive a package 0014(PING)1434304133609
+[01:47:49] [SendingModule/send00Package/INFO]: send00Package over
+[01:47:49] [AioModule/Write/Completed/DEBUG]: Sent 14 bytes to session/192.168.1.100:8438
+[01:47:49] [SendingModule/PINGResponse/DEBUG]: package 0015(PING回应包) send!
+[01:47:49] [AioModule/Write/Completed/DEBUG]: Sent 18 bytes to session/192.168.1.100:8438
+[01:47:49] [AioModule/Write/Completed/DEBUG]: Sent contents(14bytes): ff ff 00 00 00 0e 00 00 00 00 30 39 20 db 
+[01:47:49] [AioModule/Write/Completed/DEBUG]: Sent contents(18bytes): ff ff 00 00 00 12 00 15 00 00 01 4d f3 30 39 e9 6d 2a 
+[01:47:49] [AioModule/Read/Completed/DEBUG]: Received 11 bytes from session/192.168.1.100:8438
+[01:47:49] [AioModule/Read/Completed/DEBUG]: Received contents(11bytes): ff ff 00 00 00 0b 00 01 01 2a 46 
+[01:47:49] [ClientServer/ClientDecoder/INFO]: Receive a package 0001(回应连接请求)
+[01:47:49] [ClientServer/ClientDecoder/INFO]: package 0001: 1
+[01:47:49] [ClientSever/LoginBox/serverState/INFO]: Receive a package 0001(回应连接请求)
+[01:47:49] [ClientSever/LoginBox/serverState/INFO]: package 0001: 1
+[01:47:49] [AioModule/Read/Completed/DEBUG]: Received 18 bytes from session/192.168.1.100:8438
+[01:47:49] [AioModule/Read/Completed/DEBUG]: Received contents(18bytes): ff ff 00 00 00 12 00 16 00 00 00 00 00 00 00 23 28 71 
+[01:47:49] [ClientServer/ClientDecoder/INFO]: Receive a package 0016(时间同步)-64004
+[01:47:49] [ClientServer/ClientMain/KERNEL]: 3.收到0001包，确认对方为服务器Gate端
+[01:47:49] [ClientServer/ClientMain/KERNEL]: 4.初始化loginBox登陆界面
+[01:47:53] [SendingModule/sendLogin/INFO]: package 0002(登陆信息) send!
+[01:47:53] [AioModule/Write/Completed/DEBUG]: Sent 47 bytes to session/192.168.1.100:8438
+[01:47:53] [AioModule/Write/Completed/DEBUG]: Sent contents(47bytes): ff ff 00 00 00 2f 00 02 31 32 33 00 32 30 32 43 42 39 36 32 41 43 35 39 30 37 35 42 39 36 34 42 30 37 31 35 32 44 32 33 34 42 37 30 00 03 ee 
+[01:47:53] [AioModule/Read/Completed/DEBUG]: Received 11 bytes from session/192.168.1.100:8438
+[01:47:53] [AioModule/Read/Completed/DEBUG]: Received contents(11bytes): ff ff 00 00 00 0b 00 03 01 2a 58 
+[01:47:53] [ClientServer/ClientDecoder/INFO]: Receive a package 0003(登陆反馈)
+[01:47:53] [ClientServer/ClientDecoder/INFO]: package 0003: true
+[01:47:53] [ClientServer/LoginBox/onLoginResponse/INFO]: Receive a package 0003(登陆反馈)
+[01:47:53] [ClientServer/LoginBox/onLoginResponse/INFO]: package 0003: true
+[01:47:54] [AioModule/Read/Completed/DEBUG]: Received 59 bytes from session/192.168.1.100:8438
+[01:47:54] [AioModule/Read/Completed/DEBUG]: Received contents(59bytes): ff ff 00 00 00 18 00 06 00 00 00 0e 74 74 74 00 01 01 00 00 00 0b 14 3a ff ff 00 00 00 19 00 06 00 00 00 10 b9 fe b9 fe 00 01 01 00 00 00 0b 66 12 ff ff 00 00 00 0a 00 06 45 71 
+[01:47:54] [ClientServer/ClientDecoder/INFO]: Receive a package 0006(角色预加载)
+[01:47:54] [ClientServer/ClientDecoder/INFO]: package 0006: /id: 14/name: ttt/level: 1/gender: 1
+[01:47:54] [ClientSever/LoginBox/addCharacter/INFO]: Receive a package 0006(角色预加载)
+[01:47:54] [ClientServer/ClientDecoder/INFO]: Receive a package 0006(角色预加载)
+[01:47:54] [ClientServer/ClientDecoder/INFO]: package 0006: /id: 16/name: 哈哈/level: 1/gender: 1
+[01:47:54] [ClientSever/LoginBox/addCharacter/INFO]: Receive a package 0006(角色预加载)
+[01:47:54] [ClientServer/ClientDecoder/INFO]: Receive a package 0006(角色预加载——空包)
+[01:47:54] [ClientServer/LoginBox/noMorePackage/INFO]: Receive a package 0006(角色预加载: 这是最后一个空包
+[01:47:56] [SendingModule/sendCharacter/INFO]: package 0007(角色选择) send!
+[01:47:56] [AioModule/Write/Completed/DEBUG]: Sent 14 bytes to session/192.168.1.100:8438
+[01:47:56] [AioModule/Write/Completed/DEBUG]: Sent contents(14bytes): ff ff 00 00 00 0e 00 07 00 00 00 10 a0 75 
+[01:47:56] [AioModule/Read/Completed/DEBUG]: Received 85 bytes from session/192.168.1.100:8438
+[01:47:56] [AioModule/Read/Completed/DEBUG]: Received contents(85bytes): ff ff 00 00 00 55 00 0a 00 00 00 11 6d 6f 63 61 6e 6f 72 79 00 74 68 69 73 20 69 73 20 61 20 70 6c 61 6e 65 00 01 01 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0c 88 00 00 0b 6c 00 00 00 0b 9d 0d 
+[01:47:56] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[01:47:56] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 17/name: mocanory/level: 1/gender: 1/posX: 3208/posY: 2924
+[01:47:56] [ClientServer/GameBox/addCharacter/DEBUG]: Receive a package 000A(游戏中所有玩家信息)
+[01:47:56] [ClientServer/GameBox/addCharacter/DEBUG]: 000A:加入一个非主角玩家:mocanory
+[01:47:56] [AioModule/Read/Completed/DEBUG]: Received 351 bytes from session/192.168.1.100:8438
+[01:47:56] [AioModule/Read/Completed/DEBUG]: Received contents(351bytes): ff ff 00 00 00 51 00 0a 00 00 00 10 b9 fe b9 fe 00 74 68 69 73 20 69 73 20 61 20 70 6c 61 6e 65 00 01 01 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 55 00 00 0c 26 00 00 00 0b 30 8d ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 20 00 00 00 00 00 00 00 21 00 00 00 00 00 00 00 22 00 00 00 00 00 00 00 23 00 00 00 00 00 00 00 24 00 00 00 00 00 00 00 25 00 00 00 00 00 00 00 26 00 00 00 00 00 00 00 27 00 00 00 00 00 00 00 28 00 00 00 00 00 00 00 29 00 00 00 00 00 00 00 2a 00 00 00 00 00 00 00 2b 00 00 00 00 00 00 00 2c 00 00 00 00 00 00 00 2d 00 00 00 00 00 00 00 2e 00 00 00 00 00 00 00 2f 00 00 00 00 00 00 00 30 00 00 00 00 00 00 00 31 00 00 00 00 00 00 00 32 00 00 00 00 00 00 00 33 00 00 00 00 00 00 00 34 00 00 00 00 00 00 00 35 00 00 00 00 00 00 00 36 00 00 00 00 00 00 00 37 00 00 00 00 00 00 00 38 00 00 00 00 00 00 00 39 00 00 00 00 00 00 00 3a 00 00 00 00 00 00 00 3b 00 00 00 00 00 00 00 3c 00 00 00 00 00 00 00 3d 00 00 00 00 00 00 00 3e 00 00 00 00 00 00 00 3f 00 00 00 00 ae 8c 
+[01:47:56] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[01:47:56] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 16/name: 哈哈/level: 1/gender: 1/posX: 2901/posY: 3110
+[01:47:56] [ClientServer/GameBox/addCharacter/DEBUG]: Receive a package 000A(游戏中所有玩家信息)
+[01:47:56] [ClientServer/GameBox/addCharacter/DEBUG]: 000A:加入一个主角玩家:哈哈
+[01:47:56] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[01:47:56] [AioModule/Read/Completed/DEBUG]: Received 64 bytes from session/192.168.1.100:8438
+[01:47:56] [AioModule/Read/Completed/DEBUG]: Received contents(64bytes): ff ff 00 00 00 32 00 1a 00 00 00 03 00 00 00 03 3b 9a ca 01 00 00 00 01 00 00 00 04 3b 9a ca 02 00 00 00 01 00 00 00 05 3b 9a ca 03 00 00 00 01 18 6d ff ff 00 00 00 0e 00 1b 00 00 00 00 72 5c 
+[01:47:56] [ClientServer/ClientDecoder/INFO]: Receive a package 001A(技能信息)
+[01:47:57] [ClientServer/ClientMain/KERNEL]: 5.登陆结束
+[01:47:57] [ClientServer/ClientMain/KERNEL]: 6.开始游戏，启动gameBox
+[01:47:57] [ClientServer/GameBox/startGame/KERNEL]: 接收主角详细信息(000A):关闭加载窗口,开始游戏!
+[01:47:58] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to session/192.168.1.100:8438
+[01:47:58] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[01:47:58] [SendingModule/sendTargetPos/DEBUG]: targetX: 3257/targetY: 3286
+[01:47:58] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b 00 00 0c b9 00 00 0c d6 00 00 01 4d f3 30 5b 59 9a 20 
+[01:47:58] [AioModule/Read/Completed/DEBUG]: Received 30 bytes from session/192.168.1.100:8438
+[01:47:58] [AioModule/Read/Completed/DEBUG]: Received contents(30bytes): ff ff 00 00 00 1e 00 0c 00 00 00 10 00 00 0c b9 00 00 0c d6 00 00 01 4d f3 30 5b 59 24 ec 
+[01:47:58] [ClientServer/ClientDecoder/INFO]: Receive a package 000C(所有玩家目标坐标更新)
+[01:47:58] [ClientServer/ClientDecoder/INFO]: package 000C: /id: 16/posX: 3257/posY: 3286
+[01:47:58] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[01:47:58] [Client/GameBox/updateTarget/INFO]: targetX: 3257/targetY 3286
+[01:47:58] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to session/192.168.1.100:8438
+[01:47:58] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[01:47:58] [SendingModule/sendTargetPos/DEBUG]: targetX: 3370/targetY: 3016
+[01:47:58] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b 00 00 0d 2a 00 00 0b c8 00 00 01 4d f3 30 5e 31 5b bd 
+[01:47:58] [AioModule/Read/Completed/DEBUG]: Received 30 bytes from session/192.168.1.100:8438
+[01:47:58] [AioModule/Read/Completed/DEBUG]: Received contents(30bytes): ff ff 00 00 00 1e 00 0c 00 00 00 10 00 00 0d 2a 00 00 0b c8 00 00 01 4d f3 30 5e 31 bd 43 
+[01:47:58] [ClientServer/ClientDecoder/INFO]: Receive a package 000C(所有玩家目标坐标更新)
+[01:47:58] [ClientServer/ClientDecoder/INFO]: package 000C: /id: 16/posX: 3370/posY: 3016
+[01:47:58] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[01:47:58] [Client/GameBox/updateTarget/INFO]: targetX: 3370/targetY 3016
+[01:48:03] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:技能实例ID:5
+[01:48:03] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[01:48:03] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 18 00 00 00 05 00 00 00 00 00 00 00 11 ba de 
+[01:48:03] [AioModule/Read/Completed/DEBUG]: Received 18 bytes from session/192.168.1.100:8438
+[01:48:03] [AioModule/Read/Completed/DEBUG]: Received contents(18bytes): ff ff 00 00 00 12 00 1d 00 00 00 10 00 00 00 11 b9 62 
+[01:48:03] [AioModule/Read/Completed/WARNING]: java.nio.BufferUnderflowException
+[01:48:07] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[01:48:07] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to session/192.168.1.100:8438
+[01:48:07] [SendingModule/sendTargetPos/DEBUG]: targetX: 3132/targetY: 3175
+[01:48:07] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b 00 00 0c 3c 00 00 0c 67 00 00 01 4d f3 30 80 a7 70 4a 
+[01:48:08] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[01:48:08] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to session/192.168.1.100:8438
+[01:48:08] [SendingModule/sendTargetPos/DEBUG]: targetX: 3129/targetY: 3245
+[01:48:08] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b 00 00 0c 39 00 00 0c ad 00 00 01 4d f3 30 85 00 8b a6 
+[01:48:09] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[01:48:09] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to session/192.168.1.100:8438
+[01:48:09] [SendingModule/sendTargetPos/DEBUG]: targetX: 3318/targetY: 3228
+[01:48:09] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b 00 00 0c f6 00 00 0c 9c 00 00 01 4d f3 30 87 07 65 ba 
+[01:48:09] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[01:48:09] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to session/192.168.1.100:8438
+[01:48:09] [SendingModule/sendTargetPos/DEBUG]: targetX: 3508/targetY: 3227
+[01:48:09] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b 00 00 0d b4 00 00 0c 9b 00 00 01 4d f3 30 88 2f ad 7a 
+[01:48:10] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[01:48:10] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to session/192.168.1.100:8438
+[01:48:10] [SendingModule/sendTargetPos/DEBUG]: targetX: 3604/targetY: 2714
+[01:48:10] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b 00 00 0e 14 00 00 0a 9a 00 00 01 4d f3 30 8a 1f 28 8e 
+[01:48:10] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to session/192.168.1.100:8438
+[01:48:10] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[01:48:10] [SendingModule/sendTargetPos/DEBUG]: targetX: 2617/targetY: 2820
+[01:48:10] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b 00 00 0a 39 00 00 0b 04 00 00 01 4d f3 30 8c 1f 1a 54 
+[01:48:13] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[01:48:13] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to session/192.168.1.100:8438
+[01:48:13] [SendingModule/sendTargetPos/DEBUG]: targetX: 3482/targetY: 3244
+[01:48:13] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b 00 00 0d 9a 00 00 0c ac 00 00 01 4d f3 30 98 28 3a a4 
+[01:48:16] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[01:48:16] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to session/192.168.1.100:8438
+[01:48:16] [SendingModule/sendTargetPos/DEBUG]: targetX: 3929/targetY: 3276
+[01:48:16] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b 00 00 0f 59 00 00 0c cc 00 00 01 4d f3 30 a3 70 92 df 
+[01:48:20] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:技能实例ID:5
+[01:48:20] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[01:48:20] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 18 00 00 00 05 00 00 00 00 00 00 00 11 ba de 
+[01:48:25] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[01:48:25] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to session/192.168.1.100:8438
+[01:48:25] [SendingModule/sendTargetPos/DEBUG]: targetX: 3725/targetY: 3230
+[01:48:25] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b 00 00 0e 8d 00 00 0c 9e 00 00 01 4d f3 30 c5 0f 60 ed 
+[01:48:25] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[01:48:25] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to session/192.168.1.100:8438
+[01:48:25] [SendingModule/sendTargetPos/DEBUG]: targetX: 2766/targetY: 3141
+[01:48:25] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b 00 00 0a ce 00 00 0c 45 00 00 01 4d f3 30 c7 07 2b 0c 
+[01:48:30] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[01:48:30] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to session/192.168.1.100:8438
+[01:48:30] [SendingModule/sendTargetPos/DEBUG]: targetX: 3314/targetY: 2717
+[01:48:30] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b 00 00 0c f2 00 00 0a 9d 00 00 01 4d f3 30 d8 94 2b 96 
+[01:48:33] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[01:48:33] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to session/192.168.1.100:8438
+[01:48:33] [SendingModule/sendTargetPos/DEBUG]: targetX: 2759/targetY: 3024
+[01:48:33] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b 00 00 0a c7 00 00 0b d0 00 00 01 4d f3 30 e5 1e 64 38 
+[01:48:34] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[01:48:34] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to session/192.168.1.100:8438
+[01:48:34] [SendingModule/sendTargetPos/DEBUG]: targetX: 3668/targetY: 3370
+[01:48:34] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b 00 00 0e 54 00 00 0d 2a 00 00 01 4d f3 30 ea 6f 59 d2 
+[01:48:35] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[01:48:35] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to session/192.168.1.100:8438
+[01:48:35] [SendingModule/sendTargetPos/DEBUG]: targetX: 3766/targetY: 2993
+[01:48:35] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b 00 00 0e b6 00 00 0b b1 00 00 01 4d f3 30 ee 9d 93 de 
+[01:48:36] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[01:48:36] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to session/192.168.1.100:8438
+[01:48:36] [SendingModule/sendTargetPos/DEBUG]: targetX: 2976/targetY: 2721
+[01:48:36] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b 00 00 0b a0 00 00 0a a1 00 00 01 4d f3 30 f1 96 9a 56 
+[01:48:37] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[01:48:37] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to session/192.168.1.100:8438
+[01:48:37] [SendingModule/sendTargetPos/DEBUG]: targetX: 3627/targetY: 2787
+[01:48:37] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b 00 00 0e 2b 00 00 0a e3 00 00 01 4d f3 30 f3 ab c0 3e 
+[01:48:43] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:技能实例ID:5
+[01:48:43] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[01:48:43] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 18 00 00 00 05 00 00 00 00 00 00 00 11 ba de 
+[01:50:38] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:技能实例ID:5
+[01:50:38] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[01:50:38] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 18 00 00 00 05 00 00 00 00 00 00 00 11 ba de 
+[01:50:39] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:技能实例ID:5
+[01:50:39] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[01:50:39] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 18 00 00 00 05 00 00 00 00 00 00 00 11 ba de 
+[01:50:39] [ClientServer/ClientMain/KERNEL]: 7.游戏结束，退出主程序
+[01:50:39] [SendingModule/sendLogout/INFO]: logout send!
+[01:50:39] [AioModule/Write/Completed/DEBUG]: Sent 14 bytes to session/192.168.1.100:8438
+[01:50:39] [AioModule/Write/Completed/DEBUG]: Sent contents(14bytes): ff ff 00 00 00 0e 00 13 00 00 00 00 84 c6 
