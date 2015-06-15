@@ -238,8 +238,11 @@ public class ClientDecoder implements Decoder {
 				int type = datagram.getInt();	//特效包
 				int attacker= datagram.getInt();
 				int target = datagram.getInt();
-				if(type==3){
+				if(type==3){	//攻击
 					gameBox.attack(attacker, target);				
+				}
+				if(type==100){	//特效(加血)??type 是多少？
+					gameBox.bloodUp(attacker);
 				}
 				UccuLogger.log("ClientServer/ClientDecoder", "Receive a package 001D(特效包)");
 				UccuLogger.log("ClientServer/ClientDecoder", "package 001D(特效包): attacker:"+attacker+"/targetID:"+target);

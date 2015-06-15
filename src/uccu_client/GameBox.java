@@ -114,6 +114,9 @@ public class GameBox{
 			painter.addEntity(warhead);		
 		}
 	}
+	public void bloodUp(int tar){
+		painter.addGIF(playerPool.get(tar), 10, 5);
+	}
 	public void renewCharacter(int id,String name,String describe,byte level,byte gender,
 			int life,int curlife,int mana, int curmana, int atk,int def,int exp,
 			int movespeed,int posX,int posY,int pid){
