@@ -97,7 +97,7 @@ public class Painter extends JFrame{
 		chatPanel = new ChatPanel();
 		waitingPanel = new WaitingPanel("tmpintro\nhahah\nninini",getBounds(),new Rectangle(100,100,500,700));
 		desktopPane = new JDesktopPane();
-		popupInfoPanel = new PopupInfoPanel(new Picture("lf.jpg", 0,0,0));
+		popupInfoPanel = new PopupInfoPanel(new Picture("聊天背景.png", 0,0,0));
 		iconPanel = new IconPanel();
 		iconPanel.setLocation(chatPanel.getWidth(), getHeight()-iconPanel.getHeight());
 		lockedPlayerPanel = new LockedPlayerPanel();
@@ -321,7 +321,7 @@ public class Painter extends JFrame{
 		case skill:
 			if(skillPanel.isVisible())
 				skillPanel.setVisible(false);
-			else skillPanel.show();
+			else skillPanel.showPanel();
 			break;
 		case friend:
 			if(friendPanel.isVisible())

@@ -28,7 +28,7 @@ public class ClientMain {
 	public static boolean isLoginOver;
 	public static boolean isLoginsuccess;
 	static boolean isGameOver;
-	static boolean deBug =false;//调试模式
+	static boolean deBug =true;//调试模式
 	public static void main(String[] arg) {
 		init(LogMode.DEBUG);
 		UccuLogger.kernel("ClientServer/ClientMain", "0.开始建立网络连接…………");
