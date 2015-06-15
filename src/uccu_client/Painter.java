@@ -95,13 +95,6 @@ public class Painter extends JFrame{
 		gifMap = new ConcurrentHashMap<DoublePoint,GIF>();
 		background = new Picture("bg1.jpg", 0, 0,0);
 		loadPic();
-		for(int i=0;i<2;++i){
-			imagebuffer[i] = createImage(getWidth(), getHeight());
-			graphbuffer[i] = (Graphics2D)(imagebuffer[i].getGraphics());
-			graphbuffer[i].setRenderingHint(RenderingHints.KEY_ANTIALIASING,RenderingHints.VALUE_ANTIALIAS_ON );
-		    graphbuffer[i].setRenderingHint(RenderingHints.KEY_COLOR_RENDERING,RenderingHints.VALUE_COLOR_RENDER_QUALITY );
-		    graphbuffer[i].setRenderingHint(RenderingHints. KEY_DITHERING,RenderingHints.VALUE_DITHER_ENABLE );
-		}
 		
 		gameWindow = new GameWindow();
 		chatPanel = new ChatPanel();
@@ -276,6 +269,14 @@ public class Painter extends JFrame{
 		desktopPane.add(bagPanel);
 		desktopPane.add(skillPanel);
 		desktopPane.add(friendPanel);
+		for(int i=0;i<2;++i){
+			imagebuffer[i] = createImage(getWidth(), getHeight());
+//			ClientMain.mySleep(100);
+			graphbuffer[i] = (Graphics2D)(imagebuffer[i].getGraphics());
+			graphbuffer[i].setRenderingHint(RenderingHints.KEY_ANTIALIASING,RenderingHints.VALUE_ANTIALIAS_ON );
+		    graphbuffer[i].setRenderingHint(RenderingHints.KEY_COLOR_RENDERING,RenderingHints.VALUE_COLOR_RENDER_QUALITY );
+		    graphbuffer[i].setRenderingHint(RenderingHints. KEY_DITHERING,RenderingHints.VALUE_DITHER_ENABLE );
+		}
 		this.setVisible(true);//this.repaint();	
 		new Thread(){
 			public void run(){
