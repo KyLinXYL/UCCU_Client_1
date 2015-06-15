@@ -129,7 +129,7 @@ public class ClientMain {
 				loginBox.addCharacter(2, "second role", (byte) 15, (byte) 1,12);
 //				loginBox.addCharacter(2, "t role", (byte) 15, (byte) 1,13);
 				loginBox.noMorePackage();
-//				mySleep(1000);
+				mySleep(100000);
 				// 假装再创建1个角色
 				SendingModule.sendCreateCharacter("dddd",(byte) 1, 1);
 				// 假装角色创建成功

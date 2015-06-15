@@ -54,7 +54,24 @@ public class LoginBox extends JFrame{
 		this.add(loginPanel);
 		backPicPanel = new BackgroundPanel(new Rectangle(0,0,1366,768));
 		waitingPanel = new WaitingPanel(
-				"tmpintro\nhahhahhah\nnimanima"
+				"正在与服务器建立连接...\n"
+				+"...\n"
+				+ "连通率10%:[警告]连接不稳定...\n"
+				+ "正在启动[宙斯环链]增强模块...\n"
+				+"...\n"
+				+ "连通率70%...\n"
+				+"...\n"
+				+ "已达连通阈值\n"
+				+ "启动[Alpha-Belta粒子通道]...\n"
+				+"...\n"
+				+ "连通率100%,开始测试同步...\n"
+				+"...\n"
+				+ "同步率150%...\n"
+				+"...\n"
+				+ "同步完成,启动神经元突触对接...\n"
+				+"...\n"
+				+ "对接成功!...\n"
+				+ "进入游戏...\n"
 				,new Rectangle(0,0,1366,768)
 				,new Rectangle(50,100,400,600));
 		characterPanel = new CharacterPanel(this);
