@@ -34,7 +34,7 @@ public class WaitingPanel extends JPanel {
 		introbackg = pic.getImage().getScaledInstance(introbounds.width, introbounds.height, Image.SCALE_DEFAULT);
 		intro = new JTextArea(info);
 		intro.setEditable(false);
-		intro.setFont(new Font("黑体", 1, 24));
+		intro.setFont(new Font("隶书", 1, 24));
 		intro.setForeground(Color.white);
 		intro.setOpaque(false);
 		intro.setBounds(introbounds.x+20,introbounds.y+20,introbounds.width-40,introbounds.height-40);

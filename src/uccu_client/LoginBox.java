@@ -55,24 +55,13 @@ public class LoginBox extends JFrame{
 		this.add(loginPanel);
 		backPicPanel = new BackgroundPanel(new Rectangle(0,0,1366,768));
 		waitingPanel = new WaitingPanel(
-				"正在与服务器建立连接...\n"
-				+"...\n"
-				+ "连通率10%:[警告]连接不稳定...\n"
-				+ "正在启动[宙斯环链]增强模块...\n"
-				+"...\n"
-				+ "连通率70%...\n"
-				+"...\n"
-				+ "已达连通阈值\n"
-				+ "启动[Alpha-Belta粒子通道]...\n"
-				+"...\n"
-				+ "连通率100%,开始测试同步...\n"
-				+"...\n"
-				+ "同步率150%...\n"
-				+"...\n"
-				+ "同步完成,启动神经元突触对接...\n"
-				+"...\n"
-				+ "对接成功!...\n"
-				+ "进入游戏...\n"
+				"    Berus星球被Siron称霸着,他们凭借\n着自己的智慧开创了Berus星球有史以来\n最为先进的文明。"
+				+"\n    Siron用自己的无线电波技术向外发\n射着友好的信号,等待着另一个友好种族\n的回应......"
+				+"\n    然而就像小孩子总是以为一切都是\n善意的一样,他们完全无法体会成年人的\n恶意。"
+				+"\n  毗邻Berus星系的Neuzac星球就是这样\n的存在,Neuzac在Madlos种族的漫长统治\n之下，Neuzac星上的一切几乎被消耗\n殆尽。"
+				+"\n    亟需资源的Madlos捕获到了"
+				+"Berus\n——这一个年轻而富有活力的星球发出\n的信号。"
+				+"\n   他们欣喜若狂,规划着仅剩不多的资\n源,悄无声息地来到了Berus的一颗行星。\n   一场种族生存之战就此打响！"
 				,new Rectangle(0,0,1366,768)
 				,new Rectangle(50,100,400,600));
 		characterPanel = new CharacterPanel(this);

@@ -1,0 +1,383 @@
+[17:42:26] [ClientServer/ClientMain/init/DEBUG]: address: baidu.com:80
+[17:42:26] [ClientServer/ClientMain/init/DEBUG]: 图片加载成功
+[17:42:26] [ClientServer/ClientMain/init/DEBUG]: GIF动画加载成功
+[17:42:26] [ClientServer/ClientMain/init/DEBUG]: 物品预加载成功
+[17:42:26] [ClientServer/ClientMain/init/DEBUG]: init over
+[17:42:26] [ClientServer/ClientMain/KERNEL]: 0.开始建立网络连接…………
+[17:42:26] [ClientServer/ClientMain/setUpConnection/DEBUG]: setUpConnection over
+[17:42:26] [ClientServer/ClientMain/KERNEL]: 1.网络连接成功!
+[17:42:26] [ClientServer/ClientMain/KERNEL]: 2.发送0000包，确认对方是否为服务器Gate端
+[17:42:26] [SendingModule/send00Package/INFO]: send00Package over
+[17:42:26] [ClientSever/LoginBox/serverState/INFO]: Receive a package 0001(回应连接请求)
+[17:42:26] [AioModule/Write/Completed/DEBUG]: Sent 14 bytes to sessionbaidu.com/123.125.114.144:80
+[17:42:26] [ClientSever/LoginBox/serverState/INFO]: package 0001: 1
+[17:42:26] [ClientServer/ClientMain/KERNEL]: 3.收到0001包，确认对方为服务器Gate端
+[17:42:26] [ClientServer/ClientMain/KERNEL]: 4.初始化loginBox登陆界面
+[17:42:26] [AioModule/Write/Completed/DEBUG]: Sent contents(14bytes): ff ff 00 00 00 0e 00 00 00 00 30 39 20 db 
+[17:42:26] [ClientServer/LoginBox/onLoginResponse/INFO]: Receive a package 0003(登陆反馈)
+[17:42:26] [ClientServer/LoginBox/onLoginResponse/INFO]: package 0003: true
+[17:42:27] [ClientSever/LoginBox/addCharacter/INFO]: Receive a package 0006(角色预加载)
+[17:42:27] [ClientSever/LoginBox/addCharacter/INFO]: Receive a package 0006(角色预加载)
+[17:42:27] [ClientServer/LoginBox/noMorePackage/INFO]: Receive a package 0006(角色预加载: 这是最后一个空包
+[17:42:28] [AioModule/Write/Completed/DEBUG]: Sent 25 bytes to sessionbaidu.com/123.125.114.144:80
+[17:42:28] [SendingModule/sendCreateCharacter/INFO]: package 0008(创建角色) send!
+[17:42:28] [ClientServer/LoginBox/onCreatResponse/INFO]: Receive a package 0009(角色创建结果)
+[17:42:28] [AioModule/Write/Completed/DEBUG]: Sent contents(25bytes): ff ff 00 00 00 19 00 08 6e 75 6c 6c 00 64 64 64 64 00 01 00 00 00 01 38 47 
+[17:42:29] [ClientServer/GameBox/addCharacter/DEBUG]: Receive a package 000A(游戏中所有玩家信息)
+[17:42:29] [ClientServer/GameBox/addCharacter/DEBUG]: 000A:加入一个非主角玩家:dddd
+[17:42:29] [ClientServer/GameBox/addCharacter/DEBUG]: Receive a package 000A(游戏中所有玩家信息)
+[17:42:29] [ClientServer/GameBox/addCharacter/DEBUG]: 000A:加入一个非主角玩家:dddd
+[17:42:29] [ClientServer/GameBox/addCharacter/DEBUG]: Receive a package 000A(游戏中所有玩家信息)
+[17:42:29] [ClientServer/GameBox/addCharacter/DEBUG]: 000A:加入一个主角玩家:dddd
+[17:42:29] [ClientServer/ClientMain/KERNEL]: 5.登陆结束
+[17:42:29] [ClientServer/ClientMain/KERNEL]: 6.开始游戏，启动gameBox
+[17:42:29] [ClientServer/GameBox/startGame/KERNEL]: 接收主角详细信息(000A):关闭加载窗口,开始游戏!
+[17:42:30] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:30] [Client/GameBox/updateTarget/INFO]: targetX: 5000/targetY 2000
+[17:42:30] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:30] [Client/GameBox/updateTarget/INFO]: targetX: 1000/targetY 3000
+[17:42:31] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:31] [Client/GameBox/updateTarget/INFO]: targetX: -236/targetY 2
+[17:42:31] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to sessionbaidu.com/123.125.114.144:80
+[17:42:31] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:31] [SendingModule/sendTargetPos/DEBUG]: targetX: -236/targetY: 2
+[17:42:31] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b ff ff ff 14 00 00 00 02 00 00 01 4d f6 99 4c 62 0d 5c 
+[17:42:32] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:32] [Client/GameBox/updateTarget/INFO]: targetX: -212/targetY 140
+[17:42:32] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:32] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to sessionbaidu.com/123.125.114.144:80
+[17:42:32] [SendingModule/sendTargetPos/DEBUG]: targetX: -212/targetY: 140
+[17:42:32] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b ff ff ff 2c 00 00 00 8c 00 00 01 4d f6 99 50 62 b4 2a 
+[17:42:32] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:32] [Client/GameBox/updateTarget/INFO]: targetX: 146/targetY 122
+[17:42:32] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:32] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to sessionbaidu.com/123.125.114.144:80
+[17:42:32] [SendingModule/sendTargetPos/DEBUG]: targetX: 146/targetY: 122
+[17:42:32] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b 00 00 00 92 00 00 00 7a 00 00 01 4d f6 99 52 a2 a2 4e 
+[17:42:33] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:33] [Client/GameBox/updateTarget/INFO]: targetX: 258/targetY 125
+[17:42:33] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:33] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to sessionbaidu.com/123.125.114.144:80
+[17:42:33] [SendingModule/sendTargetPos/DEBUG]: targetX: 258/targetY: 125
+[17:42:33] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b 00 00 01 02 00 00 00 7d 00 00 01 4d f6 99 54 c8 51 f6 
+[17:42:36] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:36] [Client/GameBox/updateTarget/INFO]: targetX: 598/targetY 165
+[17:42:36] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:36] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to sessionbaidu.com/123.125.114.144:80
+[17:42:36] [SendingModule/sendTargetPos/DEBUG]: targetX: 598/targetY: 165
+[17:42:36] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b 00 00 02 56 00 00 00 a5 00 00 01 4d f6 99 60 d7 a9 80 
+[17:42:39] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:39] [Client/GameBox/updateTarget/INFO]: targetX: 703/targetY 303
+[17:42:39] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:39] [SendingModule/sendTargetPos/DEBUG]: targetX: 703/targetY: 303
+[17:42:39] [AioModule/Write/Failed/WARNING]: Failed to send to sessionnull. java.nio.channels.ClosedChannelException
+[17:42:40] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:40] [Client/GameBox/updateTarget/INFO]: targetX: 630/targetY 399
+[17:42:40] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:40] [SendingModule/sendTargetPos/DEBUG]: targetX: 630/targetY: 399
+[17:42:41] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:41] [Client/GameBox/updateTarget/INFO]: targetX: 618/targetY 562
+[17:42:41] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:41] [SendingModule/sendTargetPos/DEBUG]: targetX: 618/targetY: 562
+[17:42:42] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:42] [Client/GameBox/updateTarget/INFO]: targetX: 628/targetY 757
+[17:42:42] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:42] [SendingModule/sendTargetPos/DEBUG]: targetX: 628/targetY: 757
+[17:42:43] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:43] [Client/GameBox/updateTarget/INFO]: targetX: 638/targetY 952
+[17:42:43] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:43] [SendingModule/sendTargetPos/DEBUG]: targetX: 638/targetY: 952
+[17:42:44] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:44] [Client/GameBox/updateTarget/INFO]: targetX: 805/targetY 1158
+[17:42:44] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:44] [SendingModule/sendTargetPos/DEBUG]: targetX: 805/targetY: 1158
+[17:42:45] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:45] [Client/GameBox/updateTarget/INFO]: targetX: 928/targetY 1310
+[17:42:45] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:45] [SendingModule/sendTargetPos/DEBUG]: targetX: 928/targetY: 1310
+[17:42:48] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:48] [Client/GameBox/updateTarget/INFO]: targetX: 936/targetY 1581
+[17:42:48] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:48] [SendingModule/sendTargetPos/DEBUG]: targetX: 936/targetY: 1581
+[17:42:49] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:49] [Client/GameBox/updateTarget/INFO]: targetX: 1132/targetY 1605
+[17:42:49] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:49] [SendingModule/sendTargetPos/DEBUG]: targetX: 1132/targetY: 1605
+[17:42:50] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:50] [Client/GameBox/updateTarget/INFO]: targetX: 1328/targetY 1762
+[17:42:50] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:50] [SendingModule/sendTargetPos/DEBUG]: targetX: 1328/targetY: 1762
+[17:42:51] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:51] [Client/GameBox/updateTarget/INFO]: targetX: 1474/targetY 1879
+[17:42:51] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:51] [SendingModule/sendTargetPos/DEBUG]: targetX: 1474/targetY: 1879
+[17:42:52] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:52] [Client/GameBox/updateTarget/INFO]: targetX: 1505/targetY 1904
+[17:42:52] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:52] [SendingModule/sendTargetPos/DEBUG]: targetX: 1505/targetY: 1904
+[17:42:52] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:52] [Client/GameBox/updateTarget/INFO]: targetX: 1530/targetY 1924
+[17:42:52] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:52] [SendingModule/sendTargetPos/DEBUG]: targetX: 1530/targetY: 1924
+[17:42:52] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:52] [Client/GameBox/updateTarget/INFO]: targetX: 1552/targetY 1942
+[17:42:52] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:52] [SendingModule/sendTargetPos/DEBUG]: targetX: 1552/targetY: 1942
+[17:42:52] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:52] [Client/GameBox/updateTarget/INFO]: targetX: 1574/targetY 1959
+[17:42:52] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:52] [SendingModule/sendTargetPos/DEBUG]: targetX: 1574/targetY: 1959
+[17:42:52] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:52] [Client/GameBox/updateTarget/INFO]: targetX: 1593/targetY 1974
+[17:42:52] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:52] [SendingModule/sendTargetPos/DEBUG]: targetX: 1593/targetY: 1974
+[17:42:52] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:52] [Client/GameBox/updateTarget/INFO]: targetX: 1608/targetY 1987
+[17:42:52] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:52] [SendingModule/sendTargetPos/DEBUG]: targetX: 1608/targetY: 1987
+[17:42:52] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:52] [Client/GameBox/updateTarget/INFO]: targetX: 1630/targetY 2004
+[17:42:52] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:52] [SendingModule/sendTargetPos/DEBUG]: targetX: 1630/targetY: 2004
+[17:42:52] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:52] [Client/GameBox/updateTarget/INFO]: targetX: 1646/targetY 2017
+[17:42:52] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:52] [SendingModule/sendTargetPos/DEBUG]: targetX: 1646/targetY: 2017
+[17:42:53] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:53] [Client/GameBox/updateTarget/INFO]: targetX: 1661/targetY 2029
+[17:42:53] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:53] [SendingModule/sendTargetPos/DEBUG]: targetX: 1661/targetY: 2029
+[17:42:53] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:53] [Client/GameBox/updateTarget/INFO]: targetX: 1674/targetY 2039
+[17:42:53] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:53] [SendingModule/sendTargetPos/DEBUG]: targetX: 1674/targetY: 2039
+[17:42:53] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:53] [Client/GameBox/updateTarget/INFO]: targetX: 1693/targetY 2054
+[17:42:53] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:53] [SendingModule/sendTargetPos/DEBUG]: targetX: 1693/targetY: 2054
+[17:42:53] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:53] [Client/GameBox/updateTarget/INFO]: targetX: 1769/targetY 2139
+[17:42:53] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:53] [SendingModule/sendTargetPos/DEBUG]: targetX: 1769/targetY: 2139
+[17:42:53] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:53] [Client/GameBox/updateTarget/INFO]: targetX: 1784/targetY 2152
+[17:42:53] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:53] [SendingModule/sendTargetPos/DEBUG]: targetX: 1784/targetY: 2152
+[17:42:53] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:53] [Client/GameBox/updateTarget/INFO]: targetX: 1798/targetY 2166
+[17:42:53] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:53] [SendingModule/sendTargetPos/DEBUG]: targetX: 1798/targetY: 2166
+[17:42:54] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:54] [Client/GameBox/updateTarget/INFO]: targetX: 1816/targetY 2182
+[17:42:54] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:54] [SendingModule/sendTargetPos/DEBUG]: targetX: 1816/targetY: 2182
+[17:42:54] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:54] [Client/GameBox/updateTarget/INFO]: targetX: 1831/targetY 2196
+[17:42:54] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:54] [SendingModule/sendTargetPos/DEBUG]: targetX: 1831/targetY: 2196
+[17:42:54] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:54] [Client/GameBox/updateTarget/INFO]: targetX: 1848/targetY 2212
+[17:42:54] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:54] [SendingModule/sendTargetPos/DEBUG]: targetX: 1848/targetY: 2212
+[17:42:54] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:54] [Client/GameBox/updateTarget/INFO]: targetX: 1863/targetY 2225
+[17:42:54] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:54] [SendingModule/sendTargetPos/DEBUG]: targetX: 1863/targetY: 2225
+[17:42:54] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:54] [Client/GameBox/updateTarget/INFO]: targetX: 1881/targetY 2242
+[17:42:54] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:54] [SendingModule/sendTargetPos/DEBUG]: targetX: 1881/targetY: 2242
+[17:42:54] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:54] [Client/GameBox/updateTarget/INFO]: targetX: 1898/targetY 2258
+[17:42:54] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:54] [SendingModule/sendTargetPos/DEBUG]: targetX: 1898/targetY: 2258
+[17:42:54] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:54] [Client/GameBox/updateTarget/INFO]: targetX: 1910/targetY 2269
+[17:42:54] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:54] [SendingModule/sendTargetPos/DEBUG]: targetX: 1910/targetY: 2269
+[17:42:54] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:54] [Client/GameBox/updateTarget/INFO]: targetX: 1929/targetY 2283
+[17:42:54] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:54] [SendingModule/sendTargetPos/DEBUG]: targetX: 1929/targetY: 2283
+[17:42:54] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:54] [Client/GameBox/updateTarget/INFO]: targetX: 1946/targetY 2299
+[17:42:54] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:54] [SendingModule/sendTargetPos/DEBUG]: targetX: 1946/targetY: 2299
+[17:42:55] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:55] [Client/GameBox/updateTarget/INFO]: targetX: 1961/targetY 2313
+[17:42:55] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:55] [SendingModule/sendTargetPos/DEBUG]: targetX: 1961/targetY: 2313
+[17:42:55] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:55] [Client/GameBox/updateTarget/INFO]: targetX: 1979/targetY 2329
+[17:42:55] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:55] [SendingModule/sendTargetPos/DEBUG]: targetX: 1979/targetY: 2329
+[17:42:55] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:55] [Client/GameBox/updateTarget/INFO]: targetX: 1994/targetY 2342
+[17:42:55] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:55] [SendingModule/sendTargetPos/DEBUG]: targetX: 1994/targetY: 2342
+[17:42:55] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:55] [Client/GameBox/updateTarget/INFO]: targetX: 2012/targetY 2358
+[17:42:55] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:55] [SendingModule/sendTargetPos/DEBUG]: targetX: 2012/targetY: 2358
+[17:42:55] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:55] [Client/GameBox/updateTarget/INFO]: targetX: 2029/targetY 2374
+[17:42:55] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:55] [SendingModule/sendTargetPos/DEBUG]: targetX: 2029/targetY: 2374
+[17:42:55] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:55] [Client/GameBox/updateTarget/INFO]: targetX: 2047/targetY 2391
+[17:42:55] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:55] [SendingModule/sendTargetPos/DEBUG]: targetX: 2047/targetY: 2391
+[17:42:55] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:55] [Client/GameBox/updateTarget/INFO]: targetX: 2065/targetY 2407
+[17:42:55] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:55] [SendingModule/sendTargetPos/DEBUG]: targetX: 2065/targetY: 2407
+[17:42:56] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:56] [Client/GameBox/updateTarget/INFO]: targetX: 2100/targetY 2439
+[17:42:56] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:56] [SendingModule/sendTargetPos/DEBUG]: targetX: 2100/targetY: 2439
+[17:42:56] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:56] [Client/GameBox/updateTarget/INFO]: targetX: 2118/targetY 2455
+[17:42:56] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:56] [SendingModule/sendTargetPos/DEBUG]: targetX: 2118/targetY: 2455
+[17:42:56] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:56] [Client/GameBox/updateTarget/INFO]: targetX: 2136/targetY 2471
+[17:42:56] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:56] [SendingModule/sendTargetPos/DEBUG]: targetX: 2136/targetY: 2471
+[17:42:56] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:56] [Client/GameBox/updateTarget/INFO]: targetX: 2154/targetY 2487
+[17:42:56] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:56] [SendingModule/sendTargetPos/DEBUG]: targetX: 2154/targetY: 2487
+[17:42:56] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:56] [Client/GameBox/updateTarget/INFO]: targetX: 2172/targetY 2503
+[17:42:56] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:56] [SendingModule/sendTargetPos/DEBUG]: targetX: 2172/targetY: 2503
+[17:42:56] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:56] [Client/GameBox/updateTarget/INFO]: targetX: 2192/targetY 2522
+[17:42:56] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:56] [SendingModule/sendTargetPos/DEBUG]: targetX: 2192/targetY: 2522
+[17:42:56] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:56] [Client/GameBox/updateTarget/INFO]: targetX: 2210/targetY 2538
+[17:42:56] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:56] [SendingModule/sendTargetPos/DEBUG]: targetX: 2210/targetY: 2538
+[17:42:56] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:56] [Client/GameBox/updateTarget/INFO]: targetX: 2228/targetY 2554
+[17:42:56] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:56] [SendingModule/sendTargetPos/DEBUG]: targetX: 2228/targetY: 2554
+[17:42:56] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:56] [Client/GameBox/updateTarget/INFO]: targetX: 2243/targetY 2568
+[17:42:56] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:56] [SendingModule/sendTargetPos/DEBUG]: targetX: 2243/targetY: 2568
+[17:42:57] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:42:57] [Client/GameBox/updateTarget/INFO]: targetX: 2257/targetY 2581
+[17:42:57] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:42:57] [SendingModule/sendTargetPos/DEBUG]: targetX: 2257/targetY: 2581
+[17:43:07] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:07] [Client/GameBox/updateTarget/INFO]: targetX: 2433/targetY 2774
+[17:43:07] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:07] [SendingModule/sendTargetPos/DEBUG]: targetX: 2433/targetY: 2774
+[17:43:08] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:08] [Client/GameBox/updateTarget/INFO]: targetX: 1933/targetY 2832
+[17:43:08] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:08] [SendingModule/sendTargetPos/DEBUG]: targetX: 1933/targetY: 2832
+[17:43:09] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:09] [Client/GameBox/updateTarget/INFO]: targetX: 2353/targetY 2997
+[17:43:09] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:09] [SendingModule/sendTargetPos/DEBUG]: targetX: 2353/targetY: 2997
+[17:43:10] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:10] [Client/GameBox/updateTarget/INFO]: targetX: 2342/targetY 2782
+[17:43:10] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:10] [SendingModule/sendTargetPos/DEBUG]: targetX: 2342/targetY: 2782
+[17:43:11] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:11] [Client/GameBox/updateTarget/INFO]: targetX: 1887/targetY 2533
+[17:43:11] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:11] [SendingModule/sendTargetPos/DEBUG]: targetX: 1887/targetY: 2533
+[17:43:12] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:12] [Client/GameBox/updateTarget/INFO]: targetX: 1818/targetY 2823
+[17:43:12] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:12] [SendingModule/sendTargetPos/DEBUG]: targetX: 1818/targetY: 2823
+[17:43:12] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:12] [Client/GameBox/updateTarget/INFO]: targetX: 2330/targetY 2988
+[17:43:12] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:12] [SendingModule/sendTargetPos/DEBUG]: targetX: 2330/targetY: 2988
+[17:43:13] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:13] [Client/GameBox/updateTarget/INFO]: targetX: 2704/targetY 2663
+[17:43:13] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:13] [SendingModule/sendTargetPos/DEBUG]: targetX: 2704/targetY: 2663
+[17:43:14] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:14] [Client/GameBox/updateTarget/INFO]: targetX: 2160/targetY 2517
+[17:43:14] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:14] [SendingModule/sendTargetPos/DEBUG]: targetX: 2160/targetY: 2517
+[17:43:17] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:17] [Client/GameBox/updateTarget/INFO]: targetX: 2448/targetY 2826
+[17:43:17] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:17] [SendingModule/sendTargetPos/DEBUG]: targetX: 2448/targetY: 2826
+[17:43:17] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:17] [Client/GameBox/updateTarget/INFO]: targetX: 1874/targetY 2766
+[17:43:17] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:17] [SendingModule/sendTargetPos/DEBUG]: targetX: 1874/targetY: 2766
+[17:43:18] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:18] [Client/GameBox/updateTarget/INFO]: targetX: 2031/targetY 2329
+[17:43:18] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:18] [SendingModule/sendTargetPos/DEBUG]: targetX: 2031/targetY: 2329
+[17:43:19] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:19] [Client/GameBox/updateTarget/INFO]: targetX: 2432/targetY 2361
+[17:43:19] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:19] [SendingModule/sendTargetPos/DEBUG]: targetX: 2432/targetY: 2361
+[17:43:20] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:20] [Client/GameBox/updateTarget/INFO]: targetX: 2595/targetY 2823
+[17:43:20] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:20] [SendingModule/sendTargetPos/DEBUG]: targetX: 2595/targetY: 2823
+[17:43:21] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:21] [Client/GameBox/updateTarget/INFO]: targetX: 1973/targetY 2742
+[17:43:21] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:21] [SendingModule/sendTargetPos/DEBUG]: targetX: 1973/targetY: 2742
+[17:43:21] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:21] [Client/GameBox/updateTarget/INFO]: targetX: 1705/targetY 2500
+[17:43:21] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:21] [SendingModule/sendTargetPos/DEBUG]: targetX: 1705/targetY: 2500
+[17:43:22] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:22] [Client/GameBox/updateTarget/INFO]: targetX: 1860/targetY 2208
+[17:43:22] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:22] [SendingModule/sendTargetPos/DEBUG]: targetX: 1860/targetY: 2208
+[17:43:23] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:23] [Client/GameBox/updateTarget/INFO]: targetX: 2301/targetY 2143
+[17:43:23] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:23] [SendingModule/sendTargetPos/DEBUG]: targetX: 2301/targetY: 2143
+[17:43:24] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:24] [Client/GameBox/updateTarget/INFO]: targetX: 2675/targetY 2584
+[17:43:24] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:24] [SendingModule/sendTargetPos/DEBUG]: targetX: 2675/targetY: 2584
+[17:43:24] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:24] [Client/GameBox/updateTarget/INFO]: targetX: 2641/targetY 2965
+[17:43:24] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:24] [SendingModule/sendTargetPos/DEBUG]: targetX: 2641/targetY: 2965
+[17:43:25] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:25] [Client/GameBox/updateTarget/INFO]: targetX: 1922/targetY 2759
+[17:43:25] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:25] [SendingModule/sendTargetPos/DEBUG]: targetX: 1922/targetY: 2759
+[17:43:26] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:26] [Client/GameBox/updateTarget/INFO]: targetX: 1878/targetY 2211
+[17:43:26] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:26] [SendingModule/sendTargetPos/DEBUG]: targetX: 1878/targetY: 2211
+[17:43:26] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:26] [Client/GameBox/updateTarget/INFO]: targetX: 2451/targetY 2230
+[17:43:26] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:26] [SendingModule/sendTargetPos/DEBUG]: targetX: 2451/targetY: 2230
+[17:43:27] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:27] [Client/GameBox/updateTarget/INFO]: targetX: 2539/targetY 2549
+[17:43:27] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:27] [SendingModule/sendTargetPos/DEBUG]: targetX: 2539/targetY: 2549
+[17:43:28] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:28] [Client/GameBox/updateTarget/INFO]: targetX: 2585/targetY 2824
+[17:43:28] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:28] [SendingModule/sendTargetPos/DEBUG]: targetX: 2585/targetY: 2824
+[17:43:29] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:29] [Client/GameBox/updateTarget/INFO]: targetX: 1988/targetY 2791
+[17:43:29] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:29] [SendingModule/sendTargetPos/DEBUG]: targetX: 1988/targetY: 2791
+[17:43:29] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[17:43:29] [Client/GameBox/updateTarget/INFO]: targetX: 1866/targetY 2338
+[17:43:29] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[17:43:29] [SendingModule/sendTargetPos/DEBUG]: targetX: 1866/targetY: 2338
+[17:43:33] [ClientServer/ClientMain/KERNEL]: 7.游戏结束，退出主程序
+[17:43:33] [SendingModule/sendLogout/INFO]: logout send!

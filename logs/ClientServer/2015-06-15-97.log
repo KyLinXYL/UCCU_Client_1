@@ -1,0 +1,11 @@
+[19:13:06] [ClientServer/ClientMain/init/DEBUG]: address: 192.168.1.100:8438
+[19:13:06] [ClientServer/ClientMain/init/DEBUG]: 图片加载成功
+[19:13:06] [ClientServer/ClientMain/init/DEBUG]: GIF动画加载成功
+[19:13:06] [ClientServer/ClientMain/init/DEBUG]: 物品预加载成功
+[19:13:06] [ClientServer/ClientMain/init/DEBUG]: init over
+[19:13:06] [ClientServer/ClientMain/KERNEL]: 0.开始建立网络连接…………
+[19:13:27] [AioModule/Connect/WARNING]: Failed to connect to 192.168.1.100:8438. java.util.concurrent.ExecutionException: java.io.IOException: 拒绝访问。
+
+[19:13:27] [ClientServer/ClientMain/KERNEL]: 1.网络连接失败
+[19:13:29] [ClientServer/ClientMain/KERNEL]: 1.网络连接成功!
+[19:13:29] [ClientServer/ClientMain/KERNEL]: 2.发送0000包，确认对方是否为服务器Gate端

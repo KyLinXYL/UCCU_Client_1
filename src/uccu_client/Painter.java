@@ -98,7 +98,15 @@ public class Painter extends JFrame{
 		
 		gameWindow = new GameWindow();
 		chatPanel = new ChatPanel();
-		waitingPanel = new WaitingPanel("tmpintro\nhahah\nninini",getBounds(),new Rectangle(100,100,500,700));
+		waitingPanel = new WaitingPanel(				
+				"    Berus星球被Siron称霸着,他们凭借\n着自己的智慧开创了Berus星球有史以来\n最为先进的文明。"
+				+"\n    Siron用自己的无线电波技术向外发\n射着友好的信号,等待着另一个友好种族\n的回应......"
+				+"\n    然而就像小孩子总是以为一切都是\n善意的一样,他们完全无法体会成年人的\n恶意。"
+				+"\n  毗邻Berus星系的Neuzac星球就是这样\n的存在,Neuzac在Madlos种族的漫长统治\n之下，Neuzac星上的一切几乎被消耗\n殆尽。"
+				+"\n    亟需资源的Madlos捕获到了"
+				+"Berus\n——这一个年轻而富有活力的星球发出\n的信号。"
+				+"\n   他们欣喜若狂,规划着仅剩不多的资\n源,悄无声息地来到了Berus的一颗行星。\n   一场种族生存之战就此打响！"
+				,getBounds(),new Rectangle(100,100,500,700));
 		desktopPane = new JDesktopPane();
 		popupInfoPanel = new PopupInfoPanel(new Picture("聊天背景.png", 0,0,0));
 		iconPanel = new IconPanel();

@@ -1,0 +1,480 @@
+[18:11:00] [ClientServer/ClientMain/init/DEBUG]: address: 192.168.1.100:8438
+[18:11:00] [ClientServer/ClientMain/init/DEBUG]: 图片加载成功
+[18:11:00] [ClientServer/ClientMain/init/DEBUG]: GIF动画加载成功
+[18:11:00] [ClientServer/ClientMain/init/DEBUG]: 物品预加载成功
+[18:11:01] [ClientServer/ClientMain/init/DEBUG]: init over
+[18:11:01] [ClientServer/ClientMain/KERNEL]: 0.开始建立网络连接…………
+[18:11:01] [ClientServer/ClientMain/setUpConnection/DEBUG]: setUpConnection over
+[18:11:01] [ClientServer/ClientMain/KERNEL]: 1.网络连接成功!
+[18:11:01] [ClientServer/ClientMain/KERNEL]: 2.发送0000包，确认对方是否为服务器Gate端
+[18:11:01] [SendingModule/send00Package/INFO]: send00Package over
+[18:11:01] [AioModule/Write/Completed/DEBUG]: Sent 14 bytes to session/192.168.1.100:8438
+[18:11:01] [AioModule/Write/Completed/DEBUG]: Sent contents(14bytes): ff ff 00 00 00 0e 00 00 00 00 30 39 20 db 
+[18:11:01] [AioModule/Read/Completed/DEBUG]: Received 18 bytes from session/192.168.1.100:8438
+[18:11:01] [AioModule/Read/Completed/DEBUG]: Received contents(18bytes): ff ff 00 00 00 12 00 14 00 00 01 4d f6 b3 5b 80 28 85 
+[18:11:01] [ClientServer/ClientDecoder/INFO]: Receive a package 0014(PING)1434363059072
+[18:11:01] [SendingModule/PINGResponse/DEBUG]: package 0015(PING回应包) send!
+[18:11:01] [AioModule/Write/Completed/DEBUG]: Sent 18 bytes to session/192.168.1.100:8438
+[18:11:01] [AioModule/Write/Completed/DEBUG]: Sent contents(18bytes): ff ff 00 00 00 12 00 15 00 00 01 4d f6 b3 5b 80 21 11 
+[18:11:01] [AioModule/Read/Completed/DEBUG]: Received 11 bytes from session/192.168.1.100:8438
+[18:11:01] [AioModule/Read/Completed/DEBUG]: Received contents(11bytes): ff ff 00 00 00 0b 00 01 01 2a 46 
+[18:11:01] [ClientServer/ClientDecoder/INFO]: Receive a package 0001(回应连接请求)
+[18:11:01] [ClientServer/ClientDecoder/INFO]: package 0001: 1
+[18:11:01] [ClientSever/LoginBox/serverState/INFO]: Receive a package 0001(回应连接请求)
+[18:11:01] [ClientSever/LoginBox/serverState/INFO]: package 0001: 1
+[18:11:01] [AioModule/Read/Completed/DEBUG]: Received 18 bytes from session/192.168.1.100:8438
+[18:11:01] [AioModule/Read/Completed/DEBUG]: Received contents(18bytes): ff ff 00 00 00 12 00 16 00 00 00 00 00 00 00 06 28 54 
+[18:11:01] [ClientServer/ClientDecoder/INFO]: Receive a package 0016(时间同步)2199
+[18:11:01] [ClientServer/ClientMain/KERNEL]: 3.收到0001包，确认对方为服务器Gate端
+[18:11:01] [ClientServer/ClientMain/KERNEL]: 4.初始化loginBox登陆界面
+[18:11:07] [SendingModule/sendLogin/INFO]: package 0002(登陆信息) send!
+[18:11:07] [AioModule/Write/Completed/DEBUG]: Sent 47 bytes to session/192.168.1.100:8438
+[18:11:07] [AioModule/Write/Completed/DEBUG]: Sent contents(47bytes): ff ff 00 00 00 2f 00 02 78 79 6c 00 43 37 30 43 44 30 34 33 31 33 46 46 32 36 30 41 38 33 44 36 44 37 39 39 30 38 32 32 43 30 33 32 00 6a be 
+[18:11:07] [AioModule/Read/Completed/DEBUG]: Received 11 bytes from session/192.168.1.100:8438
+[18:11:07] [AioModule/Read/Completed/DEBUG]: Received contents(11bytes): ff ff 00 00 00 0b 00 03 01 2a 58 
+[18:11:07] [ClientServer/ClientDecoder/INFO]: Receive a package 0003(登陆反馈)
+[18:11:07] [ClientServer/ClientDecoder/INFO]: package 0003: true
+[18:11:07] [ClientServer/LoginBox/onLoginResponse/INFO]: Receive a package 0003(登陆反馈)
+[18:11:07] [ClientServer/LoginBox/onLoginResponse/INFO]: package 0003: true
+[18:11:08] [AioModule/Read/Completed/DEBUG]: Received 39 bytes from session/192.168.1.100:8438
+[18:11:08] [AioModule/Read/Completed/DEBUG]: Received contents(39bytes): ff ff 00 00 00 1d 00 06 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 01 00 00 00 00 0c 7a 9f ff ff 00 00 00 0a 00 06 45 71 
+[18:11:08] [ClientServer/ClientDecoder/INFO]: Receive a package 0006(角色预加载)
+[18:11:08] [ClientServer/ClientDecoder/INFO]: package 0006: /id: 1027/name: 幻想家丶/level: 1/gender: 0
+[18:11:08] [ClientSever/LoginBox/addCharacter/INFO]: Receive a package 0006(角色预加载)
+[18:11:08] [ClientServer/ClientDecoder/INFO]: Receive a package 0006(角色预加载——空包)
+[18:11:08] [ClientServer/LoginBox/noMorePackage/INFO]: Receive a package 0006(角色预加载: 这是最后一个空包
+[18:11:11] [AioModule/Write/Completed/DEBUG]: Sent 14 bytes to session/192.168.1.100:8438
+[18:11:11] [SendingModule/sendCharacter/INFO]: package 0007(角色选择) send!
+[18:11:11] [AioModule/Write/Completed/DEBUG]: Sent contents(14bytes): ff ff 00 00 00 0e 00 07 00 00 04 03 a0 98 
+[18:11:11] [ClientServer/ClientMain/KERNEL]: 5.登陆结束
+[18:11:11] [ClientServer/ClientMain/KERNEL]: 6.开始游戏，启动gameBox
+[18:11:12] [AioModule/Read/Completed/DEBUG]: Received 87 bytes from session/192.168.1.100:8438
+[18:11:12] [AioModule/Read/Completed/DEBUG]: Received contents(87bytes): ff ff 00 00 00 57 00 0a 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 00 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 59 00 00 17 2d 00 00 00 0c a8 57 
+[18:11:12] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:12] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2905/posY: 5933
+[18:11:12] [ClientServer/GameBox/addCharacter/DEBUG]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:12] [ClientServer/GameBox/addCharacter/DEBUG]: 000A:加入一个主角玩家:幻想家丶
+[18:11:12] [AioModule/Read/Completed/DEBUG]: Received 270 bytes from session/192.168.1.100:8438
+[18:11:12] [AioModule/Read/Completed/DEBUG]: Received contents(270bytes): ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 00 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 03 8e 
+[18:11:12] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:12] [AioModule/Read/Completed/DEBUG]: Received 14 bytes from session/192.168.1.100:8438
+[18:11:12] [AioModule/Read/Completed/DEBUG]: Received contents(14bytes): ff ff 00 00 00 0e 00 1b 00 00 00 00 72 5c 
+[18:11:12] [AioModule/Read/Completed/DEBUG]: Received 50 bytes from session/192.168.1.100:8438
+[18:11:12] [AioModule/Read/Completed/DEBUG]: Received contents(50bytes): ff ff 00 00 00 32 00 1a 00 00 00 03 00 00 00 00 3b 9a ca 01 00 00 00 01 00 00 00 01 3b 9a ca 02 00 00 00 01 00 00 00 02 3b 9a ca 03 00 00 00 01 63 4d 
+[18:11:12] [ClientServer/ClientDecoder/INFO]: Receive a package 001A(技能信息)
+[18:11:12] [ClientServer/GameBox/startGame/KERNEL]: 接收主角详细信息(000A):关闭加载窗口,开始游戏!
+[18:11:13] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[18:11:13] [Client/GameBox/updateTarget/INFO]: targetX: 3154/targetY 6104
+[18:11:13] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[18:11:13] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to session/192.168.1.100:8438
+[18:11:13] [SendingModule/sendTargetPos/DEBUG]: targetX: 3154/targetY: 6104
+[18:11:13] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b 00 00 0c 52 00 00 17 d8 00 00 01 4d f6 b3 8a d2 5c 19 
+[18:11:13] [AioModule/Read/Completed/DEBUG]: Received 30 bytes from session/192.168.1.100:8438
+[18:11:13] [AioModule/Read/Completed/DEBUG]: Received contents(30bytes): ff ff 00 00 00 1e 00 0c 00 00 04 03 00 00 0c 52 00 00 17 d8 00 00 01 4d f6 b3 8a d2 1d ee 
+[18:11:13] [ClientServer/ClientDecoder/INFO]: Receive a package 000C(所有玩家目标坐标更新)
+[18:11:13] [ClientServer/ClientDecoder/INFO]: package 000C: /id: 1027/posX: 3154/posY: 6104
+[18:11:13] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[18:11:13] [Client/GameBox/updateTarget/INFO]: targetX: 3154/targetY 6104
+[18:11:19] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:19] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:19] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:19] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:19] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:19] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:19] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:19] [AioModule/Read/Completed/DEBUG]: Received 87 bytes from session/192.168.1.100:8438
+[18:11:19] [AioModule/Read/Completed/DEBUG]: Received contents(87bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 14 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0c 52 00 00 17 d8 00 00 00 0c 21 10 
+[18:11:19] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:19] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 3154/posY: 6104
+[18:11:19] [AioModule/Read/Completed/DEBUG]: Received 270 bytes from session/192.168.1.100:8438
+[18:11:19] [AioModule/Read/Completed/DEBUG]: Received contents(270bytes): ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 ff 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 05 49 
+[18:11:19] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:25] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:25] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:25] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:26] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:26] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:26] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:26] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:26] [AioModule/Read/Completed/DEBUG]: Received 87 bytes from session/192.168.1.100:8438
+[18:11:26] [AioModule/Read/Completed/DEBUG]: Received contents(87bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 28 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0c 52 00 00 17 d8 00 00 00 0c 1d 4f 
+[18:11:26] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:26] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 3154/posY: 6104
+[18:11:26] [AioModule/Read/Completed/DEBUG]: Received 270 bytes from session/192.168.1.100:8438
+[18:11:26] [AioModule/Read/Completed/DEBUG]: Received contents(270bytes): ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fe 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 07 04 
+[18:11:26] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:29] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[18:11:29] [Client/GameBox/updateTarget/INFO]: targetX: 2955/targetY 6147
+[18:11:29] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[18:11:29] [AioModule/Write/Completed/DEBUG]: Sent 26 bytes to session/192.168.1.100:8438
+[18:11:29] [SendingModule/sendTargetPos/DEBUG]: targetX: 2955/targetY: 6147
+[18:11:29] [AioModule/Write/Completed/DEBUG]: Sent contents(26bytes): ff ff 00 00 00 1a 00 0b 00 00 0b 8b 00 00 18 03 00 00 01 4d f6 b3 cb 36 3b e3 
+[18:11:29] [AioModule/Read/Completed/DEBUG]: Received 30 bytes from session/192.168.1.100:8438
+[18:11:29] [AioModule/Read/Completed/DEBUG]: Received contents(30bytes): ff ff 00 00 00 1e 00 0c 00 00 04 03 00 00 0b 8b 00 00 18 03 00 00 01 4d f6 b3 cb 36 4a 2f 
+[18:11:29] [ClientServer/ClientDecoder/INFO]: Receive a package 000C(所有玩家目标坐标更新)
+[18:11:29] [ClientServer/ClientDecoder/INFO]: package 000C: /id: 1027/posX: 2955/posY: 6147
+[18:11:29] [Client/GameBox/updateTarget/INFO]: receive Package 000C(角色目标)
+[18:11:29] [Client/GameBox/updateTarget/INFO]: targetX: 2955/targetY 6147
+[18:11:41] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:41] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:41] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:41] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:41] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:41] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:41] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:41] [AioModule/Read/Completed/DEBUG]: Received 87 bytes from session/192.168.1.100:8438
+[18:11:41] [AioModule/Read/Completed/DEBUG]: Received contents(87bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 3c 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 54 4e 
+[18:11:41] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:41] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:41] [AioModule/Read/Completed/DEBUG]: Received 270 bytes from session/192.168.1.100:8438
+[18:11:41] [AioModule/Read/Completed/DEBUG]: Received contents(270bytes): ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fd 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 08 bf 
+[18:11:41] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:43] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:43] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:43] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:43] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:43] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:43] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:43] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:43] [AioModule/Read/Completed/DEBUG]: Received 87 bytes from session/192.168.1.100:8438
+[18:11:43] [AioModule/Read/Completed/DEBUG]: Received contents(87bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 50 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 50 8d 
+[18:11:43] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:43] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:43] [AioModule/Read/Completed/DEBUG]: Received 270 bytes from session/192.168.1.100:8438
+[18:11:43] [AioModule/Read/Completed/DEBUG]: Received contents(270bytes): ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fc 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0a 7a 
+[18:11:43] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:44] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:44] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:44] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:44] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:44] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:44] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:44] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:44] [AioModule/Read/Completed/DEBUG]: Received 357 bytes from session/192.168.1.100:8438
+[18:11:44] [AioModule/Read/Completed/DEBUG]: Received contents(357bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:11:44] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:44] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:44] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:44] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:44] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:44] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:44] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:44] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:44] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:44] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:44] [AioModule/Read/Completed/DEBUG]: Received 357 bytes from session/192.168.1.100:8438
+[18:11:44] [AioModule/Read/Completed/DEBUG]: Received contents(357bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:11:44] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:44] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:44] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:44] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:44] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:44] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:44] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:44] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:44] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:44] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:44] [AioModule/Read/Completed/DEBUG]: Received 357 bytes from session/192.168.1.100:8438
+[18:11:44] [AioModule/Read/Completed/DEBUG]: Received contents(357bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:11:44] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:44] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:44] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:44] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:44] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:44] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:44] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:44] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:44] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:44] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:44] [AioModule/Read/Completed/DEBUG]: Received 87 bytes from session/192.168.1.100:8438
+[18:11:44] [AioModule/Read/Completed/DEBUG]: Received contents(87bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc 
+[18:11:44] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:44] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:44] [AioModule/Read/Completed/DEBUG]: Received 270 bytes from session/192.168.1.100:8438
+[18:11:44] [AioModule/Read/Completed/DEBUG]: Received contents(270bytes): ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:11:44] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:45] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:45] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:45] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:45] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:45] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:45] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:45] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:45] [AioModule/Read/Completed/DEBUG]: Received 87 bytes from session/192.168.1.100:8438
+[18:11:45] [AioModule/Read/Completed/DEBUG]: Received contents(87bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc 
+[18:11:45] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:45] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:45] [AioModule/Read/Completed/DEBUG]: Received 270 bytes from session/192.168.1.100:8438
+[18:11:45] [AioModule/Read/Completed/DEBUG]: Received contents(270bytes): ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:11:45] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:45] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:45] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:45] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:45] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:45] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:45] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:45] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:45] [AioModule/Read/Completed/DEBUG]: Received 357 bytes from session/192.168.1.100:8438
+[18:11:45] [AioModule/Read/Completed/DEBUG]: Received contents(357bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:11:45] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:45] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:45] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:45] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:45] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:45] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:45] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:45] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:45] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:45] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:45] [AioModule/Read/Completed/DEBUG]: Received 87 bytes from session/192.168.1.100:8438
+[18:11:45] [AioModule/Read/Completed/DEBUG]: Received contents(87bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc 
+[18:11:45] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:45] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:45] [AioModule/Read/Completed/DEBUG]: Received 270 bytes from session/192.168.1.100:8438
+[18:11:45] [AioModule/Read/Completed/DEBUG]: Received contents(270bytes): ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:11:45] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:45] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:45] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:45] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:45] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:45] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:45] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:45] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:45] [AioModule/Read/Completed/DEBUG]: Received 357 bytes from session/192.168.1.100:8438
+[18:11:45] [AioModule/Read/Completed/DEBUG]: Received contents(357bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:11:45] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:45] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:45] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:46] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:46] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:46] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:46] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:46] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:46] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:46] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:46] [AioModule/Read/Completed/DEBUG]: Received 87 bytes from session/192.168.1.100:8438
+[18:11:46] [AioModule/Read/Completed/DEBUG]: Received contents(87bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc 
+[18:11:46] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:46] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:46] [AioModule/Read/Completed/DEBUG]: Received 270 bytes from session/192.168.1.100:8438
+[18:11:46] [AioModule/Read/Completed/DEBUG]: Received contents(270bytes): ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:11:46] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:46] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:46] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:46] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:46] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:46] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:46] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:46] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:46] [AioModule/Read/Completed/DEBUG]: Received 87 bytes from session/192.168.1.100:8438
+[18:11:46] [AioModule/Read/Completed/DEBUG]: Received contents(87bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc 
+[18:11:46] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:46] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:46] [AioModule/Read/Completed/DEBUG]: Received 270 bytes from session/192.168.1.100:8438
+[18:11:46] [AioModule/Read/Completed/DEBUG]: Received contents(270bytes): ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:11:46] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:46] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:46] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:46] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:46] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:46] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:46] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:46] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:46] [AioModule/Read/Completed/DEBUG]: Received 87 bytes from session/192.168.1.100:8438
+[18:11:46] [AioModule/Read/Completed/DEBUG]: Received contents(87bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc 
+[18:11:46] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:46] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:46] [AioModule/Read/Completed/DEBUG]: Received 270 bytes from session/192.168.1.100:8438
+[18:11:46] [AioModule/Read/Completed/DEBUG]: Received contents(270bytes): ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:11:46] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:46] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:46] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:46] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:46] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:46] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:46] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:46] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:46] [AioModule/Read/Completed/DEBUG]: Received 357 bytes from session/192.168.1.100:8438
+[18:11:46] [AioModule/Read/Completed/DEBUG]: Received contents(357bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:11:46] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:46] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:46] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:47] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:47] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:47] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:47] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:47] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:47] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:47] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:47] [AioModule/Read/Completed/DEBUG]: Received 87 bytes from session/192.168.1.100:8438
+[18:11:47] [AioModule/Read/Completed/DEBUG]: Received contents(87bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc 
+[18:11:47] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:47] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:47] [AioModule/Read/Completed/DEBUG]: Received 270 bytes from session/192.168.1.100:8438
+[18:11:47] [AioModule/Read/Completed/DEBUG]: Received contents(270bytes): ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:11:47] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:47] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:47] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:47] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:47] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:47] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:47] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:47] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:47] [AioModule/Read/Completed/DEBUG]: Received 87 bytes from session/192.168.1.100:8438
+[18:11:47] [AioModule/Read/Completed/DEBUG]: Received contents(87bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc 
+[18:11:47] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:47] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:47] [AioModule/Read/Completed/DEBUG]: Received 270 bytes from session/192.168.1.100:8438
+[18:11:47] [AioModule/Read/Completed/DEBUG]: Received contents(270bytes): ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:11:47] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:47] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:47] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:47] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:47] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:47] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:47] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:47] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:47] [AioModule/Read/Completed/DEBUG]: Received 87 bytes from session/192.168.1.100:8438
+[18:11:47] [AioModule/Read/Completed/DEBUG]: Received contents(87bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc 
+[18:11:47] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:47] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:47] [AioModule/Read/Completed/DEBUG]: Received 270 bytes from session/192.168.1.100:8438
+[18:11:47] [AioModule/Read/Completed/DEBUG]: Received contents(270bytes): ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:11:47] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:47] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:47] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:47] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:47] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:47] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:47] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:47] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:47] [AioModule/Read/Completed/DEBUG]: Received 87 bytes from session/192.168.1.100:8438
+[18:11:47] [AioModule/Read/Completed/DEBUG]: Received contents(87bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc 
+[18:11:47] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:47] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:47] [AioModule/Read/Completed/DEBUG]: Received 270 bytes from session/192.168.1.100:8438
+[18:11:47] [AioModule/Read/Completed/DEBUG]: Received contents(270bytes): ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:11:47] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:48] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:48] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:48] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:48] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:48] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:48] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:48] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:48] [AioModule/Read/Completed/DEBUG]: Received 357 bytes from session/192.168.1.100:8438
+[18:11:48] [AioModule/Read/Completed/DEBUG]: Received contents(357bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:11:48] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:48] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:48] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:48] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:48] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:48] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:48] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:48] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:48] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:48] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:48] [AioModule/Read/Completed/DEBUG]: Received 87 bytes from session/192.168.1.100:8438
+[18:11:48] [AioModule/Read/Completed/DEBUG]: Received contents(87bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc 
+[18:11:48] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:48] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:48] [AioModule/Read/Completed/DEBUG]: Received 270 bytes from session/192.168.1.100:8438
+[18:11:48] [AioModule/Read/Completed/DEBUG]: Received contents(270bytes): ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:11:48] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:48] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:48] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:48] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:48] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:48] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:48] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:48] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:48] [AioModule/Read/Completed/DEBUG]: Received 87 bytes from session/192.168.1.100:8438
+[18:11:48] [AioModule/Read/Completed/DEBUG]: Received contents(87bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc 
+[18:11:48] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:48] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:48] [AioModule/Read/Completed/DEBUG]: Received 270 bytes from session/192.168.1.100:8438
+[18:11:48] [AioModule/Read/Completed/DEBUG]: Received contents(270bytes): ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:11:48] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:51] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:51] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:51] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:51] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:51] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:51] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:51] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:51] [AioModule/Read/Completed/DEBUG]: Received 87 bytes from session/192.168.1.100:8438
+[18:11:51] [AioModule/Read/Completed/DEBUG]: Received contents(87bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc 
+[18:11:51] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:51] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:51] [AioModule/Read/Completed/DEBUG]: Received 270 bytes from session/192.168.1.100:8438
+[18:11:51] [AioModule/Read/Completed/DEBUG]: Received contents(270bytes): ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:11:51] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:54] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:54] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:54] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:54] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:54] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:54] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:54] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:54] [AioModule/Read/Completed/DEBUG]: Received 357 bytes from session/192.168.1.100:8438
+[18:11:54] [AioModule/Read/Completed/DEBUG]: Received contents(357bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:11:54] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:54] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:54] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:56] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:56] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:56] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:56] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:56] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:56] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:56] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:56] [AioModule/Read/Completed/DEBUG]: Received 357 bytes from session/192.168.1.100:8438
+[18:11:56] [AioModule/Read/Completed/DEBUG]: Received contents(357bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:11:56] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:56] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:56] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:11:59] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:11:59] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:11:59] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:11:59] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:11:59] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:11:59] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:11:59] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:11:59] [AioModule/Read/Completed/DEBUG]: Received 357 bytes from session/192.168.1.100:8438
+[18:11:59] [AioModule/Read/Completed/DEBUG]: Received contents(357bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:11:59] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:11:59] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:11:59] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:12:02] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:12:02] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:12:02] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:12:03] [AioModule/Read/Completed/DEBUG]: Received 109 bytes from session/192.168.1.100:8438
+[18:12:03] [AioModule/Read/Completed/DEBUG]: Received contents(109bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc 
+[18:12:03] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:12:03] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:12:03] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:12:03] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:12:03] [AioModule/Read/Completed/DEBUG]: Received 270 bytes from session/192.168.1.100:8438
+[18:12:03] [AioModule/Read/Completed/DEBUG]: Received contents(270bytes): ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:12:03] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:12:05] [SendingModule/sendUseItem/DEBUG]: 发送物品逻辑包:操作的物品实例ID:0
+[18:12:05] [AioModule/Write/Completed/DEBUG]: Sent 22 bytes to session/192.168.1.100:8438
+[18:12:05] [AioModule/Write/Completed/DEBUG]: Sent contents(22bytes): ff ff 00 00 00 16 00 17 00 00 00 00 00 00 00 00 00 00 04 03 6e 27 
+[18:12:05] [AioModule/Read/Completed/DEBUG]: Received 22 bytes from session/192.168.1.100:8438
+[18:12:05] [AioModule/Read/Completed/DEBUG]: Received contents(22bytes): ff ff 00 00 00 16 00 1d 00 00 00 04 00 00 04 03 00 00 04 03 62 b9 
+[18:12:05] [ClientServer/ClientDecoder/INFO]: Receive a package 001D(特效包)
+[18:12:05] [ClientServer/ClientDecoder/INFO]: package 001D(特效包): attacker:1027/targetID:1027
+[18:12:05] [AioModule/Read/Completed/DEBUG]: Received 87 bytes from session/192.168.1.100:8438
+[18:12:05] [AioModule/Read/Completed/DEBUG]: Received contents(87bytes): ff ff 00 00 00 57 00 1c 00 00 04 03 bb c3 cf eb bc d2 d8 bc 00 74 68 69 73 20 69 73 20 58 75 73 20 70 6c 61 6e 65 00 01 00 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 64 00 00 00 14 00 00 00 14 00 00 00 01 00 00 00 c8 00 00 0b 8b 00 00 18 03 00 00 00 0c 4c cc 
+[18:12:05] [ClientServer/ClientDecoder/INFO]: Receive a package 000A(游戏中所有玩家信息)
+[18:12:05] [ClientServer/ClientDecoder/INFO]: package 000A: /id: 1027/name: 幻想家丶/level: 1/gender: 0/posX: 2955/posY: 6147
+[18:12:05] [AioModule/Read/Completed/DEBUG]: Received 270 bytes from session/192.168.1.100:8438
+[18:12:05] [AioModule/Read/Completed/DEBUG]: Received contents(270bytes): ff ff 00 00 01 0e 00 19 00 00 00 20 00 00 00 00 00 00 01 fb 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 09 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 0f 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 11 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 13 00 00 00 00 00 00 00 14 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00 16 00 00 00 00 00 00 00 17 00 00 00 00 00 00 00 18 00 00 00 00 00 00 00 19 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 1b 00 00 00 00 00 00 00 1c 00 00 00 00 00 00 00 1d 00 00 00 00 00 00 00 1e 00 00 00 00 00 00 00 1f 00 00 00 00 0c 35 
+[18:12:05] [ClientServer/ClientDecoder/INFO]: Receive a package 0019(背包信息)
+[18:12:25] [ClientServer/ClientMain/KERNEL]: 7.游戏结束，退出主程序
+[18:12:25] [SendingModule/sendLogout/INFO]: logout send!
+[18:12:25] [AioModule/Write/Completed/DEBUG]: Sent 14 bytes to session/192.168.1.100:8438
+[18:12:25] [AioModule/Write/Completed/DEBUG]: Sent contents(14bytes): ff ff 00 00 00 0e 00 13 00 00 00 00 84 c6 
+[18:12:25] [AioModule/Read/Completed/DEBUG]: Received 18 bytes from session/192.168.1.100:8438
+[18:12:25] [AioModule/Read/Completed/DEBUG]: Received contents(18bytes): ff ff 00 00 00 12 00 1e 00 00 04 03 00 00 00 00 6d f2 
+[18:12:25] [ClientServer/ClientDecoder/INFO]: Receive a package 001E(下线包)

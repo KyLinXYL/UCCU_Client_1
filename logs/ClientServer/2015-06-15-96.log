@@ -1,0 +1,6 @@
+[19:12:35] [ClientServer/ClientMain/init/DEBUG]: address: 192.168.1.100:8438
+[19:12:35] [ClientServer/ClientMain/init/DEBUG]: 图片加载成功
+[19:12:35] [ClientServer/ClientMain/init/DEBUG]: GIF动画加载成功
+[19:12:35] [ClientServer/ClientMain/init/DEBUG]: 物品预加载成功
+[19:12:36] [ClientServer/ClientMain/init/DEBUG]: init over
+[19:12:36] [ClientServer/ClientMain/KERNEL]: 0.开始建立网络连接…………
