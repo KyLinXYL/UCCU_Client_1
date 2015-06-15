@@ -1,0 +1,48 @@
+[01:37:04] [ClientServer/ClientMain/init/DEBUG]: address: 192.168.1.100:8438
+[01:37:04] [ClientServer/ClientMain/init/DEBUG]: 图片加载成功
+[01:37:04] [ClientServer/ClientMain/init/DEBUG]: GIF动画加载成功
+[01:37:04] [ClientServer/ClientMain/init/DEBUG]: 物品预加载成功
+[01:37:04] [ClientServer/ClientMain/init/DEBUG]: init over
+[01:37:04] [ClientServer/ClientMain/KERNEL]: 0.开始建立网络连接…………
+[01:37:04] [ClientServer/ClientMain/setUpConnection/DEBUG]: setUpConnection over
+[01:37:04] [ClientServer/ClientMain/KERNEL]: 1.网络连接成功!
+[01:37:04] [ClientServer/ClientMain/KERNEL]: 2.发送0000包，确认对方是否为服务器Gate端
+[01:37:04] [SendingModule/send00Package/INFO]: send00Package over
+[01:37:04] [AioModule/Write/Completed/DEBUG]: Sent 14 bytes to session/192.168.1.100:8438
+[01:37:04] [ClientSever/LoginBox/serverState/INFO]: Receive a package 0001(回应连接请求)
+[01:37:04] [ClientSever/LoginBox/serverState/INFO]: package 0001: 1
+[01:37:04] [ClientServer/ClientMain/KERNEL]: 3.收到0001包，确认对方为服务器Gate端
+[01:37:04] [AioModule/Write/Completed/DEBUG]: Sent contents(14bytes): ff ff 00 00 00 0e 00 00 00 00 30 39 20 db 
+[01:37:04] [ClientServer/ClientMain/KERNEL]: 4.初始化loginBox登陆界面
+[01:37:04] [AioModule/Read/Completed/DEBUG]: Received 18 bytes from session/192.168.1.100:8438
+[01:37:04] [AioModule/Read/Completed/DEBUG]: Received contents(18bytes): ff ff 00 00 00 12 00 14 00 00 01 4d f3 26 62 99 6d 7e 
+[01:37:04] [ClientServer/ClientDecoder/INFO]: Receive a package 0014(PING)1434303488665
+[01:37:04] [SendingModule/PINGResponse/DEBUG]: package 0015(PING回应包) send!
+[01:37:04] [AioModule/Write/Completed/DEBUG]: Sent 18 bytes to session/192.168.1.100:8438
+[01:37:04] [AioModule/Write/Completed/DEBUG]: Sent contents(18bytes): ff ff 00 00 00 12 00 15 00 00 01 4d f3 26 62 99 66 0a 
+[01:37:04] [AioModule/Read/Completed/DEBUG]: Received 11 bytes from session/192.168.1.100:8438
+[01:37:04] [AioModule/Read/Completed/DEBUG]: Received contents(11bytes): ff ff 00 00 00 0b 00 01 01 2a 46 
+[01:37:04] [ClientServer/ClientDecoder/INFO]: Receive a package 0001(回应连接请求)
+[01:37:04] [ClientServer/ClientDecoder/INFO]: package 0001: 1
+[01:37:04] [ClientSever/LoginBox/serverState/INFO]: Receive a package 0001(回应连接请求)
+[01:37:04] [ClientSever/LoginBox/serverState/INFO]: package 0001: 1
+[01:37:04] [AioModule/Read/Completed/DEBUG]: Received 18 bytes from session/192.168.1.100:8438
+[01:37:04] [AioModule/Read/Completed/DEBUG]: Received contents(18bytes): ff ff 00 00 00 12 00 16 00 00 00 00 00 00 00 04 28 52 
+[01:37:04] [ClientServer/ClientDecoder/INFO]: Receive a package 0016(时间同步)-64028
+[01:37:04] [ClientServer/LoginBox/onLoginResponse/INFO]: Receive a package 0003(登陆反馈)
+[01:37:04] [ClientServer/LoginBox/onLoginResponse/INFO]: package 0003: true
+[01:37:05] [ClientSever/LoginBox/addCharacter/INFO]: Receive a package 0006(角色预加载)
+[01:37:05] [ClientSever/LoginBox/addCharacter/INFO]: Receive a package 0006(角色预加载)
+[01:37:05] [ClientServer/LoginBox/noMorePackage/INFO]: Receive a package 0006(角色预加载: 这是最后一个空包
+[01:37:06] [SendingModule/sendCreateCharacter/INFO]: package 0008(创建角色) send!
+[01:37:06] [AioModule/Write/Completed/DEBUG]: Sent 25 bytes to session/192.168.1.100:8438
+[01:37:06] [ClientServer/LoginBox/onCreatResponse/INFO]: Receive a package 0009(角色创建结果)
+[01:37:06] [AioModule/Write/Completed/DEBUG]: Sent contents(25bytes): ff ff 00 00 00 19 00 08 6e 75 6c 6c 00 64 64 64 64 00 01 00 00 00 01 38 47 
+[01:37:07] [ClientServer/GameBox/addCharacter/DEBUG]: Receive a package 000A(游戏中所有玩家信息)
+[01:37:07] [ClientServer/GameBox/addCharacter/DEBUG]: 000A:加入一个主角玩家:dddd
+[01:37:07] [ClientServer/ClientMain/KERNEL]: 5.登陆结束
+[01:37:07] [ClientServer/ClientMain/KERNEL]: 6.开始游戏，启动gameBox
+[01:37:08] [ClientServer/GameBox/startGame/KERNEL]: 接收主角详细信息(000A):关闭加载窗口,开始游戏!
+[01:37:10] [ClientServer/ClientMain/KERNEL]: 7.游戏结束，退出主程序
+[01:37:10] [SendingModule/sendLogout/INFO]: logout send!
+[01:37:10] [AioModule/Write/Failed/WARNING]: Failed to send to sessionnull. java.nio.channels.ClosedChannelException
