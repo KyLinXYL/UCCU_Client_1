@@ -1,0 +1,35 @@
+[13:00:37] [ClientServer/ClientMain/init/DEBUG]: address: baidu.com:80
+[13:00:37] [ClientServer/ClientMain/init/DEBUG]: 图片加载成功
+[13:00:37] [ClientServer/ClientMain/init/DEBUG]: GIF动画加载成功
+[13:00:37] [ClientServer/ClientMain/init/DEBUG]: 物品预加载成功
+[13:00:38] [ClientServer/ClientMain/init/DEBUG]: init over
+[13:00:38] [ClientServer/ClientMain/KERNEL]: 0.开始建立网络连接…………
+[13:00:38] [ClientServer/ClientMain/setUpConnection/DEBUG]: setUpConnection over
+[13:00:38] [ClientServer/ClientMain/KERNEL]: 1.网络连接成功!
+[13:00:38] [ClientServer/ClientMain/KERNEL]: 2.发送0000包，确认对方是否为服务器Gate端
+[13:00:38] [SendingModule/send00Package/INFO]: send00Package over
+[13:00:38] [ClientSever/LoginBox/serverState/INFO]: Receive a package 0001(回应连接请求)
+[13:00:38] [AioModule/Write/Completed/DEBUG]: Sent 14 bytes to sessionbaidu.com/180.149.132.47:80
+[13:00:38] [ClientSever/LoginBox/serverState/INFO]: package 0001: 1
+[13:00:38] [ClientServer/ClientMain/KERNEL]: 3.收到0001包，确认对方为服务器Gate端
+[13:00:38] [AioModule/Write/Completed/DEBUG]: Sent contents(14bytes): ff ff 00 00 00 0e 00 00 00 00 30 39 20 db 
+[13:00:38] [ClientServer/ClientMain/KERNEL]: 4.初始化loginBox登陆界面
+[13:00:38] [ClientServer/LoginBox/onLoginResponse/INFO]: Receive a package 0003(登陆反馈)
+[13:00:38] [ClientServer/LoginBox/onLoginResponse/INFO]: package 0003: true
+[13:00:39] [ClientSever/LoginBox/addCharacter/INFO]: Receive a package 0006(角色预加载)
+[13:00:39] [ClientSever/LoginBox/addCharacter/INFO]: Receive a package 0006(角色预加载)
+[13:00:39] [ClientServer/LoginBox/noMorePackage/INFO]: Receive a package 0006(角色预加载: 这是最后一个空包
+[13:00:39] [SendingModule/sendCreateCharacter/INFO]: package 0008(创建角色) send!
+[13:00:39] [AioModule/Write/Completed/DEBUG]: Sent 25 bytes to sessionbaidu.com/180.149.132.47:80
+[13:00:39] [ClientServer/LoginBox/onCreatResponse/INFO]: Receive a package 0009(角色创建结果)
+[13:00:39] [AioModule/Write/Completed/DEBUG]: Sent contents(25bytes): ff ff 00 00 00 19 00 08 6e 75 6c 6c 00 64 64 64 64 00 01 00 00 00 01 38 47 
+[13:00:41] [ClientServer/GameBox/addCharacter/DEBUG]: Receive a package 000A(游戏中所有玩家信息)
+[13:00:41] [ClientServer/GameBox/addCharacter/DEBUG]: 000A:加入一个主角玩家:dddd
+[13:00:41] [ClientServer/ClientMain/KERNEL]: 5.登陆结束
+[13:00:41] [ClientServer/ClientMain/KERNEL]: 6.开始游戏，启动gameBox
+[13:00:41] [ClientServer/GameBox/startGame/KERNEL]: 接收主角详细信息(000A):关闭加载窗口,开始游戏!
+[13:00:53] [SendingModule/sendTargetPos/DEBUG]: package 000B(角色移动意图) send!
+[13:00:53] [AioModule/Write/Failed/WARNING]: Failed to send to sessionnull. java.nio.channels.ClosedChannelException
+[13:00:53] [SendingModule/sendTargetPos/DEBUG]: targetX: -306/targetY: -6
+[13:00:54] [ClientServer/ClientMain/KERNEL]: 7.游戏结束，退出主程序
+[13:00:54] [SendingModule/sendLogout/INFO]: logout send!

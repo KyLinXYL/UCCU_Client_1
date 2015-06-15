@@ -36,9 +36,9 @@ class CharacterInfo{
 public class CharacterPanel extends JPanel{
 	final int maxcharacter = 3;
 	JButton[] characterButton;
-	JTextField nameText;
-	JTextField levelText;
-	JTextField genderText;
+	JTextArea nameText;
+	JTextArea levelText;
+	JTextArea genderText;
 	BackgroundPanel bigPic;
 	JButton entryButton;
 	CharacterInfo[] characterInfo;
@@ -49,9 +49,9 @@ public class CharacterPanel extends JPanel{
 		parent = loginBox;
 		characterCount = 0;
 		select = -1;
-		nameText = new JTextField();
-		levelText = new JTextField();
-		genderText = new JTextField();
+		nameText = new JTextArea();
+		levelText = new JTextArea();
+		genderText = new JTextArea();
 		entryButton = new JButton();
 		entryButton.setBounds(1200,600,100,100);
 		entryButton.setOpaque(false);
@@ -114,18 +114,21 @@ public class CharacterPanel extends JPanel{
 		lbp.setBounds(500, 100, 3*textW, 3*textH);
 //		lbp.add(new JLabel("name"));
 		nameText.setBounds(0,0*textH,textW,textH);
+		nameText.setEditable(false);
 		nameText.setOpaque(false);
 		nameText.setForeground(Color.white);
 		nameText.setFont(new Font("黑体", 1, 36));
 		lbp.add(nameText);
 //		lbp.add(new JLabel("level"));
 		levelText.setBounds(0,1*textH,textW,textH);
+		levelText.setEditable(false);
 		levelText.setOpaque(false);
 		levelText.setForeground(Color.white);
 		levelText.setFont(new Font("黑体", 1, 36));
 		lbp.add(levelText);
 //		lbp.add(new JLabel("gender"));
 		genderText.setBounds(0,2*textH,textW,textH);
+		genderText.setEditable(false);
 		genderText.setOpaque(false);
 		genderText.setForeground(Color.white);
 		genderText.setFont(new Font("黑体", 1, 36));

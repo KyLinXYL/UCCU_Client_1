@@ -22,7 +22,9 @@ public class SubSkillPanel extends JPanel{
 		this.setBounds(bounds);
 		skillIcon = sk;
 		name = new JTextArea(sk.info.name);
+		name.setEditable(false);
 		level = new JTextArea("等级："+sk.info.level);
+		level.setEditable(false);
 		backg = new Picture("聊天背景.png",0,0,0).getImage()
 				.getScaledInstance(bounds.width, bounds.height, Image.SCALE_DEFAULT);
 		skillIcon.setBounds(5, 5, bounds.height-10, bounds.height-10);//正方形
