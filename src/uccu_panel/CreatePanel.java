@@ -29,22 +29,28 @@ public class CreatePanel extends JPanel{
 	int select;
 	BackgroundPanel bigPic;
 	final int maxcharacter = 3;
+	public void init(){
+		for(int i=0;i<maxcharacter;++i)
+			characterButton[i].setIcon(new ImageIcon(
+					Painter.painter.getPicByPid(i+11).getImage()
+					.getScaledInstance(130,130,Image.SCALE_DEFAULT) ));
+	}
 	public CreatePanel(LoginBox lb){
 		parent = lb;
 		nameField = new JTextField();
 		createButton = new JButton("create");
 		createButton.addActionListener(e->{
 			String name = nameField.getText();
-//			这两个地方都不要写死
 			byte gender = 1;
-			int picID=11;
+			if(boy.isSelected()) gender = 0;
+			int picID=select;
 			SendingModule.sendCreateCharacter(name,gender,picID);
 		});
 		backButton = new JButton("back");
 		backButton.addActionListener(e->{
 			parent.createBack();
 		});
-		boy = new JCheckBox("boy",false);
+		boy = new JCheckBox("boy",true);
 		girl = new JCheckBox("girl",false);
 		boy.addActionListener(e->{
 			girl.setSelected(false);
@@ -60,9 +66,6 @@ public class CreatePanel extends JPanel{
 			characterButton[i].setOpaque(false);
 			characterButton[i].setContentAreaFilled(false);
 			characterButton[i].setBorderPainted(false);
-			characterButton[i].setIcon(new ImageIcon(
-					Painter.painter.getPicByPid(i+11).getImage()
-					.getScaledInstance(130,130,Image.SCALE_DEFAULT) ));
 			characterButton[i].addActionListener(e->{
 				int buttonNum = Integer.parseInt( ((JButton)e.getSource()).getName() );
 				select = buttonNum+11;

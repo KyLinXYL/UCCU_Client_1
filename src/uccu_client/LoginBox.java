@@ -33,6 +33,7 @@ public class LoginBox extends JFrame{
 	}
 	public void beginCreate(){
 		characterPanel.setVisible(false);
+		createPanel.init();
 		this.add(createPanel);
 		createPanel.setVisible(true);
 	}
