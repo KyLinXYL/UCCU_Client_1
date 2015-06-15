@@ -37,6 +37,6 @@ class ItemIcon extends UsableIcon{
 			return;
 		}
 		info.lastuse = now;
-		SendingModule.sendUseItem(info.instanceID,1,-1);
+		SendingModule.sendUseItem(info.instanceID,1,Painter.painter.getLockedPlayerID());
 	}
 }
