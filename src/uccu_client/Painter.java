@@ -56,6 +56,9 @@ public class Painter extends JFrame{
 	public static Dimension  screensize;
 	public static int width,height,windowWidth,windowHeight;
 //	final AffineTransform identity = new AffineTransform();
+	Image[] imagebuffer = new Image[2];
+	Graphics2D[] graphbuffer = new Graphics2D[2];
+	int buffercount = 0;
 	
     HashMap<Integer, Picture> picMap;
     HashMap<Integer, GIFpicture> gifPicMap;
@@ -92,6 +95,13 @@ public class Painter extends JFrame{
 		gifMap = new ConcurrentHashMap<DoublePoint,GIF>();
 		background = new Picture("bg1.jpg", 0, 0,0);
 		loadPic();
+		for(int i=0;i<2;++i){
+			imagebuffer[i] = createImage(getWidth(), getHeight());
+			graphbuffer[i] = (Graphics2D)(imagebuffer[i].getGraphics());
+			graphbuffer[i].setRenderingHint(RenderingHints.KEY_ANTIALIASING,RenderingHints.VALUE_ANTIALIAS_ON );
+		    graphbuffer[i].setRenderingHint(RenderingHints.KEY_COLOR_RENDERING,RenderingHints.VALUE_COLOR_RENDER_QUALITY );
+		    graphbuffer[i].setRenderingHint(RenderingHints. KEY_DITHERING,RenderingHints.VALUE_DITHER_ENABLE );
+		}
 		
 		gameWindow = new GameWindow();
 		chatPanel = new ChatPanel();
@@ -150,13 +160,11 @@ public class Painter extends JFrame{
 			}
 		});
 	}
+	
 	private void flashImg(){
-		//根据add进来的Entity生成图像，更新gameWindow的内容    
-        Image ibuffer = createImage(getWidth(), getHeight());
-        Graphics2D gbuffer = (Graphics2D)(ibuffer.getGraphics());
-        gbuffer.setRenderingHint(RenderingHints.KEY_ANTIALIASING,RenderingHints.VALUE_ANTIALIAS_ON );
-        gbuffer.setRenderingHint(RenderingHints.KEY_COLOR_RENDERING,RenderingHints.VALUE_COLOR_RENDER_QUALITY );
-        gbuffer.setRenderingHint(RenderingHints. KEY_DITHERING,RenderingHints.VALUE_DITHER_ENABLE );
+		//根据add进来的Entity生成图像，更新gameWindow的内容
+		buffercount = (buffercount+1)%2;
+        Graphics2D gbuffer = graphbuffer[buffercount];
         /* 根据主角位置绘制背景 */
         int imgW = background.getWidth()-2,imgH = background.getHeight()-2;
         int zeroX = windowWidth/2 - ((int)mainRole.posX)%imgW - imgW;
@@ -182,8 +190,12 @@ public class Painter extends JFrame{
 				deleteGIF(dp);
 			}
 		}
-		gameWindow.img = ibuffer;
+		gameWindow.img = imagebuffer[buffercount];
 		gameWindow.repaint();
+	}
+	public int getLockedPlayerID(){
+		if(lockPlayer == null) return mainRole.getID();
+		else return lockPlayer.getID();
 	}
 	public void button1Clicked(int absX,int absY){
 		gameBox.sendTargetPos(absX,absY);

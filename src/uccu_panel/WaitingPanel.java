@@ -33,6 +33,7 @@ public class WaitingPanel extends JPanel {
 		Picture pic = new Picture("聊天背景.png", 0, 0, 0);
 		introbackg = pic.getImage().getScaledInstance(introbounds.width, introbounds.height, Image.SCALE_DEFAULT);
 		intro = new JTextArea(info);
+		intro.setEditable(false);
 		intro.setFont(new Font("黑体", 1, 24));
 		intro.setForeground(Color.white);
 		intro.setOpaque(false);

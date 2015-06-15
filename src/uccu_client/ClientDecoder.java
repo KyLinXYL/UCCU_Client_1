@@ -95,7 +95,7 @@ public class ClientDecoder implements Decoder {
 				long globalTime= datagram.getLong();
 				UccuLogger.log("ClientServer/ClientDecoder", "Receive a package 000C(所有玩家目标坐标更新)");
 				UccuLogger.log("ClientServer/ClientDecoder", "package 000C: "+"/id: "+id+"/posX: "+targetX+"/posY: "+targetY);
-//				if(id != ClientMain.mainID)
+				if(id != ClientMain.mainID)
 					gameBox.updateTarget(id, targetX, targetY,globalTime);
 				break;
 			}
@@ -246,6 +246,13 @@ public class ClientDecoder implements Decoder {
 				}
 				UccuLogger.log("ClientServer/ClientDecoder", "Receive a package 001D(特效包)");
 				UccuLogger.log("ClientServer/ClientDecoder", "package 001D(特效包): attacker:"+attacker+"/targetID:"+target);
+				break;
+			}
+			case 0x001E:{
+				int quitid = datagram.getInt();
+				int quitopt = datagram.getInt();
+				gameBox.playerQuit(quitid,quitopt);
+				UccuLogger.log("ClientServer/ClientDecoder", "Receive a package 001E(下线包)");
 				break;
 			}
 			
