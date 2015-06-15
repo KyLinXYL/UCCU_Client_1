@@ -78,7 +78,7 @@ public class GameBox{
 		}
 	}
 	public void sendTargetPos(int targetX,int targetY){
-//		updateTarget(ClientMain.mainID,targetX, targetY,System.currentTimeMillis()-globalTimeDelta);//先更新目标地址，再发送数据包
+		updateTarget(ClientMain.mainID,targetX, targetY,System.currentTimeMillis()-globalTimeDelta);//先更新目标地址，再发送数据包
 		SendingModule.sendMovingTarget(mainrole.getID(), targetX,targetY);
 		}
 	//将角色初始化,加入角色池并放入贴图池
@@ -99,8 +99,8 @@ public class GameBox{
 			painter.addEntity(tmpMain);
 			painter.setMainRole(tmpMain);
 			mainrole=tmpMain;
-			for(int i=0;i<3;++i)
-				mainrole.add_skills(0, 5, 5, 5);
+//			for(int i=0;i<3;++i)
+//				mainrole.add_skills(0, 5, 5, 5);
 			UccuLogger.debug("ClientServer/GameBox/addCharacter", "000A:加入一个主角玩家:"+name);
 		}
 	}	
@@ -127,7 +127,7 @@ public class GameBox{
 		renewair.gender=gender;
 		renewair.life= life;
 		renewair.curlife=curlife;
-		renewair.hp = (double)life/(double)curlife;
+		renewair.hp = (double)curlife/(double)life;
 		renewair.mana=mana;
 		renewair.curmana=curmana;
 		renewair.atk=atk;
@@ -136,6 +136,11 @@ public class GameBox{
 		renewair.speed=movespeed;
 //		renewair.posX=posX;
 //		renewair.posY=posY;
+	}
+	public void playerQuit(int pid,int opt){
+		Airplane p = playerPool.get(pid);
+		playerPool.remove(p);
+		painter.deleteEntity(p);
 	}
 	//Action_plane线程专门负责处理每20ms之后所有飞机的位置
 	private class ActionThread_plane implements Runnable{
