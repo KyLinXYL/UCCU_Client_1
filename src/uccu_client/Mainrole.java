@@ -44,6 +44,18 @@ public class Mainrole extends Airplane {
 		skills[i].instanceID = instanceID;
 		skills[i].level = level;
 		skills[i].exp = exp;
+		if(picID==1000000001||picID==1){
+			skills[i].name="全局聊天";
+			skills[i].describtion="向宇宙空间广播\n信息，所有飞行器\n都能收到\n你的消息";		
+		}
+		else if(picID==1000000002||picID==2){
+			skills[i].name="私聊";
+			skills[i].describtion="通过严格加密的\n精确无线电波,\n向目标飞行器\n发送讯息";		
+		}
+		else if(picID==1000000003||picID==3){
+			skills[i].name="热跟踪导弹";
+			skills[i].describtion="导弹上的探测器\n捕获目标辐射的\n能量,自动制导,\n点对点轰炸";		
+		}
 	}
 }
 

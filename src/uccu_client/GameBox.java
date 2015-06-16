@@ -128,7 +128,7 @@ public class GameBox{
 		}
 	}
 	public void bloodUp(int tar){
-		painter.addGIF(playerPool.get(tar), 10, 5);
+		painter.addGIF(playerPool.get(tar), 4, 5);
 	}
 	public void renewCharacter(int id,String name,String describe,byte level,byte gender,
 			int life,int curlife,int mana, int curmana, int atk,int def,int exp,
