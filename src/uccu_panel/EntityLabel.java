@@ -85,6 +85,11 @@ public class EntityLabel extends JLabel{
             gbuffer.setColor(Color.RED);
             gbuffer.fillRect(relX-picW/2 ,relY-picH/2, (int)(pic.getWidth()*hp), 5);
         }
+        if(entityInfo.getType() == style.airplane){
+        	Airplane ap = (Airplane)entityInfo;
+        	gbuffer.setColor(Color.white);
+        	gbuffer.drawChars(ap.name.toCharArray(), 0, ap.name.length(), relX-picW/4 ,relY+picH/2);
+        }
         return;
 	}
 }

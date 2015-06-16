@@ -38,7 +38,10 @@ public class CreatePanel extends JPanel{
 	public CreatePanel(LoginBox lb){
 		parent = lb;
 		nameField = new JTextField();
-		createButton = new JButton("create");
+		createButton = new JButton();
+		createButton.setOpaque(false);
+		createButton.setContentAreaFilled(false);
+		createButton.setBorderPainted(false);
 		createButton.addActionListener(e->{
 			String name = nameField.getText();
 			byte gender = 1;
@@ -46,7 +49,10 @@ public class CreatePanel extends JPanel{
 			int picID=select;
 			SendingModule.sendCreateCharacter(name,gender,picID);
 		});
-		backButton = new JButton("back");
+		backButton = new JButton();
+		backButton.setOpaque(false);
+		backButton.setContentAreaFilled(false);
+		backButton.setBorderPainted(false);
 		backButton.addActionListener(e->{
 			parent.createBack();
 		});
@@ -98,9 +104,13 @@ public class CreatePanel extends JPanel{
 		nameField.setBackground(new Color(110,110,110,150));
 		nameField.setForeground(Color.white);
 		this.add(nameField);
-		createButton.setBounds(1100, 500, 100, 100);
+		createButton.setBounds(1150, 630, 70, 70);
+		createButton.setIcon(new ImageIcon(new Picture("创建.png",0,0,0).getImage()
+				.getScaledInstance(createButton.getWidth(), createButton.getHeight(), Image.SCALE_DEFAULT) ));
 		this.add(createButton);
-		backButton.setBounds(1100, 600, 100, 50);
+		backButton.setBounds(1250, 630, 70, 70);
+		backButton.setIcon(new ImageIcon(new Picture("返回.png",0,0,0).getImage()
+				.getScaledInstance(backButton.getWidth(), backButton.getHeight(), Image.SCALE_DEFAULT) ));
 		this.add(backButton);
 	}
 }

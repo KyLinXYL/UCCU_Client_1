@@ -108,34 +108,34 @@ public class CharacterPanel extends JPanel{
 		this.add(cbp);
 		
 		JPanel lbp = new JPanel();
-		int textW = 200,textH = 150;
+		int textW = 200,textH = 70;
 		lbp.setOpaque(false);
 		lbp.setLayout(null);
-		lbp.setBounds(500, 100, 3*textW, 3*textH);
+		lbp.setBounds(800, 500, 3*textW, 3*textH);
 //		lbp.add(new JLabel("name"));
 		nameText.setBounds(0,0*textH,textW,textH);
 		nameText.setEditable(false);
 		nameText.setOpaque(false);
 		nameText.setForeground(Color.white);
-		nameText.setFont(new Font("黑体", 1, 36));
+		nameText.setFont(new Font("隶书", 1, 36));
 		lbp.add(nameText);
 //		lbp.add(new JLabel("level"));
 		levelText.setBounds(0,1*textH,textW,textH);
 		levelText.setEditable(false);
 		levelText.setOpaque(false);
 		levelText.setForeground(Color.white);
-		levelText.setFont(new Font("黑体", 1, 36));
+		levelText.setFont(new Font("隶书", 1, 36));
 		lbp.add(levelText);
 //		lbp.add(new JLabel("gender"));
 		genderText.setBounds(0,2*textH,textW,textH);
 		genderText.setEditable(false);
 		genderText.setOpaque(false);
 		genderText.setForeground(Color.white);
-		genderText.setFont(new Font("黑体", 1, 36));
+		genderText.setFont(new Font("隶书", 1, 36));
 		lbp.add(genderText);
 		this.add(lbp);
 		
-		bigPic = new BackgroundPanel(new Rectangle(500+textW,100,400,400));
+		bigPic = new BackgroundPanel(new Rectangle(500+textW,50,400,400));
 		this.add(bigPic);
 
 	}

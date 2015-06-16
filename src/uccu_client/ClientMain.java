@@ -30,7 +30,7 @@ public class ClientMain {
 	static boolean isGameOver;
 	static boolean deBug =false;//调试模式
 	public static void main(String[] arg) {
-		init(LogMode.DEBUG);
+		init(LogMode.NONE);
 		UccuLogger.kernel("ClientServer/ClientMain", "0.开始建立网络连接…………");
 		setUpConnection();
 		UccuLogger.kernel("ClientServer/ClientMain", "1.网络连接成功!");
@@ -48,7 +48,7 @@ public class ClientMain {
 		UccuLogger.kernel("ClientServer/ClientMain", "6.开始游戏，启动gameBox");
 		gameBox.startGame();
 		myDebug(3);//debug调试模式使用
-		while (!isGameOver) {mySleep(500);myDebug(4);}//debug调试模式使用	
+		while (!isGameOver) {mySleep(5);myDebug(4);}//debug调试模式使用	
 		UccuLogger.kernel("ClientServer/ClientMain", "7.游戏结束，退出主程序");
 		procExit();
 	}
@@ -120,10 +120,10 @@ public class ClientMain {
 				loginBox.serverState((byte) 1);// 假装连接成功，服务器处于空闲状态
 			}
 			else if (num == 2) {
-//				mySleep(2000);
+//				mySleep(5000);
 				loginBox.onLoginResponse(true);// 假装收到了一个登录成功反馈
 				// loginBox.onRegistResponse(true);//假装收到了一个注册成功反馈
-//				mySleep(1000000);
+//				mySleep(5000);
 				// 假装收到了两个角色信息
 				loginBox.addCharacter(1, "first role", (byte) 12, (byte) 0,11);
 				loginBox.addCharacter(2, "second role", (byte) 15, (byte) 1,12);
@@ -134,6 +134,7 @@ public class ClientMain {
 				SendingModule.sendCreateCharacter("dddd",(byte) 1, 1);
 				// 假装角色创建成功
 				loginBox.onCreatResponse(true);
+//				mySleep(100000);
 				//创建成功后服务器还会再发回来一个包代表刚创建的角色
 //				loginBox.addCharacter(3, "third role", (byte) 1, (byte) 1);
 				//然后客户端发送一个角色选择的包，登陆结束
@@ -157,7 +158,7 @@ public class ClientMain {
 				gameBox.updateTarget(6, 1000, 3000, System.currentTimeMillis());
 			}
 			else if(num==4){	//模拟各种聊天请求
-				mySleep(500);
+//				mySleep(50);
 				double ran=Math.random();
 				if(ran<0.08){gameBox.painter.allMapChat(chatStat.frequency,"","");}
 				else if(ran<0.16){gameBox.painter.allMapChat(chatStat.nopermission,"","");}

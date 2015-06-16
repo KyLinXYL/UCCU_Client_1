@@ -9,6 +9,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Vector;
 
+import javax.swing.JOptionPane;
+
 public class GameBox{
 	final int sleeptime = 20; 
 	//实体池，应为一个HashMap，以ID为索引，实体对象为元素
@@ -40,11 +42,18 @@ public class GameBox{
 		while(roleSending){
 			if(i>100){
 				UccuLogger.kernel("ClientServer/GameBox/startGame", "接收角色详细信息(000A)超时!(未接收到主角信息)");
+				JOptionPane.showMessageDialog(null, "连接超时!");
 				ClientMain.isGameOver=true;
 				return;
 			}
-			if(mainrole!=null)
-				roleSending=false;			
+			if(mainrole!=null){
+				roleSending=false;
+				for(;i<100;++i){
+					painter.setInitStage(i/100.0);
+					try {Thread.sleep(50);} catch (InterruptedException e) {}
+				}
+				break;
+			}
 			painter.setInitStage(i++/100.0);
 			ClientMain.mySleep(200);
 		}
@@ -99,8 +108,12 @@ public class GameBox{
 			painter.addEntity(tmpMain);
 			painter.setMainRole(tmpMain);
 			mainrole=tmpMain;
-//			for(int i=0;i<3;++i)
-//				mainrole.add_skills(0, 5, 5, 5);
+			if(ClientMain.deBug){
+				for(int i=0;i<3;++i)
+					mainrole.add_skills(3, 5, 5, 5);
+				for(int i=0;i<32;++i)
+					mainrole.add_items(3, 2, 3);
+			}
 			UccuLogger.debug("ClientServer/GameBox/addCharacter", "000A:加入一个主角玩家:"+name);
 		}
 	}	

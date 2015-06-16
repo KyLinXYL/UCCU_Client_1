@@ -15,10 +15,11 @@ public class SkillPanel extends JInternalFrame{
 	final int lbW = 70,lbH = 70,gapW = 18,gapH=12;
 	public SkillPanel() {
 		super("skill",false,true);
-		this.setLocation(20, 20);
+		this.setLocation(200, 200);
 		this.setSize(250,300);
 		this.setDefaultCloseOperation(HIDE_ON_CLOSE);
 		this.setLayout(null);
+		this.setBorder(null);
 		bp = null;
 		backg = new BackgroundPanel(new Rectangle(0,0,getWidth(),getHeight()));
 		backg.setSize(getSize());

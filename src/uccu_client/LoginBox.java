@@ -9,6 +9,8 @@ import java.awt.Toolkit;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -17,6 +19,7 @@ import uccu_panel.BackgroundPanel;
 import uccu_panel.CharacterPanel;
 import uccu_panel.CreatePanel;
 import uccu_panel.LoginPanel;
+import uccu_panel.MessageFrame;
 import uccu_panel.WaitingPanel;
 
 public class LoginBox extends JFrame{
@@ -44,6 +47,7 @@ public class LoginBox extends JFrame{
 				((JFrame)e.getSource()).dispose();
 			}
 		});
+		this.setIconImage(new Picture("UCCU.png", 0, 0, 0).getImage());
 		this.setLayout(null);
 		screensize = Toolkit.getDefaultToolkit().getScreenSize();
 		this.setUndecorated(true);
@@ -55,19 +59,38 @@ public class LoginBox extends JFrame{
 		this.add(loginPanel);
 		backPicPanel = new BackgroundPanel(new Rectangle(0,0,1366,768));
 		waitingPanel = new WaitingPanel(
-				"    Berus星球被Siron称霸着,他们凭借\n着自己的智慧开创了Berus星球有史以来\n最为先进的文明。"
-				+"\n    Siron用自己的无线电波技术向外发\n射着友好的信号,等待着另一个友好种族\n的回应......"
-				+"\n    然而就像小孩子总是以为一切都是\n善意的一样,他们完全无法体会成年人的\n恶意。"
-				+"\n  毗邻Berus星系的Neuzac星球就是这样\n的存在,Neuzac在Madlos种族的漫长统治\n之下，Neuzac星上的一切几乎被消耗\n殆尽。"
-				+"\n    亟需资源的Madlos捕获到了"
-				+"Berus\n——这一个年轻而富有活力的星球发出\n的信号。"
-				+"\n   他们欣喜若狂,规划着仅剩不多的资\n源,悄无声息地来到了Berus的一颗行星。\n   一场种族生存之战就此打响！"
+				"UCCU小组出品...\n"
+						+"Track (轨迹)...\n"
+						+"成员:...\n"
+						+"李哲涵	 徐玉麟...\n"
+						+"唐  爽	 王  丰...\n"
+						+"王  佩	 潘  虹...\n"
+						+"	 2015年6月...\n"
+						+"..."
+						+"正在与服务器建立连接...\n"
+										+ "连通率100%,开始测试同步...\n"
+										+"...\n"
+										+ "同步率200%...\n"
+										+"...\n"
+										+ "同步完成,启动神经元突触对接...\n"
+										+"...\n"
+										+ "对接成功!...\n"
+										+ "进入游戏...\n"
 				,new Rectangle(0,0,1366,768)
-				,new Rectangle(50,100,400,600));
+				,new Rectangle(50,100,450,550));
 		characterPanel = new CharacterPanel(this);
 		characterPanel.setBounds(0, 0, 1366, 768);
 		createPanel = new CreatePanel(this);
 		createPanel.setBounds(0, 0, 1366, 768);
+		JButton exitbutton = new JButton();
+		exitbutton.setBounds(1340, 10, 20, 20);
+		exitbutton.setIcon(new ImageIcon(
+				new Picture("关闭.png",0,0,0).getImage()
+				.getScaledInstance(20,20,Image.SCALE_DEFAULT) ));
+		this.add(exitbutton);
+		exitbutton.addActionListener(e->{
+			this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
+		});
 	}
 	public void init(){
 //		backPicPanel.img = Toolkit.getDefaultToolkit().getImage("bg1.jpg");
@@ -90,7 +113,7 @@ public class LoginBox extends JFrame{
 			this.setVisible(true);//backPicPanel.repaint();
 		}
 		else{
-			JOptionPane.showMessageDialog(null, "login fail!");
+			new MessageFrame("登录失败");
 		}
 		//decoder得到一个登录反馈时调用该函数
 	}
@@ -99,24 +122,28 @@ public class LoginBox extends JFrame{
 		UccuLogger.log("ClientServer/LoginBox/onRegistResponse", "Receive a package 0005(注册结果)");
 		UccuLogger.log("ClientServer/LoginBox/onRegistResponse", "package 0005: "+res);
 		if(res){
-			JOptionPane.showMessageDialog(null, "regist success!");
+			new MessageFrame("注册成功");
 		}
 		else{
-			JOptionPane.showMessageDialog(null, "regist fail!");
+			new MessageFrame("注册失败");
 		}
 		//decoder得到一个注册反馈时调用该函数
 	}
 	public void onCreatResponse(boolean res){
 		UccuLogger.log("ClientServer/LoginBox/onCreatResponse", "Receive a package 0009(角色创建结果)");
 		if(res){
-			JOptionPane.showMessageDialog(null, "create success!");
+			new MessageFrame("创建成功！");
 		}
 		else{
-			JOptionPane.showMessageDialog(null, "create fail!");
+			new MessageFrame("创建失败");
 		}
 	}//创建角色成功否
 	public void noMorePackage() {
 		UccuLogger.log("ClientServer/LoginBox/noMorePackage", "Receive a package 0006(角色预加载: 这是最后一个空包");
+		for(int i=1;i<=100;++i){
+			waitingPanel.setStage(i/100.0);
+			try {Thread.sleep(50);} catch (InterruptedException e) {}
+		}
 		this.setVisible(false);
 		waitingPanel.setVisible(false);
 		this.add(characterPanel);

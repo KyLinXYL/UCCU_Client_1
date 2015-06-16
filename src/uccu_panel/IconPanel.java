@@ -17,10 +17,12 @@ public class IconPanel extends JPanel{
 	JButton bag;
 	JButton skill;
 	JButton friend;
+	JButton exit;
 	ImageIcon[] infopic;
 	ImageIcon[] bagpic;
 	ImageIcon[] skillpic;
 	ImageIcon[] friendpic;
+	ImageIcon[] exitpic;
 	final int iconW = 70,iconH = 70;
 	public IconPanel(){
 		this.setLayout(null);
@@ -29,15 +31,18 @@ public class IconPanel extends JPanel{
 		bag = new JButton();
 		skill = new JButton();
 		friend  = new JButton();
+		exit = new JButton();
 		infopic = new ImageIcon[3];
 		bagpic = new ImageIcon[3];
 		skillpic = new ImageIcon[3];
 		friendpic = new ImageIcon[3];
+		exitpic = new ImageIcon[3];
 		
-		info.setBounds(0*iconW, 0, iconW,iconH);
-		bag.setBounds(1*iconW, 0, iconW,iconH);
-		skill.setBounds(2*iconW, 0, iconW,iconH);
-		friend.setBounds(3*iconW, 0, iconW,iconH);
+		info.setBounds(0,0*iconH,  iconW,iconH);
+		bag.setBounds(0,1*iconH,  iconW,iconH);
+		skill.setBounds(0,2*iconH,  iconW,iconH);
+		friend.setBounds(0,3*iconH, iconW,iconH);
+		exit.setBounds(0,4*iconH,iconW,iconH);
 		infopic[0] = new ImageIcon(Toolkit.getDefaultToolkit().getImage("人物1.png"));
 		infopic[0].setImage(infopic[0].getImage().getScaledInstance(
 				info.getWidth(), info.getHeight(), Image.SCALE_DEFAULT));
@@ -81,6 +86,17 @@ public class IconPanel extends JPanel{
 		friendpic[2].setImage(friendpic[2].getImage().getScaledInstance(
 				friend.getWidth(), friend.getHeight(), Image.SCALE_DEFAULT));
 		friend.setIcon(friendpic[0]);
+		
+		exitpic[0] = new ImageIcon(Toolkit.getDefaultToolkit().getImage("退出1.png"));
+		exitpic[0].setImage(exitpic[0].getImage().getScaledInstance(
+				exit.getWidth(), exit.getHeight(), Image.SCALE_DEFAULT));
+		exitpic[1] = new ImageIcon(Toolkit.getDefaultToolkit().getImage("退出2.png"));
+		exitpic[1].setImage(exitpic[1].getImage().getScaledInstance(
+				exit.getWidth(), exit.getHeight(), Image.SCALE_DEFAULT));
+		exitpic[2] = new ImageIcon(Toolkit.getDefaultToolkit().getImage("退出1.png"));
+		exitpic[2].setImage(exitpic[2].getImage().getScaledInstance(
+				exit.getWidth(), exit.getHeight(), Image.SCALE_DEFAULT));
+		exit.setIcon(exitpic[0]);
 		
 		info.addMouseListener(new MouseAdapter() {
 			@Override
@@ -158,10 +174,30 @@ public class IconPanel extends JPanel{
 				friend.setIcon(friendpic[0]);
 		    }
 		});
+		exit.addMouseListener(new MouseAdapter() {
+			@Override
+		    public void mousePressed(MouseEvent e) {
+				exit.setIcon(exitpic[2]);
+		    }
+			@Override
+		    public void mouseReleased(MouseEvent e) {
+				exit.setIcon(exitpic[1]);
+				Painter.painter.showInnerFrame(FrameType.exit);
+		    }
+			@Override
+		    public void mouseEntered(MouseEvent e) {
+				exit.setIcon(exitpic[1]);
+		    }
+			@Override
+		    public void mouseExited(MouseEvent e) {
+				exit.setIcon(exitpic[0]);
+		    }
+		});
 		this.add(info);
 		this.add(bag);
 		this.add(skill);
 		this.add(friend);
-		this.setSize(4*iconW,iconH);
+		this.add(exit);
+		this.setSize(iconW,5*iconH);
 	}
 }

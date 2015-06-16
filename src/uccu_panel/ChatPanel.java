@@ -2,6 +2,7 @@ package uccu_panel;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.nio.ByteBuffer;
@@ -50,7 +51,7 @@ public class ChatPanel extends JPanel{
         publicViewArea.setEditable(false);
         privateViewArea.setEditable(false);
         editField = new JTextField(50);
-        sendButton = new JButton("Send");
+        sendButton = new JButton();
         hideButton = new JButton("...");
         publicSp = new JScrollPane(publicViewArea);
         privateSp = new JScrollPane(privateViewArea);
@@ -64,14 +65,14 @@ public class ChatPanel extends JPanel{
         publicViewArea.setOpaque(false);
         publicViewArea.setForeground(Color.white);
         publicSp.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        publicSp.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        publicSp.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);
         
         privateSp.setOpaque(false);
         privateSp.getViewport().setOpaque(false);
         privateViewArea.setOpaque(false);
         privateViewArea.setForeground(Color.white);
         privateSp.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        privateSp.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        privateSp.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);
         
         publicLabel.setBounds(0, 0, lbW, lbH);
         publicLabel.setForeground(Color.WHITE);
@@ -86,8 +87,16 @@ public class ChatPanel extends JPanel{
         editField.setBounds(0,lbH+vaMaxH,efW,efH);
         this.add(editField);
         sendButton.setBounds(efW,lbH+vaMaxH,sbW,sbH);
+//		sendButton.setOpaque(false);
+		sendButton.setBorderPainted(false);
+		sendButton.setBackground(Color.white);
+//		sendButton.setContentAreaFilled(false);
+        sendButton.setIcon(new ImageIcon(new Picture("发送信息.png",0,0,0).getImage()
+				.getScaledInstance(sendButton.getWidth(), sendButton.getHeight(), Image.SCALE_DEFAULT) ));
         this.add(sendButton);
         hideButton.setBounds(efW + sbW, lbH+vaMaxH, hbW, hbH);
+        hideButton.setBorderPainted(false);
+        hideButton.setBackground(Color.white);
         this.add(hideButton);
         this.setBounds(0, MaxY - (vaMaxH + efH + lbH), vaMaxW, vaMaxH + efH + lbH);
         isHide = false;

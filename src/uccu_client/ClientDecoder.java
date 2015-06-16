@@ -181,6 +181,7 @@ public class ClientDecoder implements Decoder {
 					if(ID == 0) continue;
 					gameBox.mainrole.add_items(ID, num, instanceID);
 				}
+				Painter.painter.bagPanel.reflash();
 				UccuLogger.log("ClientServer/ClientDecoder", "Receive a package 0019(背包信息)");
 				break;
 			}

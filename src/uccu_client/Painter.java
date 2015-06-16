@@ -14,6 +14,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.FileInputStream;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.concurrent.ConcurrentHashMap;
@@ -22,10 +23,14 @@ import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import sun.audio.AudioPlayer;
+import sun.audio.AudioStream;
+import uccu_client.Entity.style;
 import uccu_client.GameBox.chatStat;
 import uccu_panel.BagPanel;
 import uccu_panel.ChatPanel;
 import uccu_panel.EntityLabel;
+import uccu_panel.ExitPanel;
 import uccu_panel.FriendPanel;
 import uccu_panel.GameWindow;
 import uccu_panel.IconPanel;
@@ -48,6 +53,7 @@ public class Painter extends JFrame{
 	BagPanel bagPanel;
 	SkillPanel skillPanel;
 	FriendPanel friendPanel;
+	ExitPanel exitPanel;
 	LockedPlayerPanel lockedPlayerPanel;
 	ChatPanel chatPanel;
 	IconPanel iconPanel;
@@ -73,6 +79,7 @@ public class Painter extends JFrame{
 		painter = this;
 		
 		this.setUndecorated(true);
+		this.setIconImage(new Picture("UCCU.png", 0, 0, 0).getImage());
 		this.setBackground(new Color(0,0,0,0));
 		screensize = Toolkit.getDefaultToolkit().getScreenSize();
 		this.setSize(screensize);
@@ -110,13 +117,14 @@ public class Painter extends JFrame{
 		desktopPane = new JDesktopPane();
 		popupInfoPanel = new PopupInfoPanel(new Picture("聊天背景.png", 0,0,0));
 		iconPanel = new IconPanel();
-		iconPanel.setLocation(chatPanel.getWidth(), getHeight()-iconPanel.getHeight());
+		iconPanel.setLocation(getWidth()-iconPanel.getWidth(), getHeight()-iconPanel.getHeight()-100);
 		lockedPlayerPanel = new LockedPlayerPanel();
 		playerInfoPanel = new PlayerInfoPanel("haha",true,true);
 		selfInfoPanel = new SelfInfoPanel();
 		bagPanel = new BagPanel();
 		skillPanel = new SkillPanel();
 		friendPanel = new FriendPanel();
+		exitPanel = new ExitPanel();
 		addEventGeter();
 	}
 	private void loadPic(){
@@ -283,6 +291,7 @@ public class Painter extends JFrame{
 		desktopPane.add(bagPanel);
 		desktopPane.add(skillPanel);
 		desktopPane.add(friendPanel);
+		desktopPane.add(exitPanel);
 		for(int i=0;i<2;++i){
 			imagebuffer[i] = createImage(getWidth(), getHeight());
 //			ClientMain.mySleep(100);
@@ -300,9 +309,25 @@ public class Painter extends JFrame{
 				}
 			}
 		}.start();
+		new Thread(){
+			public void run(){
+				while(true){
+					try {
+						   FileInputStream bgmFile=new FileInputStream("bgm.wav" );
+						   AudioStream bgm=new AudioStream(bgmFile);
+						   AudioPlayer.player.start(bgm);
+					}catch (Exception e) {System.out.println("音乐打开失败");}					
+					try{
+					    Thread.sleep(124000);//音频播放时间
+					}catch(Exception e){System.out.println(e);}
+				}
+			}
+		}.start();
 	}
 	public void addEntity(Entity e){
-		EntityLabel el = new EntityLabel(e, picMap.get(e.getPicID()),true);
+		boolean clickable = true;
+		if(e.getType() != style.airplane) clickable = false;
+		EntityLabel el = new EntityLabel(e, picMap.get(e.getPicID()),clickable);
 		entityMap.put(e, el);
 		gameWindow.add(el);
 	}
@@ -331,14 +356,14 @@ public class Painter extends JFrame{
 		playerInfoPanel.show();
 	}
 	public enum FrameType{
-		info,bag,skill,friend;
+		info,bag,skill,friend,exit;
 	}
 	public void showInnerFrame(FrameType type){
 		switch(type){
 		case info:
 			if(selfInfoPanel.isVisible())
 				selfInfoPanel.setVisible(false);
-			else selfInfoPanel.show();
+//			else selfInfoPanel.show();
 			break;
 		case bag:
 			if(bagPanel.isVisible())
@@ -353,7 +378,10 @@ public class Painter extends JFrame{
 		case friend:
 			if(friendPanel.isVisible())
 				friendPanel.setVisible(false);
-			else friendPanel.show();
+//			else friendPanel.show();
+			break;
+		case exit:
+			exitPanel.show();
 			break;
 		}
 	}
